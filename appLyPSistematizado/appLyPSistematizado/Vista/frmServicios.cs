@@ -21,5 +21,11 @@ namespace appLyPSistematizado.Vista
         {
             objCupos.Show();
         }
+
+        private void pbMensualidad_Click(object sender, EventArgs e)
+        {
+            frmCliente objcliente = new frmCliente();
+            objcliente.Show();
+        }
     }
 }
