@@ -76,6 +76,7 @@
             this.check1.TabIndex = 4;
             this.check1.Text = "01";
             this.check1.UseVisualStyleBackColor = true;
+            this.check1.CheckedChanged += new System.EventHandler(this.check1_CheckedChanged);
             // 
             // text3
             // 

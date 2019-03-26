@@ -54,9 +54,15 @@ namespace appLyPSistematizado.Vista
                 text10.BackColor = Color.Red;
             }
 
+            frmAutomovil objAutomovil = new frmAutomovil();
+            objAutomovil.Show();
 
 
+        }
 
+        private void check1_CheckedChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }
