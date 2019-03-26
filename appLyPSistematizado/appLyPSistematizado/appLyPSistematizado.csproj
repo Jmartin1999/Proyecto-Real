@@ -52,11 +52,13 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Datos\clAutomovil.cs" />
-    <Compile Include="Datos\clCliente3.cs" />
+    <Compile Include="Datos\clautomovil2.cs" />
+    <Compile Include="Datos\clCliente.cs" />
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clLogin.cs" />
-    <Compile Include="Datos\clValidacion3.cs" />
+    <Compile Include="Datos\clpersona2.cs" />
+    <Compile Include="Datos\clServicio.cs" />
+    <Compile Include="Datos\cltarifa2.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,11 +67,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vista\frmAutomovil.cs">
+    <Compile Include="Vista\frmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\frmAutomovil.Designer.cs">
-      <DependentUpon>frmAutomovil.cs</DependentUpon>
+    <Compile Include="Vista\frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmCupos.cs">
       <SubType>Form</SubType>
@@ -101,6 +103,12 @@
     <Compile Include="Vista\frmRegistroUsuario.Designer.cs">
       <DependentUpon>frmRegistroUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\frmServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmServicio.Designer.cs">
+      <DependentUpon>frmServicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmServicios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,8 +127,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vista\frmAutomovil.resx">
-      <DependentUpon>frmAutomovil.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmCupos.resx">
       <DependentUpon>frmCupos.cs</DependentUpon>
@@ -136,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmRegistroUsuario.resx">
       <DependentUpon>frmRegistroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmServicio.resx">
+      <DependentUpon>frmServicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmServicios.resx">
       <DependentUpon>frmServicios.cs</DependentUpon>
