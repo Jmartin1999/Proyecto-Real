@@ -153,6 +153,7 @@
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(100, 20);
             this.txtContraseña.TabIndex = 27;
+            this.txtContraseña.UseSystemPasswordChar = true;
             // 
             // txtCorreo
             // 

@@ -96,6 +96,7 @@
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(100, 20);
             this.txtContraseña.TabIndex = 8;
+            this.txtContraseña.UseSystemPasswordChar = true;
             // 
             // label5
             // 
