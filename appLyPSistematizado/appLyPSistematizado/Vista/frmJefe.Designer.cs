@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJefe));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,11 +35,12 @@
             this.pbRegistro = new System.Windows.Forms.PictureBox();
             this.pbTipo = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbProceso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegistro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTipo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -70,6 +70,7 @@
             this.pbProceso.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbProceso.TabIndex = 2;
             this.pbProceso.TabStop = false;
+            this.pbProceso.Click += new System.EventHandler(this.pbProceso_Click);
             // 
             // pbRegistro
             // 
@@ -101,11 +102,41 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "label3";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(51, 329);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Proceso Vehicular";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(290, 487);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Registro Personal";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(527, 315);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(134, 13);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Tipos y Tarifas Vehiculares";
+            // 
             // frmJefe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 517);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pbTipo);
             this.Controls.Add(this.pbRegistro);
@@ -117,7 +148,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProceso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegistro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTipo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,6 +161,8 @@
         private System.Windows.Forms.PictureBox pbRegistro;
         private System.Windows.Forms.PictureBox pbTipo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

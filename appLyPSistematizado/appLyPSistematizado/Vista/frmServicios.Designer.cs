@@ -50,6 +50,7 @@
             this.pbParqueo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbParqueo.TabIndex = 0;
             this.pbParqueo.TabStop = false;
+            this.pbParqueo.Click += new System.EventHandler(this.pbParqueo_Click);
             // 
             // pbLavado
             // 

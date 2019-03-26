@@ -16,5 +16,10 @@ namespace appLyPSistematizado.Vista
         {
             InitializeComponent();
         }
+        frmCupos objCupos = new frmCupos();
+        private void pbParqueo_Click(object sender, EventArgs e)
+        {
+            objCupos.Show();
+        }
     }
 }

@@ -17,10 +17,16 @@ namespace appLyPSistematizado.Vista
             InitializeComponent();
         }
         frmRegistroPersonal objRegistroPersonal = new frmRegistroPersonal();
+        frmServicios objServicios = new frmServicios();
 
         private void pbRegistro_Click(object sender, EventArgs e)
         {
             objRegistroPersonal.Show();
+        }
+
+        private void pbProceso_Click(object sender, EventArgs e)
+        {
+            objServicios.Show();
         }
     }
 }
