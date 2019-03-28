@@ -56,6 +56,8 @@ namespace appLyPSistematizado.Vista
                 txtTelf11.Clear();
                 txtDirec11.Clear();
                 txtFecha11.Clear();
+                frmAutomovil objAutomovil = new frmAutomovil();
+                objAutomovil.Show();
             }
         }
 

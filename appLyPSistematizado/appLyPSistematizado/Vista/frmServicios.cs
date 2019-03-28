@@ -28,5 +28,12 @@ namespace appLyPSistematizado.Vista
             frmCliente objcliente = new frmCliente();
             objcliente.Show();
         }
+
+        private void pbLavado_Click(object sender, EventArgs e)
+        {
+
+            frmCliente objcliente = new frmCliente();
+            objcliente.Show();
+        }
     }
 }

@@ -61,6 +61,7 @@
             this.pbLavado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLavado.TabIndex = 1;
             this.pbLavado.TabStop = false;
+            this.pbLavado.Click += new System.EventHandler(this.pbLavado_Click);
             // 
             // pbMensualidad
             // 

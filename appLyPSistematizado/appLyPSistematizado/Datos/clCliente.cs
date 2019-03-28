@@ -28,7 +28,7 @@ namespace appLyPSistematizado.Datos
             {
                 clCliente objcliente = new clCliente();
                 objcliente.Documento = dtCliente.Rows[i]["Documento"].ToString();
-                objcliente.NombresApellidos = dtCliente.Rows[i]["Nombres"].ToString();
+                objcliente.NombresApellidos = dtCliente.Rows[i]["NombresYApellidos"].ToString();
                 objcliente.Telefono = dtCliente.Rows[i]["Telefono"].ToString();
                 objcliente.Direccion = dtCliente.Rows[i]["Direccion"].ToString();
                 objcliente.Fecha = dtCliente.Rows[i]["Fecha"].ToString();

@@ -18,7 +18,7 @@ namespace appLyPSistematizado.Datos
         {
             try
             {
-                conexion = new SqlConnection("Data Source=.;Initial Catalog=proyecto;Integrated Security=True");
+                conexion = new SqlConnection("Data Source=.;Initial Catalog=ProyectoCompartido;Integrated Security=True");
 
             }
             catch (Exception)
