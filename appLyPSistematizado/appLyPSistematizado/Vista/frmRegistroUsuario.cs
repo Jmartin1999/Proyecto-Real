@@ -21,7 +21,7 @@ namespace appLyPSistematizado.Vista
 
             clLogin objLogin = new clLogin();
             objLogin.Documento = txtDocumento.Text;
-            objLogin.Nombres = txtNombres.Text;
+            objLogin.NombreP = txtNombres.Text;
             objLogin.Direccion = txtDireccion.Text;
             objLogin.Telefono = txtTelefono.Text;
             objLogin.Correo = txtCorreo.Text;

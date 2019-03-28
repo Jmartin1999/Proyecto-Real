@@ -40,7 +40,7 @@ namespace appLyPSistematizado
         {
 
             clLogin objLogin = new clLogin();
-            listaUsuario = objLogin.mtdListar();
+            listaUsuario = objLogin.mtdListarSesion();
 
             for (int i = 0; i < listaUsuario.Count; i++)
 
