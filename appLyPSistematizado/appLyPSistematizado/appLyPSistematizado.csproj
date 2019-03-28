@@ -53,12 +53,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\clautomovil2.cs" />
+    <Compile Include="Datos\clAutomovil3.cs" />
     <Compile Include="Datos\clCliente.cs" />
+    <Compile Include="Datos\clCliente3.cs" />
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clLogin.cs" />
     <Compile Include="Datos\clpersona2.cs" />
     <Compile Include="Datos\clServicio.cs" />
     <Compile Include="Datos\cltarifa2.cs" />
+    <Compile Include="Datos\clValidacion3.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +70,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\frmAutomovil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmAutomovil.Designer.cs">
+      <DependentUpon>frmAutomovil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +136,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vista\frmAutomovil.resx">
+      <DependentUpon>frmAutomovil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>

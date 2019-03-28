@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using appLyPSistematizado.Datos;
 using System.Data;
+
 
 namespace appLyPSistematizado.Datos
 {
-    class clAutomovil
+    class clAutomovil3
     {
-        
         public string TipoV { get; set; }
         public string Estado { get; set; }
         public string Placa { get; set; }
@@ -18,18 +17,18 @@ namespace appLyPSistematizado.Datos
         public string Observaciones { get; set; }
         public int idCliente { get; set; }
 
-        List<clAutomovil> listaAutomovil = new List<clAutomovil>();
+        List<clAutomovil3> listaAutomovil = new List<clAutomovil3>();
         clConexion objconexion = new clConexion();
 
-        public List<clAutomovil> mtdListar()
+        public List<clAutomovil3> mtdListar()
         {
 
             DataTable dtAutomovil = new DataTable();
-            string consulta = "select *from Automovil";
+            string consulta = "select*from Automovil";
             dtAutomovil = objconexion.mtdDesconectado(consulta);
             for (int i = 0; i < dtAutomovil.Rows.Count; i++)
             {
-                clAutomovil objAutomovil = new clAutomovil();
+                clAutomovil3 objAutomovil = new clAutomovil3();
                 objAutomovil.TipoV = dtAutomovil.Rows[i]["TipoV"].ToString();
                 objAutomovil.Estado = dtAutomovil.Rows[i]["Estado"].ToString();
                 objAutomovil.Placa = dtAutomovil.Rows[i]["Placa"].ToString();
@@ -72,4 +71,3 @@ namespace appLyPSistematizado.Datos
         }
     }
 }
-

@@ -168,7 +168,6 @@
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(121, 20);
             this.txtPlaca.TabIndex = 36;
-            this.txtPlaca.TextChanged += new System.EventHandler(this.txtPlaca_TextChanged);
             this.txtPlaca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPlaca_KeyPress);
             // 
             // txtEstado
@@ -177,7 +176,6 @@
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(121, 20);
             this.txtEstado.TabIndex = 35;
-            this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             this.txtEstado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEstado_KeyPress);
             // 
             // label6
