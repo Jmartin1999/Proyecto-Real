@@ -35,8 +35,9 @@ namespace appLyPSistematizado.Vista
             else
             {
                 clCliente objcliente = new clCliente();
-                objcliente.Documento = txtDoc11.Text;
+                
                 objcliente.NombresApellidos = txtNom11.Text;
+                objcliente.Documento = txtDoc11.Text;
                 objcliente.Telefono = txtTelf11.Text;
                 objcliente.Direccion = txtDirec11.Text;
                 objcliente.Fecha = txtFecha11.Text;
@@ -84,8 +85,9 @@ namespace appLyPSistematizado.Vista
         private void btnModificar11_Click(object sender, EventArgs e)
         {
             clCliente objcliente = new clCliente();
-            objcliente.Documento = txtDoc11.Text;
+            
             objcliente.NombresApellidos = txtNom11.Text;
+            objcliente.Documento = txtDoc11.Text;
             objcliente.Telefono = txtTelf11.Text;
             objcliente.Direccion = txtDirec11.Text;
             objcliente.Fecha = txtFecha11.Text;
@@ -130,8 +132,9 @@ namespace appLyPSistematizado.Vista
 
         private void dgvCliente_DoubleClick(object sender, EventArgs e)
         {
-            txtDoc11.Text = Convert.ToString(dgvCliente.CurrentRow.Cells[0].Value);
-            txtNom11.Text = Convert.ToString(dgvCliente.CurrentRow.Cells[1].Value);
+            
+            txtNom11.Text = Convert.ToString(dgvCliente.CurrentRow.Cells[0].Value);
+            txtDoc11.Text = Convert.ToString(dgvCliente.CurrentRow.Cells[1].Value);
             txtTelf11.Text = Convert.ToString(dgvCliente.CurrentRow.Cells[2].Value);
             txtDirec11.Text = Convert.ToString(dgvCliente.CurrentRow.Cells[3].Value);
             txtFecha11.Text = Convert.ToString(dgvCliente.CurrentRow.Cells[4].Value);
