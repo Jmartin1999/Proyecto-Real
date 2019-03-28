@@ -81,5 +81,6 @@ namespace appLyPSistematizado.Datos
             dtbuscar = objconeexion.mtdDesconectado(consulta);
             return dtbuscar;
         }
+        
     }
 }

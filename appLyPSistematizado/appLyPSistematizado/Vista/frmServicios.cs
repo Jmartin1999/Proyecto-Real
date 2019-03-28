@@ -32,8 +32,8 @@ namespace appLyPSistematizado.Vista
         private void pbLavado_Click(object sender, EventArgs e)
         {
 
-            frmCliente objcliente = new frmCliente();
-            objcliente.Show();
+            frmAutomovil objautomovil = new frmAutomovil();
+            objautomovil.Show();
         }
     }
 }

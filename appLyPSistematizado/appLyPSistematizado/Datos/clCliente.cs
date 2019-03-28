@@ -55,7 +55,7 @@ namespace appLyPSistematizado.Datos
         }
         public int mtdModificar()
         {
-            string consulta = "update Cliente set Documento='" + Documento + "', NombresYApellidos='" + NombresApellidos + "',Telefono='" + Telefono + "',Direccion='" + Direccion + "' ,Fecha='" + Fecha + "' where Documento = '" + Documento + "' ";
+            string consulta = "update Cliente set NombresYApellidos='" + NombresApellidos + "',Documento='" + Documento + "',Telefono='" + Telefono + "',Direccion='" + Direccion + "' ,Fecha='" + Fecha + "' where Documento = '" + Documento + "' ";
             int cannnn = objConeexion.mtdConectado(consulta);
             return cannnn;
         }
