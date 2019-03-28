@@ -1,5 +1,6 @@
 ﻿using appLyPSistematizado.Datos;
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
@@ -13,18 +14,19 @@ namespace appLyPSistematizado.Vista
         {
             InitializeComponent();
         }
+        List<clLogin> listapersonal = new List<clLogin>();
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             clLogin objLogin = new clLogin();
             objLogin.Documento = txtDocumento.Text;
-            objLogin.Nombres = txtNombres.Text;
+            objLogin.NombreP = txtNombres.Text;
             objLogin.Direccion = txtDireccion.Text;
             objLogin.Telefono = txtTelefono.Text;
             objLogin.Correo = txtCorreo.Text;
             objLogin.Contraseña = txtContraseña.Text;
             objLogin.Rol = cmbRol.Text;
-            objLogin.Sueldo = txtSueldo.Text;
+            objLogin.SueldoBasico = txtSueldo.Text;
             int can = objLogin.mtdRegistrar();
             if (can > 0)
             {
@@ -91,6 +93,82 @@ namespace appLyPSistematizado.Vista
             objCliente.Host = "smtp.gmail.com";
             objCliente.EnableSsl = true;
             objCliente.Send(objMensaje);
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            clLogin objLogin = new clLogin();
+            objLogin.Documento = txtDocumento.Text;
+            objLogin.NombreP = txtNombres.Text;
+            objLogin.Direccion = txtDireccion.Text;
+            objLogin.Telefono = txtTelefono.Text;
+            objLogin.Correo = txtCorreo.Text;
+            objLogin.Contraseña = txtContraseña.Text;
+            objLogin.Rol = cmbRol.Text;
+            objLogin.SueldoBasico = txtSueldo.Text;
+            int can = objLogin.mtdModificarPersona();
+            if (can > 0)
+            {
+                MessageBox.Show("Filas Afectadas" + can);
+               frmRegistroPersonal_Load(null, null);
+            }
+            else
+            {
+                MessageBox.Show("ERORRRRRRRRRR");
+            }
+        }
+
+        private void frmRegistroPersonal_Load(object sender, EventArgs e)
+        {
+            clLogin objLogin = new clLogin();
+            List<clLogin> listapersonal = new List<clLogin>();
+            listapersonal = objLogin.mtdListarPersona();
+            dgvPersonal.DataSource = listapersonal;
+
+            for (int i = 0; i < listapersonal.Count; i++)
+            {
+                if (listapersonal[i].Documento == "1055315950")
+                {
+                    MessageBox.Show(listapersonal[i].Rol);
+                }
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+            clLogin objLogin = new clLogin();
+            objLogin.Documento = txtDocumento.Text;
+            objLogin.NombreP = txtNombres.Text;
+            objLogin.Direccion = txtDireccion.Text;
+            objLogin.Telefono = txtTelefono.Text;
+            objLogin.Correo = txtCorreo.Text;
+            objLogin.Contraseña = txtContraseña.Text;
+            objLogin.Rol = cmbRol.Text;
+            objLogin.SueldoBasico = txtSueldo.Text;
+            int can = objLogin.EliminarPersona();
+            if (can > 0)
+            {
+                MessageBox.Show("Filas Afectadas" + can);
+                frmRegistroPersonal_Load(null, null);
+            }
+            else
+            {
+                MessageBox.Show("ERORRRRRRRRRR");
+            }
+        }
+
+        private void dgvPersonal_DoubleClick(object sender, EventArgs e)
+        {
+            txtDocumento.Text = Convert.ToString(dgvPersonal.CurrentRow.Cells[0].Value);
+            txtNombres.Text = Convert.ToString(dgvPersonal.CurrentRow.Cells[1].Value);
+            txtDireccion.Text = Convert.ToString(dgvPersonal.CurrentRow.Cells[2].Value);
+           txtTelefono.Text = Convert.ToString(dgvPersonal.CurrentRow.Cells[3].Value);
+            txtCorreo.Text = Convert.ToString(dgvPersonal.CurrentRow.Cells[4].Value);
+            txtContraseña.Text = Convert.ToString(dgvPersonal.CurrentRow.Cells[5].Value);
+            cmbRol.Text = Convert.ToString(dgvPersonal.CurrentRow.Cells[6].Value);
+           txtSueldo.Text = Convert.ToString(dgvPersonal.CurrentRow.Cells[7].Value);
+
         }
     }
 }
