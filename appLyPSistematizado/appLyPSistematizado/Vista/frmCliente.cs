@@ -36,6 +36,7 @@ namespace appLyPSistematizado.Vista
             {
                 clCliente objcliente = new clCliente();
                 
+
                 objcliente.NombresYApellidos = txtNom11.Text;
                 objcliente.Documento = txtDoc11.Text;
                 objcliente.Telefono = txtTelf11.Text;
