@@ -43,21 +43,24 @@ namespace appLyPSistematizado.Vista
                 objcliente.Direccion = txtDirec11.Text;
                 objcliente.Fecha = txtFecha11.Text;
                 int numm = objcliente.mtdRegistrar();
-                frmAutomovil objAutomovil = new frmAutomovil();
+                
                 if (numm > 0)
                 {
                     MessageBox.Show("Datos Registrados");
                     clCliente objCliente = new clCliente();
                     dgvCliente.DataSource = objCliente.mtdListar();
-                  
-                    objAutomovil.Show();
+
+                    
                 }
                 else
                 {
                     MessageBox.Show("Datos no Registrados");
                 }
-                txtDoc11.Clear();
+                frmAutomovil objAutomovil = new frmAutomovil();
+                objAutomovil.Show();
+
                 txtNom11.Clear();
+                txtDoc11.Clear();
                 txtTelf11.Clear();
                 txtDirec11.Clear();
                 txtFecha11.Clear();
@@ -106,8 +109,9 @@ namespace appLyPSistematizado.Vista
                 MessageBox.Show("Error");
             }
             dgvCliente.DataSource = objcliente.mtdListar();
-            txtDoc11.Clear();
+           
             txtNom11.Clear();
+            txtDoc11.Clear();
             txtTelf11.Clear();
             txtDirec11.Clear();
             txtFecha11.Clear();
@@ -171,8 +175,9 @@ namespace appLyPSistematizado.Vista
             objCliente.mtdEliminar();
             MessageBox.Show("Datos Eliminados");
             dgvCliente.DataSource = objCliente.mtdListar();
-            txtDoc11.Clear();
+           
             txtNom11.Clear();
+            txtDoc11.Clear();
             txtTelf11.Clear();
             txtDirec11.Clear();
             txtFecha11.Clear();
