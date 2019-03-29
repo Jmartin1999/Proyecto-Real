@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblDocumento = new System.Windows.Forms.Label();
             this.btnAtras22 = new System.Windows.Forms.Button();
             this.txtBuscar22 = new System.Windows.Forms.TextBox();
@@ -51,6 +52,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnguarda22 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvServicio)).BeginInit();
             this.gbxcliente.SuspendLayout();
             this.SuspendLayout();
@@ -66,7 +68,7 @@
             // 
             // btnAtras22
             // 
-            this.btnAtras22.Location = new System.Drawing.Point(867, 220);
+            this.btnAtras22.Location = new System.Drawing.Point(843, 213);
             this.btnAtras22.Name = "btnAtras22";
             this.btnAtras22.Size = new System.Drawing.Size(75, 23);
             this.btnAtras22.TabIndex = 28;
@@ -91,7 +93,7 @@
             // 
             // btnEliminar22
             // 
-            this.btnEliminar22.Location = new System.Drawing.Point(867, 182);
+            this.btnEliminar22.Location = new System.Drawing.Point(843, 175);
             this.btnEliminar22.Name = "btnEliminar22";
             this.btnEliminar22.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar22.TabIndex = 26;
@@ -104,13 +106,13 @@
             this.dgvServicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvServicio.Location = new System.Drawing.Point(107, 51);
             this.dgvServicio.Name = "dgvServicio";
-            this.dgvServicio.Size = new System.Drawing.Size(680, 247);
+            this.dgvServicio.Size = new System.Drawing.Size(680, 340);
             this.dgvServicio.TabIndex = 25;
             this.dgvServicio.DoubleClick += new System.EventHandler(this.dgvServicio_DoubleClick);
             // 
             // btnModificar22
             // 
-            this.btnModificar22.Location = new System.Drawing.Point(867, 140);
+            this.btnModificar22.Location = new System.Drawing.Point(843, 133);
             this.btnModificar22.Name = "btnModificar22";
             this.btnModificar22.Size = new System.Drawing.Size(75, 23);
             this.btnModificar22.TabIndex = 21;
@@ -134,16 +136,16 @@
             this.gbxcliente.Controls.Add(this.txtSalida22);
             this.gbxcliente.Controls.Add(this.label4);
             this.gbxcliente.Controls.Add(this.label3);
-            this.gbxcliente.Location = new System.Drawing.Point(30, 315);
+            this.gbxcliente.Location = new System.Drawing.Point(22, 397);
             this.gbxcliente.Name = "gbxcliente";
-            this.gbxcliente.Size = new System.Drawing.Size(858, 167);
+            this.gbxcliente.Size = new System.Drawing.Size(858, 144);
             this.gbxcliente.TabIndex = 24;
             this.gbxcliente.TabStop = false;
             // 
             // cmbTarifa22
             // 
             this.cmbTarifa22.FormattingEnabled = true;
-            this.cmbTarifa22.Location = new System.Drawing.Point(601, 103);
+            this.cmbTarifa22.Location = new System.Drawing.Point(600, 87);
             this.cmbTarifa22.Name = "cmbTarifa22";
             this.cmbTarifa22.Size = new System.Drawing.Size(204, 21);
             this.cmbTarifa22.TabIndex = 20;
@@ -169,7 +171,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(466, 72);
+            this.label9.Location = new System.Drawing.Point(466, 62);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(124, 13);
             this.label9.TabIndex = 15;
@@ -210,7 +212,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(481, 106);
+            this.label5.Location = new System.Drawing.Point(480, 90);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 9;
@@ -227,7 +229,7 @@
             // 
             // txtnombre11
             // 
-            this.txtnombre11.Location = new System.Drawing.Point(600, 67);
+            this.txtnombre11.Location = new System.Drawing.Point(600, 57);
             this.txtnombre11.Name = "txtnombre11";
             this.txtnombre11.Size = new System.Drawing.Size(204, 20);
             this.txtnombre11.TabIndex = 8;
@@ -259,13 +261,17 @@
             // 
             // btnguarda22
             // 
-            this.btnguarda22.Location = new System.Drawing.Point(867, 104);
+            this.btnguarda22.Location = new System.Drawing.Point(843, 97);
             this.btnguarda22.Name = "btnguarda22";
             this.btnguarda22.Size = new System.Drawing.Size(75, 23);
             this.btnguarda22.TabIndex = 20;
             this.btnguarda22.Text = "Registrar";
             this.btnguarda22.UseVisualStyleBackColor = true;
             this.btnguarda22.Click += new System.EventHandler(this.btnguarda22_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmServicio
             // 
@@ -317,5 +323,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnguarda22;
+        private System.Windows.Forms.Timer timer1;
     }
 }
