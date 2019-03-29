@@ -57,7 +57,7 @@ namespace appLyPSistematizado.Datos
         }
         public int mtdModificar()
         {
-            string consulta = "update Servicios set FechaHoraE='" + entrada + "',FechaHoraS='" + salida + "',IdAutomovil='" + IdAutomovil + "',IdPersona='" + IdPersona + "' ,IdTarifa='" + IdTarifa + "' where IdAutomovil = '" + IdAutomovil + "' "; /*, Otro = '" + Otro + "'*/
+            string consulta = "update Servicio set FechaHoraE='" + entrada + "',FechaHoraS='" + salida + "',IdAutomovil='" + IdAutomovil + "',IdPersona='" + IdPersona + "' ,IdTarifa='" + IdTarifa + "' where IdAutomovil = '" + IdAutomovil + "' "; /*, Otro = '" + Otro + "'*/
             int cannnn = objconeexion.mtdConectado(consulta);
             return cannnn;
         }
@@ -81,6 +81,7 @@ namespace appLyPSistematizado.Datos
             dtbuscar = objconeexion.mtdDesconectado(consulta);
             return dtbuscar;
         }
-        
+    
+
     }
 }

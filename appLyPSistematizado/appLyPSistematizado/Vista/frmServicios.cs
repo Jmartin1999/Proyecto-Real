@@ -19,7 +19,7 @@ namespace appLyPSistematizado.Vista
         frmCupos objCupos = new frmCupos();
         private void pbParqueo_Click(object sender, EventArgs e)
         {
-            
+            frmAutomovil objAutomovil = new frmAutomovil("");
             objCupos.Show();
         }
 
@@ -32,8 +32,26 @@ namespace appLyPSistematizado.Vista
         private void pbLavado_Click(object sender, EventArgs e)
         {
 
-            frmAutomovil objautomovil = new frmAutomovil();
-            objautomovil.Show();
+
+            frmAutomovil objAutomovil = new frmAutomovil("");
+            objAutomovil.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmTarifa objtarifa = new frmTarifa();
+            objtarifa.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmServicio Objservicio = new frmServicio();
+            Objservicio.Show();
+        }
+
+        private void frmServicios_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

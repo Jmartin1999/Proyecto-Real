@@ -36,29 +36,35 @@ namespace appLyPSistematizado.Vista
             {
                 clCliente objcliente = new clCliente();
                 
-                objcliente.NombresApellidos = txtNom11.Text;
+
+                objcliente.NombresYApellidos = txtNom11.Text;
                 objcliente.Documento = txtDoc11.Text;
                 objcliente.Telefono = txtTelf11.Text;
                 objcliente.Direccion = txtDirec11.Text;
                 objcliente.Fecha = txtFecha11.Text;
                 int numm = objcliente.mtdRegistrar();
+                
                 if (numm > 0)
                 {
                     MessageBox.Show("Datos Registrados");
                     clCliente objCliente = new clCliente();
                     dgvCliente.DataSource = objCliente.mtdListar();
+
+                    
                 }
                 else
                 {
                     MessageBox.Show("Datos no Registrados");
                 }
-                txtDoc11.Clear();
+                frmAutomovil objAutomovil = new frmAutomovil("");
+                objAutomovil.Show();
+
                 txtNom11.Clear();
+                txtDoc11.Clear();
                 txtTelf11.Clear();
                 txtDirec11.Clear();
                 txtFecha11.Clear();
-                frmAutomovil objAutomovil = new frmAutomovil();
-                objAutomovil.Show();
+               
             }
         }
 
@@ -86,7 +92,7 @@ namespace appLyPSistematizado.Vista
         {
             clCliente objcliente = new clCliente();
             
-            objcliente.NombresApellidos = txtNom11.Text;
+            objcliente.NombresYApellidos = txtNom11.Text;
             objcliente.Documento = txtDoc11.Text;
             objcliente.Telefono = txtTelf11.Text;
             objcliente.Direccion = txtDirec11.Text;
@@ -103,8 +109,9 @@ namespace appLyPSistematizado.Vista
                 MessageBox.Show("Error");
             }
             dgvCliente.DataSource = objcliente.mtdListar();
-            txtDoc11.Clear();
+           
             txtNom11.Clear();
+            txtDoc11.Clear();
             txtTelf11.Clear();
             txtDirec11.Clear();
             txtFecha11.Clear();
@@ -168,8 +175,9 @@ namespace appLyPSistematizado.Vista
             objCliente.mtdEliminar();
             MessageBox.Show("Datos Eliminados");
             dgvCliente.DataSource = objCliente.mtdListar();
-            txtDoc11.Clear();
+           
             txtNom11.Clear();
+            txtDoc11.Clear();
             txtTelf11.Clear();
             txtDirec11.Clear();
             txtFecha11.Clear();

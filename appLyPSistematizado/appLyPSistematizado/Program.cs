@@ -17,7 +17,7 @@ namespace appLyPSistematizado
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRegistroUsuario());
+            Application.Run(new frmServicios());
         }
     }
 }

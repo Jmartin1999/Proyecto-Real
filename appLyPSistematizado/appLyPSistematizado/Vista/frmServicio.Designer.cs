@@ -37,13 +37,11 @@
             this.btnModificar22 = new System.Windows.Forms.Button();
             this.gbxcliente = new System.Windows.Forms.GroupBox();
             this.cmbTarifa22 = new System.Windows.Forms.ComboBox();
-            this.cbxSi22 = new System.Windows.Forms.CheckBox();
             this.cmbempleado22 = new System.Windows.Forms.ComboBox();
             this.cmbAutomovil22 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTipoa = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtEntrada22 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,7 +58,7 @@
             // lblDocumento
             // 
             this.lblDocumento.AutoSize = true;
-            this.lblDocumento.Location = new System.Drawing.Point(218, 275);
+            this.lblDocumento.Location = new System.Drawing.Point(200, 25);
             this.lblDocumento.Name = "lblDocumento";
             this.lblDocumento.Size = new System.Drawing.Size(34, 13);
             this.lblDocumento.TabIndex = 22;
@@ -68,7 +66,7 @@
             // 
             // btnAtras22
             // 
-            this.btnAtras22.Location = new System.Drawing.Point(923, 162);
+            this.btnAtras22.Location = new System.Drawing.Point(867, 220);
             this.btnAtras22.Name = "btnAtras22";
             this.btnAtras22.Size = new System.Drawing.Size(75, 23);
             this.btnAtras22.TabIndex = 28;
@@ -77,14 +75,14 @@
             // 
             // txtBuscar22
             // 
-            this.txtBuscar22.Location = new System.Drawing.Point(337, 275);
+            this.txtBuscar22.Location = new System.Drawing.Point(319, 25);
             this.txtBuscar22.Name = "txtBuscar22";
             this.txtBuscar22.Size = new System.Drawing.Size(204, 20);
             this.txtBuscar22.TabIndex = 23;
             // 
             // btnBuscar22
             // 
-            this.btnBuscar22.Location = new System.Drawing.Point(590, 273);
+            this.btnBuscar22.Location = new System.Drawing.Point(572, 23);
             this.btnBuscar22.Name = "btnBuscar22";
             this.btnBuscar22.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar22.TabIndex = 27;
@@ -93,7 +91,7 @@
             // 
             // btnEliminar22
             // 
-            this.btnEliminar22.Location = new System.Drawing.Point(923, 124);
+            this.btnEliminar22.Location = new System.Drawing.Point(867, 182);
             this.btnEliminar22.Name = "btnEliminar22";
             this.btnEliminar22.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar22.TabIndex = 26;
@@ -104,7 +102,7 @@
             // dgvServicio
             // 
             this.dgvServicio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvServicio.Location = new System.Drawing.Point(125, 301);
+            this.dgvServicio.Location = new System.Drawing.Point(107, 51);
             this.dgvServicio.Name = "dgvServicio";
             this.dgvServicio.Size = new System.Drawing.Size(680, 247);
             this.dgvServicio.TabIndex = 25;
@@ -112,7 +110,7 @@
             // 
             // btnModificar22
             // 
-            this.btnModificar22.Location = new System.Drawing.Point(923, 82);
+            this.btnModificar22.Location = new System.Drawing.Point(867, 140);
             this.btnModificar22.Name = "btnModificar22";
             this.btnModificar22.Size = new System.Drawing.Size(75, 23);
             this.btnModificar22.TabIndex = 21;
@@ -123,13 +121,11 @@
             // gbxcliente
             // 
             this.gbxcliente.Controls.Add(this.cmbTarifa22);
-            this.gbxcliente.Controls.Add(this.cbxSi22);
             this.gbxcliente.Controls.Add(this.cmbempleado22);
             this.gbxcliente.Controls.Add(this.cmbAutomovil22);
             this.gbxcliente.Controls.Add(this.label9);
             this.gbxcliente.Controls.Add(this.label8);
             this.gbxcliente.Controls.Add(this.txtTipoa);
-            this.gbxcliente.Controls.Add(this.label6);
             this.gbxcliente.Controls.Add(this.label1);
             this.gbxcliente.Controls.Add(this.txtEntrada22);
             this.gbxcliente.Controls.Add(this.label5);
@@ -138,36 +134,24 @@
             this.gbxcliente.Controls.Add(this.txtSalida22);
             this.gbxcliente.Controls.Add(this.label4);
             this.gbxcliente.Controls.Add(this.label3);
-            this.gbxcliente.Location = new System.Drawing.Point(18, 20);
+            this.gbxcliente.Location = new System.Drawing.Point(30, 315);
             this.gbxcliente.Name = "gbxcliente";
-            this.gbxcliente.Size = new System.Drawing.Size(858, 225);
+            this.gbxcliente.Size = new System.Drawing.Size(858, 167);
             this.gbxcliente.TabIndex = 24;
             this.gbxcliente.TabStop = false;
             // 
             // cmbTarifa22
             // 
             this.cmbTarifa22.FormattingEnabled = true;
-            this.cmbTarifa22.Location = new System.Drawing.Point(609, 142);
+            this.cmbTarifa22.Location = new System.Drawing.Point(601, 103);
             this.cmbTarifa22.Name = "cmbTarifa22";
             this.cmbTarifa22.Size = new System.Drawing.Size(204, 21);
             this.cmbTarifa22.TabIndex = 20;
             // 
-            // cbxSi22
-            // 
-            this.cbxSi22.AutoSize = true;
-            this.cbxSi22.Checked = true;
-            this.cbxSi22.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxSi22.Location = new System.Drawing.Point(609, 178);
-            this.cbxSi22.Name = "cbxSi22";
-            this.cbxSi22.Size = new System.Drawing.Size(35, 17);
-            this.cbxSi22.TabIndex = 18;
-            this.cbxSi22.Text = "Si";
-            this.cbxSi22.UseVisualStyleBackColor = true;
-            // 
             // cmbempleado22
             // 
             this.cmbempleado22.FormattingEnabled = true;
-            this.cmbempleado22.Location = new System.Drawing.Point(608, 68);
+            this.cmbempleado22.Location = new System.Drawing.Point(600, 29);
             this.cmbempleado22.Name = "cmbempleado22";
             this.cmbempleado22.Size = new System.Drawing.Size(204, 21);
             this.cmbempleado22.TabIndex = 17;
@@ -176,7 +160,7 @@
             // cmbAutomovil22
             // 
             this.cmbAutomovil22.FormattingEnabled = true;
-            this.cmbAutomovil22.Location = new System.Drawing.Point(148, 147);
+            this.cmbAutomovil22.Location = new System.Drawing.Point(148, 87);
             this.cmbAutomovil22.Name = "cmbAutomovil22";
             this.cmbAutomovil22.Size = new System.Drawing.Size(204, 21);
             this.cmbAutomovil22.TabIndex = 16;
@@ -185,7 +169,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(474, 111);
+            this.label9.Location = new System.Drawing.Point(466, 72);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(124, 13);
             this.label9.TabIndex = 15;
@@ -194,7 +178,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(29, 191);
+            this.label8.Location = new System.Drawing.Point(29, 116);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 13);
             this.label8.TabIndex = 13;
@@ -202,24 +186,15 @@
             // 
             // txtTipoa
             // 
-            this.txtTipoa.Location = new System.Drawing.Point(148, 184);
+            this.txtTipoa.Location = new System.Drawing.Point(148, 116);
             this.txtTipoa.Name = "txtTipoa";
             this.txtTipoa.Size = new System.Drawing.Size(204, 20);
             this.txtTipoa.TabIndex = 14;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(489, 178);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 13);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Otro Servicio";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 71);
+            this.label1.Location = new System.Drawing.Point(29, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 13);
             this.label1.TabIndex = 1;
@@ -227,7 +202,7 @@
             // 
             // txtEntrada22
             // 
-            this.txtEntrada22.Location = new System.Drawing.Point(148, 71);
+            this.txtEntrada22.Location = new System.Drawing.Point(148, 33);
             this.txtEntrada22.Name = "txtEntrada22";
             this.txtEntrada22.Size = new System.Drawing.Size(204, 20);
             this.txtEntrada22.TabIndex = 2;
@@ -235,7 +210,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(489, 145);
+            this.label5.Location = new System.Drawing.Point(481, 106);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 9;
@@ -244,7 +219,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 111);
+            this.label2.Location = new System.Drawing.Point(29, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 13);
             this.label2.TabIndex = 3;
@@ -252,14 +227,14 @@
             // 
             // txtnombre11
             // 
-            this.txtnombre11.Location = new System.Drawing.Point(608, 106);
+            this.txtnombre11.Location = new System.Drawing.Point(600, 67);
             this.txtnombre11.Name = "txtnombre11";
             this.txtnombre11.Size = new System.Drawing.Size(204, 20);
             this.txtnombre11.TabIndex = 8;
             // 
             // txtSalida22
             // 
-            this.txtSalida22.Location = new System.Drawing.Point(148, 111);
+            this.txtSalida22.Location = new System.Drawing.Point(148, 59);
             this.txtSalida22.Name = "txtSalida22";
             this.txtSalida22.Size = new System.Drawing.Size(204, 20);
             this.txtSalida22.TabIndex = 4;
@@ -267,7 +242,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(474, 72);
+            this.label4.Location = new System.Drawing.Point(466, 33);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(128, 13);
             this.label4.TabIndex = 7;
@@ -276,7 +251,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 147);
+            this.label3.Location = new System.Drawing.Point(29, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 5;
@@ -284,7 +259,7 @@
             // 
             // btnguarda22
             // 
-            this.btnguarda22.Location = new System.Drawing.Point(923, 46);
+            this.btnguarda22.Location = new System.Drawing.Point(867, 104);
             this.btnguarda22.Name = "btnguarda22";
             this.btnguarda22.Size = new System.Drawing.Size(75, 23);
             this.btnguarda22.TabIndex = 20;
@@ -328,13 +303,11 @@
         private System.Windows.Forms.Button btnModificar22;
         private System.Windows.Forms.GroupBox gbxcliente;
         private System.Windows.Forms.ComboBox cmbTarifa22;
-        private System.Windows.Forms.CheckBox cbxSi22;
         private System.Windows.Forms.ComboBox cmbempleado22;
         private System.Windows.Forms.ComboBox cmbAutomovil22;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTipoa;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtEntrada22;
         private System.Windows.Forms.Label label5;

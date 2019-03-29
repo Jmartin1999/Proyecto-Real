@@ -9,8 +9,9 @@ namespace appLyPSistematizado.Datos
 {
     class clCliente
     {
+        
+        public string NombresYApellidos { get; set; }
         public string Documento { get; set; }
-        public string NombresApellidos { get; set; }
         public string Telefono { get; set; }
         public string Direccion { get; set; }
         public string Fecha { get; set; }
@@ -27,7 +28,7 @@ namespace appLyPSistematizado.Datos
             for (int i = 0; i < dtCliente.Rows.Count; i++)
             {
                 clCliente objcliente = new clCliente();
-                objcliente.NombresApellidos = dtCliente.Rows[i]["NombresYApellidos"].ToString();
+                objcliente.NombresYApellidos = dtCliente.Rows[i]["NombresYApellidos"].ToString();
                 objcliente.Documento = dtCliente.Rows[i]["Documento"].ToString();
                 objcliente.Telefono = dtCliente.Rows[i]["Telefono"].ToString();
                 objcliente.Direccion = dtCliente.Rows[i]["Direccion"].ToString();
@@ -41,7 +42,7 @@ namespace appLyPSistematizado.Datos
         public int mtdRegistrar()
         {
             string consulta = "insert into Cliente (NombresYApellidos,Documento,Telefono,Direccion,Fecha)"
-                + "values ('" + NombresApellidos + "','" + Documento + "','" + Telefono + "','" + Direccion + "','" + Fecha + "')";
+                + "values ('" + NombresYApellidos + "','" + Documento + "','" + Telefono + "','" + Direccion + "','" + Fecha + "')";
             int cint = objConeexion.mtdConectado(consulta);
             return cint;
         }
@@ -55,7 +56,7 @@ namespace appLyPSistematizado.Datos
         }
         public int mtdModificar()
         {
-            string consulta = "update Cliente set NombresYApellidos='" + NombresApellidos + "',Documento='" + Documento + "',Telefono='" + Telefono + "',Direccion='" + Direccion + "' ,Fecha='" + Fecha + "' where Documento = '" + Documento + "' ";
+            string consulta = "update Cliente set NombresYApellidos='" + NombresYApellidos + "',Documento='" + Documento + "',Telefono='" + Telefono + "',Direccion='" + Direccion + "' ,Fecha='" + Fecha + "' where Documento = '" + Documento + "' ";
             int cannnn = objConeexion.mtdConectado(consulta);
             return cannnn;
         }
