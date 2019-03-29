@@ -61,6 +61,7 @@
     <Compile Include="Datos\clpersona2.cs" />
     <Compile Include="Datos\clServicio.cs" />
     <Compile Include="Datos\cltarifa2.cs" />
+    <Compile Include="Datos\clTipo.cs" />
     <Compile Include="Datos\clValidacion3.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -124,6 +125,12 @@
     <Compile Include="Vista\frmServicios.Designer.cs">
       <DependentUpon>frmServicios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\frmTarifa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmTarifa.Designer.cs">
+      <DependentUpon>frmTarifa.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmServicios.resx">
       <DependentUpon>frmServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmTarifa.resx">
+      <DependentUpon>frmTarifa.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

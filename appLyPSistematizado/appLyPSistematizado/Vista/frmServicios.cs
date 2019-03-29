@@ -35,5 +35,11 @@ namespace appLyPSistematizado.Vista
             frmAutomovil objautomovil = new frmAutomovil();
             objautomovil.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmTarifa objtarifa = new frmTarifa();
+            objtarifa.Show();
+        }
     }
 }

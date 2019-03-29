@@ -21,7 +21,7 @@ namespace appLyPSistematizado.Vista
 
             clLogin objLogin = new clLogin();
             bool incorrecto = false;
-            ListaUsuario = objLogin.mtdListar();
+            ListaUsuario = objLogin.mtdListarCorreos();
             for (int i = 0; i < ListaUsuario.Count; i++)
             {
                 if (ListaUsuario[i].Correo == txtCorreo.Text)
