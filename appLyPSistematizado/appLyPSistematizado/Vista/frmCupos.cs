@@ -55,7 +55,7 @@ namespace appLyPSistematizado.Vista
             }
             
 
-            frmAutomovil objAutomovil = new frmAutomovil();
+            frmAutomovil objAutomovil = new frmAutomovil("");
             objAutomovil.Show();
             
 
