@@ -41,5 +41,16 @@ namespace appLyPSistematizado.Vista
             frmTarifa objtarifa = new frmTarifa();
             objtarifa.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmServicio Objservicio = new frmServicio();
+            Objservicio.Show();
+        }
+
+        private void frmServicios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

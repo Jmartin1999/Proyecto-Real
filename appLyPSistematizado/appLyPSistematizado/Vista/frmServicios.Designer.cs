@@ -120,9 +120,11 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(1054, 135);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(161, 133);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -141,18 +143,21 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(823, 271);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 13);
+            this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Servicio";
+            this.label6.Text = "Salida ";
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(815, 135);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(161, 133);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // frmServicios
             // 
@@ -170,8 +175,10 @@
             this.Controls.Add(this.pbMensualidad);
             this.Controls.Add(this.pbLavado);
             this.Controls.Add(this.pbParqueo);
+            this.MaximizeBox = false;
             this.Name = "frmServicios";
             this.Text = "SERVICIOS";
+            this.Load += new System.EventHandler(this.frmServicios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbParqueo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLavado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMensualidad)).EndInit();
