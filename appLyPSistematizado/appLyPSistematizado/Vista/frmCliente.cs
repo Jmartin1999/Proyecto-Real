@@ -36,17 +36,20 @@ namespace appLyPSistematizado.Vista
             {
                 clCliente objcliente = new clCliente();
                 
-                objcliente.NombresApellidos = txtNom11.Text;
+                objcliente.NombresYApellidos = txtNom11.Text;
                 objcliente.Documento = txtDoc11.Text;
                 objcliente.Telefono = txtTelf11.Text;
                 objcliente.Direccion = txtDirec11.Text;
                 objcliente.Fecha = txtFecha11.Text;
                 int numm = objcliente.mtdRegistrar();
+                frmAutomovil objAutomovil = new frmAutomovil();
                 if (numm > 0)
                 {
                     MessageBox.Show("Datos Registrados");
                     clCliente objCliente = new clCliente();
                     dgvCliente.DataSource = objCliente.mtdListar();
+                  
+                    objAutomovil.Show();
                 }
                 else
                 {
@@ -57,8 +60,7 @@ namespace appLyPSistematizado.Vista
                 txtTelf11.Clear();
                 txtDirec11.Clear();
                 txtFecha11.Clear();
-                frmAutomovil objAutomovil = new frmAutomovil();
-                objAutomovil.Show();
+               
             }
         }
 
@@ -86,7 +88,7 @@ namespace appLyPSistematizado.Vista
         {
             clCliente objcliente = new clCliente();
             
-            objcliente.NombresApellidos = txtNom11.Text;
+            objcliente.NombresYApellidos = txtNom11.Text;
             objcliente.Documento = txtDoc11.Text;
             objcliente.Telefono = txtTelf11.Text;
             objcliente.Direccion = txtDirec11.Text;
