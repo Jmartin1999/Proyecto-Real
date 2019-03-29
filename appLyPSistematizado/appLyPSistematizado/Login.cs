@@ -47,10 +47,10 @@ namespace appLyPSistematizado
             {
                 if (listaUsuario[i].Correo == txtUsuario.Text && listaUsuario[i].Contraseña == txtContraseña.Text && listaUsuario[i].Rol == cmbRol.Text)
                 {
-                    cmbRol.Text = "Administrador";
+                    cmbRol.Text = "ADMINISTRADOR";
                     objServicios.Show();
                 }
-                else if (cmbRol.Text == "Jefe")
+                else if (cmbRol.Text == "JEFE")
                 {
                     MessageBox.Show("No puede ingresar");
                 }
@@ -58,7 +58,7 @@ namespace appLyPSistematizado
             
                 else if (listaUsuario[i].Correo == txtUsuario.Text && listaUsuario[i].Contraseña == txtContraseña.Text && listaUsuario[i].Rol==cmbRol.Text)
                 {
-                    cmbRol.Text = "Jefe";
+                    cmbRol.Text = "JEFE";
                     objJefe.Show();
                 }
 

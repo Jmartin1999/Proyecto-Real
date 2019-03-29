@@ -22,6 +22,8 @@ namespace appLyPSistematizado.Vista
         clValidacion3 objvalidacion = new clValidacion3();
         private void frmAutomovil_Load(object sender, EventArgs e)
         {
+            
+            cbxIdCliente.Visible = false;
             clAutomovil3 objAutomovil = new clAutomovil3();
             List<clAutomovil3> listadatos2 = new List<clAutomovil3>();
             listadatos2 = objAutomovil.mtdListar();
