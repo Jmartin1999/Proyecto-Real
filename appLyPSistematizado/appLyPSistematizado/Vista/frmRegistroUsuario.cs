@@ -1,6 +1,6 @@
 ﻿using appLyPSistematizado.Datos;
 using System;
-using System.Collections.Generic;
+using System.Data;
 using System.Net;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
@@ -14,11 +14,11 @@ namespace appLyPSistematizado.Vista
         {
             InitializeComponent();
         }
-        List<clLogin> listaCorreo = new List<clLogin>();
+
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
+            bool incorrecto = false;
             clLogin objLogin = new clLogin();
             objLogin.Documento = txtDocumento.Text;
             objLogin.NombreP = txtNombres.Text;
@@ -27,25 +27,36 @@ namespace appLyPSistematizado.Vista
             objLogin.Correo = txtCorreo.Text;
             objLogin.Contraseña = txtContraseña.Text;
             objLogin.Rol = cmbRol.Text;
-       
-          
 
-            listaCorreo = objLogin.mtdListarCorreos();
-            for (int i = 0; i < listaCorreo.Count; i++)
+
+            DataTable listarepeticion = new DataTable();
+            listarepeticion = objLogin.mtdListarCorreos();
+            for (int i = 0; i < listarepeticion.Rows.Count; i++)
 
             {
-                if (listaCorreo[i].Correo == txtCorreo.Text)
+                if (Convert.ToString(listarepeticion.Rows[i]["Correo"]) == txtCorreo.Text)
                 {
-                    MessageBox.Show("Este Correo ya esta registrado");
+                    incorrecto = true;
+                    
                 }
                 else
                 {
+                    incorrecto = true;
+                    MessageBox.Show("Este Correo ya esta registrado");
+                }
+                if (incorrecto == false)
+                {
                     objLogin.mtdRegistrar();
                     MessageBox.Show("Registrado");
+                 
                 }
 
             }
+
         }
+
+
+
 
 
 
@@ -111,5 +122,6 @@ namespace appLyPSistematizado.Vista
 
     }
 }
+
 
 

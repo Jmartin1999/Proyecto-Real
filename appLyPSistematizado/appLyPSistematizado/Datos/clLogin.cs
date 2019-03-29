@@ -53,7 +53,7 @@ namespace appLyPSistematizado.Datos
             return listaUsuarios;
 
         }
-        public List<clLogin> mtdListarCorreos()
+        public DataTable mtdListarCorreos()
         {
 
 
@@ -61,19 +61,13 @@ namespace appLyPSistematizado.Datos
           DataTable dtLogin1 = new DataTable();
             string consulta = "select Correo  from Persona";
             dtLogin1 = objConexion.mtdDesconectado(consulta);
-            for (int i = 0; i < dtLogin1.Rows.Count; i++)
-            {
-                clLogin objLogin = new clLogin();
-                objLogin.Correo = dtLogin1.Rows[i]["Correo"].ToString();
-                
-                listaCorreo.Add(objLogin);
-            }
-            return listaCorreo;
+            
+            return dtLogin1;
 
         }
         public int mtdModificarPersona()
         {
-            string consulta = "Update Persona set Documento='" + Documento + "',NombreP='" + NombreP + "',Dirrecion='" + Direccion + "',Telefono='" + Telefono + "',Correo='" + Correo + "',Contraseña='" + Contraseña + "',Rol='" + Rol + "',SueldoBasico='" + SueldoBasico + "' where  Documento='" + Documento + "'";
+            string consulta = "Update Persona set Documento='" + Documento + "',NombreP='" + NombreP + "',Dirrecion='" + Direccion + "',Telefono='" + Telefono + "',Correo='" + Correo + "',Contraseña='" + Contraseña + "',Rol='" + Rol + "',SueldoBasico=" + SueldoBasico + " where  Documento='" + Documento + "'";
             int cantidad = objConexion.mtdConectado(consulta);
             return cantidad;
         }

@@ -14,7 +14,7 @@ namespace appLyPSistematizado.Vista
         {
             InitializeComponent();
         }
-        List<clLogin> listapersonal = new List<clLogin>();
+     
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
@@ -37,7 +37,7 @@ namespace appLyPSistematizado.Vista
             {
                 MessageBox.Show("ERORRRRRRRRRR");
             }
-            mtdEnviar();
+    
 
         }
         public static bool validaremail(string email)

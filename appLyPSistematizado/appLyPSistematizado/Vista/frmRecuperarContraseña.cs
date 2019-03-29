@@ -1,6 +1,7 @@
 ﻿using appLyPSistematizado.Datos;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Net;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
@@ -21,10 +22,11 @@ namespace appLyPSistematizado.Vista
 
             clLogin objLogin = new clLogin();
             bool incorrecto = false;
-            ListaUsuario = objLogin.mtdListarCorreos();
-            for (int i = 0; i < ListaUsuario.Count; i++)
+            DataTable listarUsuario = new DataTable();
+            listarUsuario = objLogin.mtdListarCorreos();
+            for (int i = 0; i < listarUsuario.Rows.Count; i++)
             {
-                if (ListaUsuario[i].Correo == txtCorreo.Text)
+                if (Convert.ToString( listarUsuario.Rows[i]["Correo"]) == txtCorreo.Text)
                 {
                     objLogin.Contraseña = txtContraseña.Text;
                     int can = objLogin.mtdModificarContraseña();
