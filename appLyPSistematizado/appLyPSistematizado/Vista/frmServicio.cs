@@ -26,16 +26,7 @@ namespace appLyPSistematizado.Vista
             objservicio.IdAutomovil = Convert.ToInt32(cmbAutomovil22.SelectedValue);
             objservicio.IdPersona = Convert.ToInt32(cmbempleado22.SelectedValue);
             objservicio.IdTarifa = Convert.ToInt32(cmbTarifa22.SelectedValue);
-            //string respuesta;
-            //if (cbxSi22.Checked)
-            //{
-            //    respuesta = "Si";
-            //}
-            //else
-            //{
-            //    respuesta = "No";
-            //}
-            //objservicio.Otro = respuesta;
+            
             int canttt = objservicio.mtdRegistar22();
             if (canttt > 0)
             {
@@ -94,9 +85,7 @@ namespace appLyPSistematizado.Vista
             objservicio.IdAutomovil = Convert.ToInt32(cmbAutomovil22.Text);
             objservicio.IdPersona = Convert.ToInt32(cmbempleado22.Text);
             objservicio.IdTarifa = Convert.ToInt32(cmbTarifa22.Text);
-            //objservicio.Otro = cbxSi22.Text;
-
-
+            
             int cant = objservicio.mtdModificar();
             if (cant > 0)
             {
@@ -117,7 +106,7 @@ namespace appLyPSistematizado.Vista
             cmbAutomovil22.Text = Convert.ToString(dgvServicio.CurrentRow.Cells[2].Value);
             cmbempleado22.Text = Convert.ToString(dgvServicio.CurrentRow.Cells[3].Value);
             cmbTarifa22.Text = Convert.ToString(dgvServicio.CurrentRow.Cells[4].Value);
-            //cbxSi22.Text = Convert.ToString(dgvServicio.CurrentRow.Cells[0].Value);
+            
         }
 
         private void cmbAutomovil22_SelectedIndexChanged(object sender, EventArgs e)
@@ -147,6 +136,11 @@ namespace appLyPSistematizado.Vista
             //clServicio Objservicio = new clServicio();
             //Objservicio.IdAutomovil = txtBuscar22.Text;
             //Objservicio.mtdEliminar22();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            txtEntrada22.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
     }
 }

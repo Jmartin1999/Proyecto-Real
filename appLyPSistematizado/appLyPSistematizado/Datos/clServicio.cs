@@ -14,7 +14,7 @@ namespace appLyPSistematizado.Datos
         public int IdAutomovil { get; set; }
         public int IdPersona { get; set; }
         public int IdTarifa { get; set; }
-        //public string Otro { get; set; }
+        
 
         clConexion objconeexion = new clConexion();
 
@@ -33,7 +33,7 @@ namespace appLyPSistematizado.Datos
                 ObjServicio.IdAutomovil = Convert.ToInt32(dtservicios.Rows[i]["IdAutomovil"]);
                 ObjServicio.IdPersona = Convert.ToInt32(dtservicios.Rows[i]["IdPersona"]);
                 ObjServicio.IdTarifa = Convert.ToInt32(dtservicios.Rows[i]["IdTarifa"]);
-                //ObjServicio.Otro = dtservicios.Rows[i]["Otro"].ToString();
+                
                 listaservicios.Add(ObjServicio);
 
             }
@@ -51,13 +51,13 @@ namespace appLyPSistematizado.Datos
         public int mtdRegistar22()
         {
             string consulta = "insert into Servicio (FechaHoraE, FechaHoraS, IdAutomovil,IdPersona,IdTarifa)"
-                 + "values ('" + entrada + "', '" + salida + "','" + IdAutomovil + "','" + IdPersona + "','" + IdTarifa + "')";   /*,Otro*/ /*,'" + Otro + "'*/
+                 + "values ('" + entrada + "', '" + salida + "','" + IdAutomovil + "','" + IdPersona + "','" + IdTarifa + "')";   
             int cantid = objconeexion.mtdConectado(consulta);
             return cantid;
         }
         public int mtdModificar()
         {
-            string consulta = "update Servicio set FechaHoraE='" + entrada + "',FechaHoraS='" + salida + "',IdAutomovil='" + IdAutomovil + "',IdPersona='" + IdPersona + "' ,IdTarifa='" + IdTarifa + "' where IdAutomovil = '" + IdAutomovil + "' "; /*, Otro = '" + Otro + "'*/
+            string consulta = "update Servicio set FechaHoraE='" + entrada + "',FechaHoraS='" + salida + "',IdAutomovil='" + IdAutomovil + "',IdPersona='" + IdPersona + "' ,IdTarifa='" + IdTarifa + "' where IdAutomovil = '" + IdAutomovil + "' "; 
             int cannnn = objconeexion.mtdConectado(consulta);
             return cannnn;
         }

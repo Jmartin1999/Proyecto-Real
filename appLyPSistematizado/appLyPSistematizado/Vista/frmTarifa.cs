@@ -56,6 +56,9 @@ namespace appLyPSistematizado.Vista
                 {
                     MessageBox.Show("No se registro");
                 }
+                txtTipoS.Clear();
+                txtTipoV.Clear();
+                txtCosto.Clear();
             }
         }
 
