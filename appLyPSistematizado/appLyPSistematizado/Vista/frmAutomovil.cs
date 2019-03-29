@@ -15,11 +15,16 @@ namespace appLyPSistematizado.Vista
 {
     public partial class frmAutomovil : Form
     {
-        public frmAutomovil()
+        public frmAutomovil(string dato)
         {
             InitializeComponent();
+            r = dato;
+            label10.Text = "Parqueo";
         }
+        frmServicios objServicios = new frmServicios();
         clValidacion3 objvalidacion = new clValidacion3();
+        string r = "";
+
         private void frmAutomovil_Load(object sender, EventArgs e)
         {
             
@@ -183,5 +188,12 @@ namespace appLyPSistematizado.Vista
             txtObservaciones.Text = Convert.ToString(dgvAutomovil.CurrentRow.Cells[4].Value);
             cbxIdCliente.Text = Convert.ToString(dgvAutomovil.CurrentRow.Cells[5].Value);
         }
+
+        private void dgvAutomovil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+  
     }
 }

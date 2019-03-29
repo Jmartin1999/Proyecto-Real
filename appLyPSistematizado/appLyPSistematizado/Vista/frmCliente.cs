@@ -56,7 +56,7 @@ namespace appLyPSistematizado.Vista
                 {
                     MessageBox.Show("Datos no Registrados");
                 }
-                frmAutomovil objAutomovil = new frmAutomovil();
+                frmAutomovil objAutomovil = new frmAutomovil("");
                 objAutomovil.Show();
 
                 txtNom11.Clear();

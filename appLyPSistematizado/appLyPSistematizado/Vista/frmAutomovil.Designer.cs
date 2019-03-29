@@ -49,6 +49,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegistro = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutomovil)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,14 +97,14 @@
             // cbxIdCliente
             // 
             this.cbxIdCliente.FormattingEnabled = true;
-            this.cbxIdCliente.Location = new System.Drawing.Point(527, 134);
+            this.cbxIdCliente.Location = new System.Drawing.Point(527, 145);
             this.cbxIdCliente.Name = "cbxIdCliente";
             this.cbxIdCliente.Size = new System.Drawing.Size(180, 21);
             this.cbxIdCliente.TabIndex = 44;
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(346, 184);
+            this.btnEditar.Location = new System.Drawing.Point(426, 184);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 43;
@@ -143,11 +145,12 @@
             this.dgvAutomovil.Name = "dgvAutomovil";
             this.dgvAutomovil.Size = new System.Drawing.Size(728, 150);
             this.dgvAutomovil.TabIndex = 39;
+            this.dgvAutomovil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAutomovil_CellContentClick);
             this.dgvAutomovil.DoubleClick += new System.EventHandler(this.dgvAutomovil_DoubleClick);
             // 
             // txtObservaciones
             // 
-            this.txtObservaciones.Location = new System.Drawing.Point(527, 83);
+            this.txtObservaciones.Location = new System.Drawing.Point(527, 94);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(180, 41);
@@ -156,7 +159,7 @@
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(527, 57);
+            this.txtMarca.Location = new System.Drawing.Point(527, 68);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(180, 20);
             this.txtMarca.TabIndex = 37;
@@ -181,7 +184,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(444, 137);
+            this.label6.Location = new System.Drawing.Point(444, 148);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 34;
@@ -189,7 +192,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(423, 97);
+            this.label5.Location = new System.Drawing.Point(423, 108);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 33;
@@ -198,7 +201,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(444, 64);
+            this.label4.Location = new System.Drawing.Point(444, 75);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 32;
@@ -233,7 +236,7 @@
             // 
             // btnRegistro
             // 
-            this.btnRegistro.Location = new System.Drawing.Point(236, 184);
+            this.btnRegistro.Location = new System.Drawing.Point(279, 184);
             this.btnRegistro.Name = "btnRegistro";
             this.btnRegistro.Size = new System.Drawing.Size(75, 23);
             this.btnRegistro.TabIndex = 28;
@@ -241,11 +244,31 @@
             this.btnRegistro.UseVisualStyleBackColor = true;
             this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(415, 39);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(86, 13);
+            this.label9.TabIndex = 49;
+            this.label9.Text = "Tipo De Servicio";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(524, 39);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(19, 13);
+            this.label10.TabIndex = 50;
+            this.label10.Text = "10";
+            // 
             // frmAutomovil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label8);
@@ -299,5 +322,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRegistro;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
