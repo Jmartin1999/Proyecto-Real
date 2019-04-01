@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 using appLyPSistematizado.Datos;
 
 namespace appLyPSistematizado.Vista
@@ -16,6 +17,7 @@ namespace appLyPSistematizado.Vista
         public frmServicio()
         {
             InitializeComponent();
+            timer1.Enabled = true;
         }
 
         private void btnguarda22_Click(object sender, EventArgs e)
@@ -39,6 +41,9 @@ namespace appLyPSistematizado.Vista
                 MessageBox.Show("Datos no Registrados");
             }
         }
+
+        DateTime entradaV = DateTime.Now;
+        DateTime SalidaV = DateTime.Now;
 
         private void frmServicio_Load(object sender, EventArgs e)
         {
@@ -75,6 +80,12 @@ namespace appLyPSistematizado.Vista
             cmbTarifa22.DataSource = dttarifa;
             cmbTarifa22.DisplayMember = "Tipo";
             cmbTarifa22.ValueMember = "IdTarifa";
+
+
+            //fecha y hora 
+            txtEntrada22.Text = entradaV.ToString("dd/MM/yyyy hh:mm:ss");
+            //dd=dias  //MM=meses  //yyyy=año  //hh=hora  //mm=minuto  //ss=segundos
+
         }
 
         private void btnModificar22_Click(object sender, EventArgs e)
@@ -136,11 +147,46 @@ namespace appLyPSistematizado.Vista
             //clServicio Objservicio = new clServicio();
             //Objservicio.IdAutomovil = txtBuscar22.Text;
             //Objservicio.mtdEliminar22();
+
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            txtEntrada22.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            label10.Text = DateTime.Now.ToString();
+
+        }
+
+        private void chbsalida_CheckedChanged(object sender, EventArgs e)
+        {
+            string respuesta;
+
+            if (chbsalida.Checked)
+            {
+                respuesta = txtSalida22.Text = SalidaV.ToString(@"dd/MM/yyyy hh:mm:ss");
+            }
+            else
+            {
+                respuesta = "";
+            }
+        }
+
+        private void btnFactura_Click(object sender, EventArgs e)
+        {
+            //frmTotalPagar pagar = new frmTotalPagar();
+            //pagar.Show();
+            
+            TimeSpan tiempoDiferencia = DateTime.Now - entradaV;
+            string tiempo = tiempoDiferencia.ToString();
+            MessageBox.Show(tiempo );
+
+
+
+
+
+
+
+
         }
     }
 }

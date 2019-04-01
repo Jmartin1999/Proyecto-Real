@@ -170,6 +170,28 @@ namespace appLyPSistematizado.Vista
            txtSueldo.Text = Convert.ToString(dgvPersonal.CurrentRow.Cells[7].Value);
 
         }
+        clValidacion3 objvalidacion = new clValidacion3();
+
+        private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            objvalidacion.mtdSolNumeros(e);
+        }
+
+        private void txtNombres_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            objvalidacion.mtdSololetras(e);
+            objvalidacion.mtdSoloMayusculas(e);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            objvalidacion.mtdSolNumeros(e);
+        }
+
+        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            objvalidacion.mtdSoloMayusculas(e);
+        }
     }
 }
 

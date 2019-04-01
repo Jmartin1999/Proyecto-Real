@@ -92,6 +92,7 @@
             this.pbTipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbTipo.TabIndex = 4;
             this.pbTipo.TabStop = false;
+            this.pbTipo.Click += new System.EventHandler(this.pbTipo_Click);
             // 
             // label3
             // 

@@ -58,7 +58,7 @@
             // 
             this.txtContraseña.Location = new System.Drawing.Point(267, 158);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(100, 20);
+            this.txtContraseña.Size = new System.Drawing.Size(155, 20);
             this.txtContraseña.TabIndex = 5;
             this.txtContraseña.UseSystemPasswordChar = true;
             // 
@@ -85,7 +85,7 @@
             // 
             this.txtCorreo.Location = new System.Drawing.Point(267, 105);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(100, 20);
+            this.txtCorreo.Size = new System.Drawing.Size(155, 20);
             this.txtCorreo.TabIndex = 9;
             this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
             // 

@@ -28,5 +28,12 @@ namespace appLyPSistematizado.Vista
         {
             objServicios.Show();
         }
+
+        private void pbTipo_Click(object sender, EventArgs e)
+        {
+            frmTarifa tarifa = new frmTarifa();
+            tarifa.Show();
+
+        }
     }
 }
