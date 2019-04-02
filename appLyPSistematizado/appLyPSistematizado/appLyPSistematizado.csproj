@@ -89,17 +89,11 @@
     <Compile Include="Vista\frmCupos.Designer.cs">
       <DependentUpon>frmCupos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\frmJefe.cs">
+    <Compile Include="Vista\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\frmJefe.Designer.cs">
-      <DependentUpon>frmJefe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\frmRecuperarContraseña.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\frmRecuperarContraseña.Designer.cs">
-      <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
+    <Compile Include="Vista\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmRegistroPersonal.cs">
       <SubType>Form</SubType>
@@ -158,11 +152,8 @@
     <EmbeddedResource Include="Vista\frmCupos.resx">
       <DependentUpon>frmCupos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmJefe.resx">
-      <DependentUpon>frmJefe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmRecuperarContraseña.resx">
-      <DependentUpon>frmRecuperarContraseña.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmRegistroPersonal.resx">
       <DependentUpon>frmRegistroPersonal.cs</DependentUpon>

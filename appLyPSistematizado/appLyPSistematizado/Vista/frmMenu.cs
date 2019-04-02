@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace appLyPSistematizado.Vista
 {
-    public partial class frmJefe : Form
+    public partial class frmMenu : Form
     {
-        public frmJefe()
+        public frmMenu()
         {
             InitializeComponent();
         }
