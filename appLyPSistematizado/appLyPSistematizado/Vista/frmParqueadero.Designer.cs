@@ -49,7 +49,7 @@
             this.btnRegistro = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.chbsalida = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtEntrada22 = new System.Windows.Forms.TextBox();
@@ -57,10 +57,10 @@
             this.txtSalida22 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtTiempotrans = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtTarifaParqueo = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtTiempotrans = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutomovil)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -281,17 +281,17 @@
             this.label10.TabIndex = 50;
             this.label10.Text = "10";
             // 
-            // comboBox1
+            // cmbEstado
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbEstado.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
             "BUENO",
             "MALO"});
-            this.comboBox1.Location = new System.Drawing.Point(205, 239);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(278, 31);
-            this.comboBox1.TabIndex = 51;
+            this.cmbEstado.Location = new System.Drawing.Point(205, 239);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(278, 31);
+            this.cmbEstado.TabIndex = 51;
             // 
             // chbsalida
             // 
@@ -360,7 +360,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtSalida22);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmbEstado);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtPlaca);
@@ -390,24 +390,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(78, 25);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(151, 23);
-            this.label13.TabIndex = 58;
-            this.label13.Text = "Tiempo transcurido";
-            // 
-            // txtTiempotrans
-            // 
-            this.txtTiempotrans.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTiempotrans.Location = new System.Drawing.Point(59, 49);
-            this.txtTiempotrans.Name = "txtTiempotrans";
-            this.txtTiempotrans.Size = new System.Drawing.Size(204, 30);
-            this.txtTiempotrans.TabIndex = 59;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -426,14 +408,32 @@
             this.txtTarifaParqueo.Size = new System.Drawing.Size(204, 30);
             this.txtTarifaParqueo.TabIndex = 61;
             // 
-            // frmAutomovil
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(78, 25);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(151, 23);
+            this.label13.TabIndex = 58;
+            this.label13.Text = "Tiempo transcurido";
+            // 
+            // txtTiempotrans
+            // 
+            this.txtTiempotrans.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTiempotrans.Location = new System.Drawing.Point(59, 49);
+            this.txtTiempotrans.Name = "txtTiempotrans";
+            this.txtTiempotrans.Size = new System.Drawing.Size(204, 30);
+            this.txtTiempotrans.TabIndex = 59;
+            // 
+            // frmParqueadero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 637);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvAutomovil);
-            this.Name = "frmAutomovil";
+            this.Name = "frmParqueadero";
             this.Text = "Parqueo";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAutomovil_Load);
@@ -469,7 +469,7 @@
         private System.Windows.Forms.Button btnRegistro;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.CheckBox chbsalida;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtEntrada22;

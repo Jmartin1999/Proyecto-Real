@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using appLyPSistematizado.Vista;
 
 namespace appLyPSistematizado
 {
@@ -18,7 +17,7 @@ namespace appLyPSistematizado
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmParqueadero());
+            Application.Run(new Login());
         }
     }
 }
