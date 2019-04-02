@@ -11,9 +11,9 @@ using appLyPSistematizado.Datos;
 
 namespace appLyPSistematizado.Vista
 {
-    public partial class frmCliente : Form
+    public partial class frmMensualidad : Form
     {
-        public frmCliente()
+        public frmMensualidad()
         {
             InitializeComponent();
         }
@@ -57,7 +57,7 @@ namespace appLyPSistematizado.Vista
                 {
                     MessageBox.Show("Datos no Registrados");
                 }
-                frmAutomovil objAutomovil = new frmAutomovil("");
+                frmParqueadero objAutomovil = new frmParqueadero("");
                 objAutomovil.Show();
 
                 txtNom11.Clear();

@@ -13,9 +13,9 @@ using System.Data;
 
 namespace appLyPSistematizado.Vista
 {
-    public partial class frmAutomovil : Form
+    public partial class frmParqueadero : Form
     {
-        public frmAutomovil(string dato)
+        public frmParqueadero(string dato)
         {
             InitializeComponent();
             r = dato;
@@ -200,6 +200,26 @@ namespace appLyPSistematizado.Vista
         }
 
         private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPlaca_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
         {
 
         }

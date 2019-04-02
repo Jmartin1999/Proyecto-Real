@@ -71,17 +71,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vista\frmAutomovil.cs">
+    <Compile Include="Vista\frmParqueadero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\frmAutomovil.Designer.cs">
-      <DependentUpon>frmAutomovil.cs</DependentUpon>
+    <Compile Include="Vista\frmParqueadero.Designer.cs">
+      <DependentUpon>frmParqueadero.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\frmCliente.cs">
+    <Compile Include="Vista\frmMensualidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\frmCliente.Designer.cs">
-      <DependentUpon>frmCliente.cs</DependentUpon>
+    <Compile Include="Vista\frmMensualidad.Designer.cs">
+      <DependentUpon>frmMensualidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmCupos.cs">
       <SubType>Form</SubType>
@@ -101,11 +101,11 @@
     <Compile Include="Vista\frmRegistroPersonal.Designer.cs">
       <DependentUpon>frmRegistroPersonal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\frmServicio.cs">
+    <Compile Include="Vista\frmLavado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\frmServicio.Designer.cs">
-      <DependentUpon>frmServicio.cs</DependentUpon>
+    <Compile Include="Vista\frmLavado.Designer.cs">
+      <DependentUpon>frmLavado.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmTarifa.cs">
       <SubType>Form</SubType>
@@ -125,11 +125,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vista\frmAutomovil.resx">
-      <DependentUpon>frmAutomovil.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\frmParqueadero.resx">
+      <DependentUpon>frmParqueadero.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmCliente.resx">
-      <DependentUpon>frmCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\frmMensualidad.resx">
+      <DependentUpon>frmMensualidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmCupos.resx">
       <DependentUpon>frmCupos.cs</DependentUpon>
@@ -140,8 +140,8 @@
     <EmbeddedResource Include="Vista\frmRegistroPersonal.resx">
       <DependentUpon>frmRegistroPersonal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmServicio.resx">
-      <DependentUpon>frmServicio.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\frmLavado.resx">
+      <DependentUpon>frmLavado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmTarifa.resx">
       <DependentUpon>frmTarifa.cs</DependentUpon>
