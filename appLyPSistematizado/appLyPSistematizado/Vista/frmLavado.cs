@@ -12,9 +12,9 @@ using appLyPSistematizado.Datos;
 
 namespace appLyPSistematizado.Vista
 {
-    public partial class frmServicio : Form
+    public partial class frmLavado : Form
     {
-        public frmServicio()
+        public frmLavado()
         {
             InitializeComponent();
             timer1.Enabled = true;

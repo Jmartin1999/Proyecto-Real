@@ -55,7 +55,7 @@ namespace appLyPSistematizado.Vista
             }
             
 
-            frmAutomovil objAutomovil = new frmAutomovil("");
+            frmParqueadero objAutomovil = new frmParqueadero("");
             objAutomovil.Show();
             
 

@@ -13,22 +13,22 @@ using System.Data;
 
 namespace appLyPSistematizado.Vista
 {
-    public partial class frmAutomovil : Form
+    public partial class frmParqueadero : Form
     {
-        public frmAutomovil(string dato)
+        public frmParqueadero(string dato)
         {
             InitializeComponent();
             r = dato;
             label10.Text = "Parqueo";
         }
-      
+        
         clValidacion3 objvalidacion = new clValidacion3();
         string r = "";
 
         private void frmAutomovil_Load(object sender, EventArgs e)
         {
-            
-            cbxIdCliente.Visible = false;
+
+
             clAutomovil3 objAutomovil = new clAutomovil3();
             List<clAutomovil3> listadatos2 = new List<clAutomovil3>();
             listadatos2 = objAutomovil.mtdListar();
@@ -37,21 +37,11 @@ namespace appLyPSistematizado.Vista
             {
 
             }
-
-            //cargar combos
-            clCliente3 objcliente = new clCliente3();
-            DataTable dtCliente = new DataTable();
-            dtCliente = objcliente.mtdListar();
-            cbxIdCliente.DataSource = dtCliente;
-            cbxIdCliente.DisplayMember = "Nombres";
-            cbxIdCliente.ValueMember = "IdCliente";
-
-        
-    }
-
+        }
+            
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(cmbt.Text) || string.IsNullOrEmpty(txtEstado.Text))
+            if (string.IsNullOrEmpty(cmbt.Text) || string.IsNullOrEmpty(cmbEstado.Text))
             {
                 MessageBox.Show("debe ingresar la informacion completa");
             }
@@ -68,11 +58,10 @@ namespace appLyPSistematizado.Vista
                 clAutomovil3 objAutomovil = new clAutomovil3();
 
                 objAutomovil.TipoV = cmbt.Text;
-                objAutomovil.Estado = txtEstado.Text;
+                objAutomovil.Estado = cmbEstado.Text;
                 objAutomovil.Placa = txtPlaca.Text;
                 objAutomovil.Marca = txtMarca.Text;
                 objAutomovil.Observaciones = txtObservaciones.Text;
-                objAutomovil.idCliente = Convert.ToInt32(cbxIdCliente.SelectedValue);
                 int cant = objAutomovil.mtdlistarregis();
                 if (cant > 0)
                 {
@@ -84,7 +73,7 @@ namespace appLyPSistematizado.Vista
                 {
                     MessageBox.Show("Datos NO  Registrados");
                 }
-                txtEstado.Clear();
+                cmbEstado.Text = "";
                 cmbt.Text = "";
                 txtPlaca.Clear();
                 txtMarca.Clear();
@@ -101,11 +90,10 @@ namespace appLyPSistematizado.Vista
         {
             clAutomovil3 objAutomovil = new clAutomovil3();
             objAutomovil.TipoV = cmbt.Text;
-            objAutomovil.Estado = txtEstado.Text;
+            objAutomovil.Estado = cmbEstado.Text;
             objAutomovil.Placa = txtPlaca.Text;
             objAutomovil.Marca = txtMarca.Text;
             objAutomovil.Observaciones = txtObservaciones.Text;
-            objAutomovil.idCliente = Convert.ToInt32(cbxIdCliente.SelectedValue);
             int cant = objAutomovil.mtdeditar();
             if (cant > 0)
             {
@@ -117,8 +105,8 @@ namespace appLyPSistematizado.Vista
             {
                 MessageBox.Show("ERROR");
             }
-            
-            txtEstado.Clear();
+
+            cmbEstado.Text = "";
             cmbt.Text = "";
             txtPlaca.Clear();
             txtMarca.Clear();
@@ -133,7 +121,7 @@ namespace appLyPSistematizado.Vista
             clAutomovil3 objAutomovil = new clAutomovil3();
             objAutomovil.Placa = txtPlaca2.Text;
             dgvAutomovil.DataSource = objAutomovil.mtdbuscar();
-            txtEstado.Clear();
+            cmbEstado.Text = "";
             cmbt.Text = "";
             txtPlaca.Clear();
             txtMarca.Clear();
@@ -147,7 +135,7 @@ namespace appLyPSistematizado.Vista
             objAutomovil.mtdeliminar();
             MessageBox.Show("DATOS ELIMINADOS");
             dgvAutomovil.DataSource = objAutomovil.mtdListar();
-            txtEstado.Clear();
+            cmbEstado.Text = "";
             cmbt.Text = "";
             txtPlaca.Clear();
             txtMarca.Clear();
@@ -187,11 +175,10 @@ namespace appLyPSistematizado.Vista
         private void dgvAutomovil_DoubleClick(object sender, EventArgs e)
         {
             cmbt.Text = Convert.ToString(dgvAutomovil.CurrentRow.Cells[0].Value);
-            txtEstado.Text = Convert.ToString(dgvAutomovil.CurrentRow.Cells[1].Value);
+            cmbEstado.Text = Convert.ToString(dgvAutomovil.CurrentRow.Cells[1].Value);
             txtPlaca.Text = Convert.ToString(dgvAutomovil.CurrentRow.Cells[2].Value);
             txtMarca.Text = Convert.ToString(dgvAutomovil.CurrentRow.Cells[3].Value);
             txtObservaciones.Text = Convert.ToString(dgvAutomovil.CurrentRow.Cells[4].Value);
-            cbxIdCliente.Text = Convert.ToString(dgvAutomovil.CurrentRow.Cells[5].Value);
         }
 
         private void dgvAutomovil_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -200,6 +187,26 @@ namespace appLyPSistematizado.Vista
         }
 
         private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPlaca_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
         {
 
         }
