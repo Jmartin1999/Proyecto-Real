@@ -246,6 +246,7 @@
             this.btnListarPersonal.TabIndex = 43;
             this.btnListarPersonal.Text = "Listar Personal";
             this.btnListarPersonal.UseVisualStyleBackColor = true;
+            this.btnListarPersonal.Click += new System.EventHandler(this.btnListarPersonal_Click);
             // 
             // frmRegistroPersonal
             // 

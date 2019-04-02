@@ -14,7 +14,8 @@ namespace appLyPSistematizado.Vista
         {
             InitializeComponent();
         }
-     
+
+        List<clLogin> listaPersonal = new List<clLogin>();
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
@@ -191,6 +192,12 @@ namespace appLyPSistematizado.Vista
         private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
         {
             objvalidacion.mtdSoloMayusculas(e);
+        }
+
+        private void btnListarPersonal_Click(object sender, EventArgs e)
+        {
+         
+
         }
     }
 }

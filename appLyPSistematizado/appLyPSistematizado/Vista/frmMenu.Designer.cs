@@ -145,7 +145,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmMenu";
-            this.Text = "Menu";
+            this.Text = "frmJefe";
             ((System.ComponentModel.ISupportInitialize)(this.pbProceso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegistro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTipo)).EndInit();
