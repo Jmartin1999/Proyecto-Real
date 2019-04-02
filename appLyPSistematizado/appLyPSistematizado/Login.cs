@@ -136,20 +136,8 @@ namespace appLyPSistematizado
                 txtContraseña.UseSystemPasswordChar = true;
             }
         }
-       string contraseñarecuperada="";
-        private void btnContraseña_Click(object sender, EventArgs e)
-        {
-            clLogin objLogin = new clLogin();
-            string email = txtUsuario.Text;
-            listaOlvidar = objLogin.mtdOlvidar(email);
-
+       
    
-           contraseñarecuperada = listaOlvidar[0].Contraseña.ToString();
-              
-        
-            mtdEnviar();
-            MessageBox.Show("Se ha enviado un Correo de recuperacion a su cuenta de correo electronico");
-        }
         
         public void mtdEnviar()
         {
@@ -169,6 +157,20 @@ namespace appLyPSistematizado
             objCliente.Host = "smtp.gmail.com";
             objCliente.EnableSsl = true;
             objCliente.Send(objMensaje);
+        }
+        string contraseñarecuperada = "";
+        private void lnlContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            clLogin objLogin = new clLogin();
+            string email = txtUsuario.Text;
+            listaOlvidar = objLogin.mtdOlvidar(email);
+
+
+            contraseñarecuperada = listaOlvidar[0].Contraseña.ToString();
+
+
+            mtdEnviar();
+            MessageBox.Show("Se ha enviado un Correo de recuperacion a su cuenta de correo electronico");
         }
     }
 }

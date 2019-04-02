@@ -34,12 +34,10 @@
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnIniciar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.chkContraseña = new System.Windows.Forms.CheckBox();
             this.cmbRol = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnContraseña = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lnlContraseña = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -87,23 +85,13 @@
             // 
             // btnIniciar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(403, 415);
+            this.btnIniciar.Location = new System.Drawing.Point(357, 401);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(131, 29);
             this.btnIniciar.TabIndex = 5;
             this.btnIniciar.Text = "Iniciar Sesion ";
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(584, 369);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 15);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Olvido su contraseña?";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // chkContraseña
             // 
@@ -136,38 +124,26 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Rol";
             // 
-            // btnContraseña
+            // lnlContraseña
             // 
-            this.btnContraseña.ForeColor = System.Drawing.Color.Blue;
-            this.btnContraseña.Location = new System.Drawing.Point(177, 415);
-            this.btnContraseña.Name = "btnContraseña";
-            this.btnContraseña.Size = new System.Drawing.Size(146, 29);
-            this.btnContraseña.TabIndex = 11;
-            this.btnContraseña.Text = "Olvido Contraseña?";
-            this.btnContraseña.UseVisualStyleBackColor = true;
-            this.btnContraseña.Click += new System.EventHandler(this.btnContraseña_Click);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(107, 369);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(61, 15);
-            this.linkLabel1.TabIndex = 12;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
+            this.lnlContraseña.AutoSize = true;
+            this.lnlContraseña.Location = new System.Drawing.Point(354, 356);
+            this.lnlContraseña.Name = "lnlContraseña";
+            this.lnlContraseña.Size = new System.Drawing.Size(130, 15);
+            this.lnlContraseña.TabIndex = 12;
+            this.lnlContraseña.TabStop = true;
+            this.lnlContraseña.Text = "Olvido Su Contraseña?";
+            this.lnlContraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnlContraseña_LinkClicked);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 520);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.btnContraseña);
+            this.Controls.Add(this.lnlContraseña);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cmbRol);
             this.Controls.Add(this.chkContraseña);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtContraseña);
@@ -192,12 +168,10 @@
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnIniciar;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox chkContraseña;
         private System.Windows.Forms.ComboBox cmbRol;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnContraseña;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lnlContraseña;
     }
 }
 
