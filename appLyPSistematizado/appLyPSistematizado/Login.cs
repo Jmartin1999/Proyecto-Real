@@ -24,15 +24,15 @@ namespace appLyPSistematizado
         List<clLogin> listaUsuario = new List<clLogin>();
         List<clLogin> listaCorreo = new List<clLogin>();
         List<clLogin> listaOlvidar = new List<clLogin>();
-        frmRegistroUsuario objRegistrar = new frmRegistroUsuario();
+     
         frmMenu objMenu = new frmMenu();
        
-        frmServicios objServicios = new frmServicios();
+     
 
         frmMenu objJefe = new frmMenu();
         private void label5_Click(object sender, EventArgs e)
         {
-            objRegistrar.Show();
+           
         }
 
         private void label4_Click(object sender, EventArgs e)

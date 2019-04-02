@@ -21,7 +21,7 @@ namespace appLyPSistematizado.Vista
             r = dato;
             label10.Text = "Parqueo";
         }
-        frmServicios objServicios = new frmServicios();
+      
         clValidacion3 objvalidacion = new clValidacion3();
         string r = "";
 
