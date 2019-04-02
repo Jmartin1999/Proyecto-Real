@@ -130,11 +130,11 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Tipos y Tarifas Vehiculares";
             // 
-            // frmJefe
+            // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 517);
+            this.ClientSize = new System.Drawing.Size(1060, 517);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -144,7 +144,7 @@
             this.Controls.Add(this.pbProceso);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "frmJefe";
+            this.Name = "frmMenu";
             this.Text = "frmJefe";
             ((System.ComponentModel.ISupportInitialize)(this.pbProceso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegistro)).EndInit();
