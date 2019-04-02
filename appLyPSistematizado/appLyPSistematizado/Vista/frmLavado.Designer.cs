@@ -1,6 +1,6 @@
 ﻿namespace appLyPSistematizado.Vista
 {
-    partial class frmServicio
+    partial class frmLavado
     {
         /// <summary>
         /// Required designer variable.

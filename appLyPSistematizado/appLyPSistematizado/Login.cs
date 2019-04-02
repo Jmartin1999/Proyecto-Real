@@ -24,10 +24,10 @@ namespace appLyPSistematizado
         List<clLogin> listaUsuario = new List<clLogin>();
         List<clLogin> listaCorreo = new List<clLogin>();
         List<clLogin> listaOlvidar = new List<clLogin>();
-        frmRegistroUsuario objRegistrar = new frmRegistroUsuario();
+        frmRegistroPersonal objRegistrar = new frmRegistroPersonal();
         frmMenu objMenu = new frmMenu();
        
-        frmServicios objServicios = new frmServicios();
+        frmMenu objServicios = new frmMenu();
 
         frmMenu objJefe = new frmMenu();
         private void label5_Click(object sender, EventArgs e)
@@ -136,20 +136,8 @@ namespace appLyPSistematizado
                 txtContraseña.UseSystemPasswordChar = true;
             }
         }
-       string contraseñarecuperada="";
-        private void btnContraseña_Click(object sender, EventArgs e)
-        {
-            clLogin objLogin = new clLogin();
-            string email = txtUsuario.Text;
-            listaOlvidar = objLogin.mtdOlvidar(email);
-
+       
    
-           contraseñarecuperada = listaOlvidar[0].Contraseña.ToString();
-              
-        
-            mtdEnviar();
-            MessageBox.Show("Se ha enviado un Correo de recuperacion a su cuenta de correo electronico");
-        }
         
         public void mtdEnviar()
         {
@@ -169,6 +157,20 @@ namespace appLyPSistematizado
             objCliente.Host = "smtp.gmail.com";
             objCliente.EnableSsl = true;
             objCliente.Send(objMensaje);
+        }
+        string contraseñarecuperada = "";
+        private void lnlContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            clLogin objLogin = new clLogin();
+            string email = txtUsuario.Text;
+            listaOlvidar = objLogin.mtdOlvidar(email);
+
+
+            contraseñarecuperada = listaOlvidar[0].Contraseña.ToString();
+
+
+            mtdEnviar();
+            MessageBox.Show("Se ha enviado un Correo de recuperacion a su cuenta de correo electronico");
         }
     }
 }
