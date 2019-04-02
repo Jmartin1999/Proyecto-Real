@@ -17,6 +17,7 @@ namespace appLyPSistematizado.Vista
         {
             InitializeComponent();
         }
+        clValidacion3 objvalidacion = new clValidacion3();
 
         private void btnguarda11_Click(object sender, EventArgs e)
         {
@@ -150,22 +151,7 @@ namespace appLyPSistematizado.Vista
 
         private void txtTelf11_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                if (char.IsControl(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-                else
-                {
-                    e.Handled = true;
-                    MessageBox.Show("digitar solo numeros");
-                }
-            }
+            objvalidacion.mtdSolNumeros(e);
         }
 
         private void btnEliminar11_Click(object sender, EventArgs e)
@@ -185,30 +171,29 @@ namespace appLyPSistematizado.Vista
 
         private void txtNom11_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetter(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-                MessageBox.Show("Digite solo letras");
-            }
-
-            e.KeyChar = char.ToUpper(e.KeyChar);
+            
+            objvalidacion.mtdSololetras(e);
+            objvalidacion.mtdSoloMayusculas(e);
         }
 
         private void txtDirec11_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.KeyChar = char.ToUpper(e.KeyChar);
+            objvalidacion.mtdSoloMayusculas(e);
+        }
+
+        private void txtDoc11_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            objvalidacion.mtdSolNumeros(e);
+        }
+
+        private void txtFecha11_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            objvalidacion.mtdSolNumeros(e);
+        }
+
+        private void txtDocumento11_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            objvalidacion.mtdSolNumeros(e);
         }
     }
 }

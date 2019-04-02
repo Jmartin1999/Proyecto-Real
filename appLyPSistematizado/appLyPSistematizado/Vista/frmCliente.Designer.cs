@@ -35,6 +35,8 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
             this.gbxcliente = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDoc11 = new System.Windows.Forms.TextBox();
             this.btnModificar11 = new System.Windows.Forms.Button();
             this.btnguarda11 = new System.Windows.Forms.Button();
             this.txtFecha11 = new System.Windows.Forms.TextBox();
@@ -45,8 +47,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTelf11 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtDoc11 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.gbxcliente.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +85,7 @@
             this.txtDocumento11.Name = "txtDocumento11";
             this.txtDocumento11.Size = new System.Drawing.Size(204, 20);
             this.txtDocumento11.TabIndex = 22;
+            this.txtDocumento11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocumento11_KeyPress);
             // 
             // btnBuscar
             // 
@@ -126,6 +127,23 @@
             this.gbxcliente.TabStop = false;
             this.gbxcliente.Text = "Registro de Cliente";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(29, 111);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Documento";
+            // 
+            // txtDoc11
+            // 
+            this.txtDoc11.Location = new System.Drawing.Point(148, 111);
+            this.txtDoc11.Name = "txtDoc11";
+            this.txtDoc11.Size = new System.Drawing.Size(204, 20);
+            this.txtDoc11.TabIndex = 13;
+            this.txtDoc11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDoc11_KeyPress_1);
+            // 
             // btnModificar11
             // 
             this.btnModificar11.Location = new System.Drawing.Point(171, 297);
@@ -152,6 +170,7 @@
             this.txtFecha11.Name = "txtFecha11";
             this.txtFecha11.Size = new System.Drawing.Size(204, 20);
             this.txtFecha11.TabIndex = 10;
+            this.txtFecha11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFecha11_KeyPress);
             // 
             // label5
             // 
@@ -212,22 +231,6 @@
             this.txtTelf11.Size = new System.Drawing.Size(204, 20);
             this.txtTelf11.TabIndex = 6;
             this.txtTelf11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelf11_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 111);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Documento";
-            // 
-            // txtDoc11
-            // 
-            this.txtDoc11.Location = new System.Drawing.Point(148, 111);
-            this.txtDoc11.Name = "txtDoc11";
-            this.txtDoc11.Size = new System.Drawing.Size(204, 20);
-            this.txtDoc11.TabIndex = 13;
             // 
             // frmCliente
             // 

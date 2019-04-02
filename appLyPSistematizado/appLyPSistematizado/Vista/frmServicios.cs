@@ -37,11 +37,7 @@ namespace appLyPSistematizado.Vista
             objAutomovil.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            frmTarifa objtarifa = new frmTarifa();
-            objtarifa.Show();
-        }
+        
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -50,6 +46,11 @@ namespace appLyPSistematizado.Vista
         }
 
         private void frmServicios_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

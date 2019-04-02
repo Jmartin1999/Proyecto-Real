@@ -179,6 +179,11 @@ namespace appLyPSistematizado.Vista
             objvalidacion.mtdSoloMayusculas(e);
         }
 
+        private void txtPlaca2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            objvalidacion.mtdSoloMayusculas(e);
+        }
+
         private void dgvAutomovil_DoubleClick(object sender, EventArgs e)
         {
             cmbt.Text = Convert.ToString(dgvAutomovil.CurrentRow.Cells[0].Value);
@@ -194,9 +199,6 @@ namespace appLyPSistematizado.Vista
 
         }
 
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

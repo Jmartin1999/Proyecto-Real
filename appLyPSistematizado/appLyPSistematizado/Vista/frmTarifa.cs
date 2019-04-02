@@ -106,6 +106,27 @@ namespace appLyPSistematizado.Vista
             txtTipoV.Text = Convert.ToString(dgvTipo.CurrentRow.Cells[1].Value);
             txtCosto.Text = Convert.ToString(dgvTipo.CurrentRow.Cells[2].Value);
         }
+        clValidacion3 objvalidacion = new clValidacion3();
+        private void txtTipoS_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            objvalidacion.mtdSoloMayusculas(e);
 
+        }
+
+        private void txtTipoV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            objvalidacion.mtdSoloMayusculas(e);
+            objvalidacion.mtdSololetras(e);
+        }
+
+        private void txtCosto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            objvalidacion.mtdSolNumeros(e);
+        }
+
+        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            objvalidacion.mtdSoloMayusculas(e);
+        }
     }
 }

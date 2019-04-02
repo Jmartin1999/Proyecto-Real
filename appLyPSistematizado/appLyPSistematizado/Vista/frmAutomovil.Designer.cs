@@ -114,10 +114,11 @@
             // 
             // txtPlaca2
             // 
-            this.txtPlaca2.Location = new System.Drawing.Point(357, 391);
+            this.txtPlaca2.Location = new System.Drawing.Point(314, 391);
             this.txtPlaca2.Name = "txtPlaca2";
-            this.txtPlaca2.Size = new System.Drawing.Size(100, 20);
+            this.txtPlaca2.Size = new System.Drawing.Size(143, 20);
             this.txtPlaca2.TabIndex = 42;
+            this.txtPlaca2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPlaca2_KeyPress);
             // 
             // label7
             // 

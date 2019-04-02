@@ -42,13 +42,15 @@
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.dgvTipo = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipo)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 261);
+            this.label5.Location = new System.Drawing.Point(349, 54);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 27;
@@ -56,16 +58,17 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(98, 258);
+            this.txtBuscar.Location = new System.Drawing.Point(413, 54);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(100, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(174, 20);
             this.txtBuscar.TabIndex = 26;
+            this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(324, 372);
+            this.btnEliminar.Location = new System.Drawing.Point(691, 50);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(78, 26);
             this.btnEliminar.TabIndex = 25;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -73,29 +76,32 @@
             // 
             // txtCosto
             // 
-            this.txtCosto.Location = new System.Drawing.Point(98, 182);
+            this.txtCosto.Location = new System.Drawing.Point(85, 170);
             this.txtCosto.Name = "txtCosto";
             this.txtCosto.Size = new System.Drawing.Size(100, 20);
             this.txtCosto.TabIndex = 24;
+            this.txtCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCosto_KeyPress);
             // 
             // txtTipoV
             // 
-            this.txtTipoV.Location = new System.Drawing.Point(98, 137);
+            this.txtTipoV.Location = new System.Drawing.Point(85, 125);
             this.txtTipoV.Name = "txtTipoV";
-            this.txtTipoV.Size = new System.Drawing.Size(100, 20);
+            this.txtTipoV.Size = new System.Drawing.Size(153, 20);
             this.txtTipoV.TabIndex = 23;
+            this.txtTipoV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTipoV_KeyPress);
             // 
             // txtTipoS
             // 
-            this.txtTipoS.Location = new System.Drawing.Point(98, 91);
+            this.txtTipoS.Location = new System.Drawing.Point(85, 79);
             this.txtTipoS.Name = "txtTipoS";
-            this.txtTipoS.Size = new System.Drawing.Size(100, 20);
+            this.txtTipoS.Size = new System.Drawing.Size(153, 20);
             this.txtTipoS.TabIndex = 22;
+            this.txtTipoS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTipoS_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 182);
+            this.label4.Location = new System.Drawing.Point(13, 170);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 13);
             this.label4.TabIndex = 21;
@@ -104,7 +110,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 137);
+            this.label3.Location = new System.Drawing.Point(13, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 20;
@@ -113,7 +119,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 91);
+            this.label2.Location = new System.Drawing.Point(13, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 19;
@@ -121,9 +127,9 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(186, 372);
+            this.btnEditar.Location = new System.Drawing.Point(147, 212);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.Size = new System.Drawing.Size(77, 24);
             this.btnEditar.TabIndex = 18;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -131,9 +137,9 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(98, 296);
+            this.btnBuscar.Location = new System.Drawing.Point(607, 50);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(78, 26);
             this.btnBuscar.TabIndex = 17;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -141,9 +147,9 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(60, 372);
+            this.btnRegistrar.Location = new System.Drawing.Point(16, 212);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrar.Size = new System.Drawing.Size(77, 24);
             this.btnRegistrar.TabIndex = 16;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
@@ -152,44 +158,55 @@
             // dgvTipo
             // 
             this.dgvTipo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTipo.Location = new System.Drawing.Point(303, 78);
+            this.dgvTipo.Location = new System.Drawing.Point(352, 93);
             this.dgvTipo.Name = "dgvTipo";
-            this.dgvTipo.Size = new System.Drawing.Size(343, 241);
+            this.dgvTipo.Size = new System.Drawing.Size(391, 241);
             this.dgvTipo.TabIndex = 15;
             this.dgvTipo.DoubleClick += new System.EventHandler(this.dgvTipo_DoubleClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(83, 40);
+            this.label1.Location = new System.Drawing.Point(92, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 14;
             this.label1.Text = "TARIFAS";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.btnEditar);
+            this.groupBox1.Controls.Add(this.txtCosto);
+            this.groupBox1.Controls.Add(this.txtTipoS);
+            this.groupBox1.Controls.Add(this.btnRegistrar);
+            this.groupBox1.Controls.Add(this.txtTipoV);
+            this.groupBox1.Location = new System.Drawing.Point(26, 47);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(283, 268);
+            this.groupBox1.TabIndex = 28;
+            this.groupBox1.TabStop = false;
+            // 
             // frmTarifa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 450);
+            this.ClientSize = new System.Drawing.Size(786, 364);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.txtCosto);
-            this.Controls.Add(this.txtTipoV);
-            this.Controls.Add(this.txtTipoS);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.dgvTipo);
-            this.Controls.Add(this.label1);
             this.Name = "frmTarifa";
             this.Text = "frmTarifa";
             this.Load += new System.EventHandler(this.frmTarifa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipo)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,5 +228,6 @@
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.DataGridView dgvTipo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

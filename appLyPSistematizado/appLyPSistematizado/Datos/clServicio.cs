@@ -11,10 +11,11 @@ namespace appLyPSistematizado.Datos
     {
         public string entrada { get; set; }
         public string salida { get; set; }
-        public int IdAutomovil { get; set; }
+        public int IdAutomovil { get; set;}
         public int IdPersona { get; set; }
         public int IdTarifa { get; set; }
-        
+        public string Total { get; set; }
+
 
         clConexion objconeexion = new clConexion();
 
@@ -80,6 +81,11 @@ namespace appLyPSistematizado.Datos
             string consulta = "Select NombreP from Persona where Documento = '" + doc + "'";
             dtbuscar = objconeexion.mtdDesconectado(consulta);
             return dtbuscar;
+        }
+        public void mtdPagar(string total)
+        {
+            
+
         }
     
 
