@@ -23,7 +23,7 @@ namespace appLyPSistematizado.Datos
         clConexion objConexion = new clConexion();
         List<clLogin> listaUsuarios = new List<clLogin>();
         List<clLogin> listaPersona = new List<clLogin>();
-        List<clLogin> listaCorreo = new List<clLogin>();
+        List<clLogin> listaOlvidar = new List<clLogin>();
         public int mtdRegistrar()
         {
             string consulta = "insert into Persona(Documento,NombreP,Direccion,Telefono,Correo,Contraseña,Rol,SueldoBasico) values ('" + Documento + "','" + NombreP + "','" + Direccion + "','" + Telefono + "','" + Correo + "','" + Contraseña + "','" + Rol + "','" + SueldoBasico + "')";
@@ -51,6 +51,24 @@ namespace appLyPSistematizado.Datos
                 listaUsuarios.Add(objLogin);
             }
             return listaUsuarios;
+
+        }
+        public List<clLogin> mtdOlvidar(string email)
+        {
+
+            DataTable dtOlvidar = new DataTable();
+            string consulta = "select  Correo,Contraseña from Persona where Correo='" + email + "'";
+            dtOlvidar = objConexion.mtdDesconectado(consulta);
+            for (int i = 0; i < dtOlvidar.Rows.Count; i++)
+            {
+                clLogin objLogin = new clLogin();
+      
+                objLogin.Contraseña = dtOlvidar.Rows[i]["Correo"].ToString();
+                objLogin.Contraseña = dtOlvidar.Rows[i]["Contraseña"].ToString();
+
+                listaOlvidar.Add(objLogin);
+            }
+            return listaOlvidar;
 
         }
         public DataTable mtdListarCorreos()
