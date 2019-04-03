@@ -282,6 +282,7 @@
             // 
             this.textBox4.BackColor = System.Drawing.Color.Silver;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(264, 41);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
@@ -293,6 +294,7 @@
             // 
             this.textBox12.BackColor = System.Drawing.Color.Silver;
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox12.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox12.Location = new System.Drawing.Point(264, 280);
             this.textBox12.Multiline = true;
             this.textBox12.Name = "textBox12";
@@ -302,6 +304,7 @@
             // 
             // btnValidar
             // 
+            this.btnValidar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnValidar.Location = new System.Drawing.Point(748, 222);
             this.btnValidar.Name = "btnValidar";
             this.btnValidar.Size = new System.Drawing.Size(95, 75);
@@ -324,7 +327,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Location = new System.Drawing.Point(303, 129);
+            this.checkBox1.Location = new System.Drawing.Point(303, 166);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(47, 17);
             this.checkBox1.TabIndex = 28;
