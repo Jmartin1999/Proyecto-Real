@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pbProceso = new System.Windows.Forms.PictureBox();
             this.pbRegistro = new System.Windows.Forms.PictureBox();
             this.pbTipo = new System.Windows.Forms.PictureBox();
@@ -55,23 +54,13 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(896, 392);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Datos";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(899, 421);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Cargo";
             // 
             // pbProceso
             // 
             this.pbProceso.Image = ((System.Drawing.Image)(resources.GetObject("pbProceso.Image")));
-            this.pbProceso.Location = new System.Drawing.Point(58, 39);
+            this.pbProceso.Location = new System.Drawing.Point(327, 74);
             this.pbProceso.Name = "pbProceso";
             this.pbProceso.Size = new System.Drawing.Size(176, 138);
             this.pbProceso.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -82,7 +71,7 @@
             // pbRegistro
             // 
             this.pbRegistro.Image = ((System.Drawing.Image)(resources.GetObject("pbRegistro.Image")));
-            this.pbRegistro.Location = new System.Drawing.Point(179, 286);
+            this.pbRegistro.Location = new System.Drawing.Point(448, 321);
             this.pbRegistro.Name = "pbRegistro";
             this.pbRegistro.Size = new System.Drawing.Size(176, 138);
             this.pbRegistro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -93,7 +82,7 @@
             // pbTipo
             // 
             this.pbTipo.Image = ((System.Drawing.Image)(resources.GetObject("pbTipo.Image")));
-            this.pbTipo.Location = new System.Drawing.Point(522, 286);
+            this.pbTipo.Location = new System.Drawing.Point(791, 321);
             this.pbTipo.Name = "pbTipo";
             this.pbTipo.Size = new System.Drawing.Size(176, 138);
             this.pbTipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -104,43 +93,51 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(584, 469);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(842, 494);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(72, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "TARIFAS";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(92, 228);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(375, 263);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.Size = new System.Drawing.Size(82, 16);
             this.label4.TabIndex = 6;
             this.label4.Text = "PARQUEO";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(229, 469);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(445, 494);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 13);
+            this.label5.Size = new System.Drawing.Size(175, 16);
             this.label5.TabIndex = 7;
             this.label5.Text = "REGISTRO PERSONAL ";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(335, 228);
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(660, 263);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 13);
+            this.label6.Size = new System.Drawing.Size(68, 16);
             this.label6.TabIndex = 8;
             this.label6.Text = "LAVADO";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(338, 39);
+            this.pictureBox1.Location = new System.Drawing.Point(607, 74);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(176, 138);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -150,7 +147,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(618, 39);
+            this.pictureBox2.Location = new System.Drawing.Point(887, 74);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(176, 138);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -160,9 +157,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(649, 232);
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(928, 263);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 13);
+            this.label7.Size = new System.Drawing.Size(116, 16);
             this.label7.TabIndex = 11;
             this.label7.Text = "MENSUALIDAD";
             // 
@@ -171,7 +170,7 @@
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(1, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1342, 606);
+            this.pictureBox3.Size = new System.Drawing.Size(1366, 712);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
@@ -180,7 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 641);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -191,7 +190,6 @@
             this.Controls.Add(this.pbTipo);
             this.Controls.Add(this.pbRegistro);
             this.Controls.Add(this.pbProceso);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Name = "frmMenu";
@@ -211,7 +209,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pbProceso;
         private System.Windows.Forms.PictureBox pbRegistro;
         private System.Windows.Forms.PictureBox pbTipo;

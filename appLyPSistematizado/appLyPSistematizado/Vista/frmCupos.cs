@@ -66,6 +66,11 @@ namespace appLyPSistematizado.Vista
         {
            
         }
+
+        private void text1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
