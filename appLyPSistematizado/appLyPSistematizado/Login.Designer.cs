@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -38,29 +39,35 @@
             this.cmbRol = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lnlContraseña = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(238, 192);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(161, 186);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 15);
+            this.label1.Size = new System.Drawing.Size(183, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Correo Electronico ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(279, 239);
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(234, 233);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 15);
+            this.label2.Size = new System.Drawing.Size(110, 27);
             this.label2.TabIndex = 1;
             this.label2.Text = "Contraseña";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(381, 185);
+            this.txtUsuario.Location = new System.Drawing.Point(381, 192);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(116, 22);
             this.txtUsuario.TabIndex = 2;
@@ -77,28 +84,32 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(380, 71);
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(328, 78);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 15);
+            this.label3.Size = new System.Drawing.Size(169, 29);
             this.label3.TabIndex = 4;
             this.label3.Text = "BIENVENIDOS";
             // 
             // btnIniciar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(357, 401);
+            this.btnIniciar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnIniciar.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIniciar.Location = new System.Drawing.Point(371, 398);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(131, 29);
+            this.btnIniciar.Size = new System.Drawing.Size(131, 32);
             this.btnIniciar.TabIndex = 5;
             this.btnIniciar.Text = "Iniciar Sesion ";
-            this.btnIniciar.UseVisualStyleBackColor = true;
+            this.btnIniciar.UseVisualStyleBackColor = false;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // chkContraseña
             // 
             this.chkContraseña.AutoSize = true;
-            this.chkContraseña.Location = new System.Drawing.Point(514, 241);
+            this.chkContraseña.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkContraseña.Location = new System.Drawing.Point(526, 230);
             this.chkContraseña.Name = "chkContraseña";
-            this.chkContraseña.Size = new System.Drawing.Size(107, 19);
+            this.chkContraseña.Size = new System.Drawing.Size(166, 31);
             this.chkContraseña.TabIndex = 8;
             this.chkContraseña.Text = "Ver Contraseña";
             this.chkContraseña.UseVisualStyleBackColor = true;
@@ -108,39 +119,61 @@
             // 
             this.cmbRol.FormattingEnabled = true;
             this.cmbRol.Items.AddRange(new object[] {
-            "Administrador",
-            "Jefe"});
-            this.cmbRol.Location = new System.Drawing.Point(381, 295);
+            "ADMINISTRADOR",
+            "JEFE"});
+            this.cmbRol.Location = new System.Drawing.Point(381, 289);
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(121, 23);
             this.cmbRol.TabIndex = 9;
-            this.cmbRol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbRol_KeyPress);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(322, 297);
+            this.label6.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(305, 289);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 15);
+            this.label6.Size = new System.Drawing.Size(39, 27);
             this.label6.TabIndex = 10;
             this.label6.Text = "Rol";
             // 
             // lnlContraseña
             // 
             this.lnlContraseña.AutoSize = true;
-            this.lnlContraseña.Location = new System.Drawing.Point(354, 356);
+            this.lnlContraseña.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnlContraseña.Location = new System.Drawing.Point(292, 348);
             this.lnlContraseña.Name = "lnlContraseña";
-            this.lnlContraseña.Size = new System.Drawing.Size(130, 15);
+            this.lnlContraseña.Size = new System.Drawing.Size(210, 27);
             this.lnlContraseña.TabIndex = 12;
             this.lnlContraseña.TabStop = true;
             this.lnlContraseña.Text = "Olvido Su Contraseña?";
             this.lnlContraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnlContraseña_LinkClicked);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(526, -15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(369, 220);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-19, -1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(950, 600);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 520);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lnlContraseña);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cmbRol);
@@ -151,11 +184,14 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox2);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGIN";
             this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,6 +209,8 @@
         private System.Windows.Forms.ComboBox cmbRol;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.LinkLabel lnlContraseña;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
