@@ -76,7 +76,11 @@ namespace appLyPSistematizado.Vista
             DataTable dtAutomovil = new DataTable();
             dtAutomovil = objAutomovil.mtdMostrar();
             dgvBuscar.DataSource = dtAutomovil;
-            
+            clPagos objPago = new clPagos();
+            DataTable dtPago = new DataTable();
+            dtPago = objPago.mtdMostrar();
+            dgvPagos.DataSource = dtPago;
+
         }
 
   
@@ -181,7 +185,6 @@ namespace appLyPSistematizado.Vista
 
             List<clAutomovil> ListaAutomovil = new List<clAutomovil>();
             objAutomovil.Placa = txtPlaca.Text;
-           
             dgvBuscar.DataSource = objAutomovil.mtdMostrar();
             ListaAutomovil = objAutomovil.mtdAutoCompletarAutomovil();
             for (int i = 0; i < ListaAutomovil.Count; i++)
@@ -198,18 +201,45 @@ namespace appLyPSistematizado.Vista
             }
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            tbPagos.Show();
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTiempo.Text = DateTime.Now.ToString();
         }
 
+
+        private void btnPagar_Click(object sender, EventArgs e)
+        {
+            tbPagos.Show();
+        }
+
         private void btnPago_Click(object sender, EventArgs e)
         {
+            clPagos objPago = new clPagos();
+            objPago.FechaPago = Convert.ToDateTime(lblTiempo.Text);
+            if (txtTipo.Text=="Carro")
+            {
+                objPago.Valor = "50000";
+            }
+            else if (txtTipo.Text=="Moto")
+            {
+                objPago.Valor = "30000";
+            }
+            else if (txtTipo.Text == "Bicicleta")
+            {
+                objPago.Valor = "10000";
+            }
+            int IdAutomovil = Convert.ToInt32(lblAutomovil.Text);
+            int can = objPago.mtdRegistrarPago(IdAutomovil);
+            if (can > 0)
+            {
+                MessageBox.Show("Registrado");
+                frmMensualidad_Load(null, null);
+            }
+            else
+            {
+                MessageBox.Show("ERORRRRRRRRRR");
+            }
 
         }
     }
