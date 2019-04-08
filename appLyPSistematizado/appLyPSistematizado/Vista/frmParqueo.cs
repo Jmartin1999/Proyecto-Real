@@ -186,6 +186,20 @@ namespace appLyPSistematizado.Vista
             listadatos = parqueo.mtdListar();
             dgvAutomovil.DataSource = parqueo.mtdListar();
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string placa = txtPlaca.Text;
+            for (int i = 0; i < listadatos.Count; i++)
+            {
+                if (listadatos[i].Placa == placa)
+                {
+                    placa = listadatos[i].Placa;
+
+
+                }
+
+            }
+        }
 
         private void txt22_TextChanged(object sender, EventArgs e)
         {

@@ -64,12 +64,12 @@ namespace appLyPSistematizado.Datos
             return encontro;
 
 
-            //String consulta2 = "insert into Servicio (FechaHoraE)" +
-            //                  " values('" + FechaE + "')";
-            //String consulta3 = "insert into Servicio (FechaHoraS)" +
-            //                 " values('" + FechaS + "')";
-            //string consulta4 = "insert into Servicio (Tipo,Valor)" +
-            //                  " values('" + Tipo + "','" + Valor + "')";
+            String consulta2 = "insert into Servicio (FechaHoraE)" +
+                              " values('" + FechaE + "')";
+            String consulta3 = "insert into Servicio (FechaHoraS)" +
+                             " values('" + FechaS + "')";
+            string consulta4 = "insert into Servicio (Tipo,Valor)" +
+                              " values('" + Tipo + "','" + Valor + "')";
 
 
 
