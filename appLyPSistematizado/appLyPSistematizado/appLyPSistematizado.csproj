@@ -53,12 +53,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\clAutomovil.cs" />
+    <Compile Include="Datos\clAutomovil3.cs" />
     <Compile Include="Datos\clCliente.cs" />
+    <Compile Include="Datos\clCliente3.cs" />
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clEmpleado.cs" />
     <Compile Include="Datos\clLogin.cs" />
     <Compile Include="Datos\clPagos.cs" />
     <Compile Include="Datos\clRegistroPersonal.cs" />
+    <Compile Include="Datos\clServicio.cs" />
+    <Compile Include="Datos\clTarifa.cs" />
     <Compile Include="Datos\clTipo.cs" />
     <Compile Include="Datos\clValidacion3.cs" />
     <Compile Include="Datos\VclLavadero.cs" />
@@ -95,6 +99,12 @@
     <Compile Include="Vista\frmJefe.Designer.cs">
       <DependentUpon>frmJefe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\frmParqueo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmParqueo.Designer.cs">
+      <DependentUpon>frmParqueo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmRegistroPersonal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmJefe.resx">
       <DependentUpon>frmJefe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmParqueo.resx">
+      <DependentUpon>frmParqueo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmRegistroPersonal.resx">
       <DependentUpon>frmRegistroPersonal.cs</DependentUpon>
