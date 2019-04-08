@@ -176,7 +176,7 @@ namespace appLyPSistematizado
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No hay conexion a internet" + ex.ToString());
+                MessageBox.Show("Revise su conexion a internet y vuelva a intentarlo hay conexion a internet");
 
             }
         }
