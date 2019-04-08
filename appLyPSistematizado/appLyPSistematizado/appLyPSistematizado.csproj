@@ -55,11 +55,13 @@
     <Compile Include="Datos\clAutomovil.cs" />
     <Compile Include="Datos\clCliente.cs" />
     <Compile Include="Datos\clConexion.cs" />
+    <Compile Include="Datos\clEmpleado.cs" />
     <Compile Include="Datos\clLogin.cs" />
     <Compile Include="Datos\clPagos.cs" />
     <Compile Include="Datos\clRegistroPersonal.cs" />
     <Compile Include="Datos\clTipo.cs" />
     <Compile Include="Datos\clValidacion3.cs" />
+    <Compile Include="Datos\VclLavadero.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +76,12 @@
     </Compile>
     <Compile Include="Vista\frmAdministrador.Designer.cs">
       <DependentUpon>frmAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmLavado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmLavado.Designer.cs">
+      <DependentUpon>frmLavado.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmMensualidad.cs">
       <SubType>Form</SubType>
@@ -113,6 +121,9 @@
     </Compile>
     <EmbeddedResource Include="Vista\frmAdministrador.resx">
       <DependentUpon>frmAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmLavado.resx">
+      <DependentUpon>frmLavado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmMensualidad.resx">
       <DependentUpon>frmMensualidad.cs</DependentUpon>

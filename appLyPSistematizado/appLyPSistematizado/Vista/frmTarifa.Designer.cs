@@ -53,8 +53,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(349, 54);
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.label5.Location = new System.Drawing.Point(348, 58);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 23);
             this.label5.TabIndex = 27;
@@ -62,18 +62,19 @@
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(413, 54);
+            this.txtBuscar.Font = new System.Drawing.Font("Comic Sans MS", 12F);
+            this.txtBuscar.Location = new System.Drawing.Point(424, 55);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(174, 20);
+            this.txtBuscar.Size = new System.Drawing.Size(174, 30);
             this.txtBuscar.TabIndex = 26;
             this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(691, 50);
+            this.btnEliminar.Location = new System.Drawing.Point(701, 54);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(78, 39);
+            this.btnEliminar.Size = new System.Drawing.Size(81, 29);
             this.btnEliminar.TabIndex = 25;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -81,33 +82,32 @@
             // 
             // txtCosto
             // 
-            this.txtCosto.Location = new System.Drawing.Point(165, 170);
+            this.txtCosto.Location = new System.Drawing.Point(130, 167);
             this.txtCosto.Name = "txtCosto";
-            this.txtCosto.Size = new System.Drawing.Size(100, 20);
+            this.txtCosto.Size = new System.Drawing.Size(100, 30);
             this.txtCosto.TabIndex = 24;
             this.txtCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCosto_KeyPress);
             // 
             // txtTipoV
             // 
-            this.txtTipoV.Location = new System.Drawing.Point(112, 125);
+            this.txtTipoV.Location = new System.Drawing.Point(130, 122);
             this.txtTipoV.Name = "txtTipoV";
-            this.txtTipoV.Size = new System.Drawing.Size(153, 20);
+            this.txtTipoV.Size = new System.Drawing.Size(153, 30);
             this.txtTipoV.TabIndex = 23;
             this.txtTipoV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTipoV_KeyPress);
             // 
             // txtTipoS
             // 
-            this.txtTipoS.Location = new System.Drawing.Point(112, 82);
+            this.txtTipoS.Location = new System.Drawing.Point(130, 79);
             this.txtTipoS.Name = "txtTipoS";
-            this.txtTipoS.Size = new System.Drawing.Size(153, 20);
+            this.txtTipoS.Size = new System.Drawing.Size(153, 30);
             this.txtTipoS.TabIndex = 22;
             this.txtTipoS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTipoS_KeyPress);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(60, 167);
+            this.label4.Location = new System.Drawing.Point(13, 170);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 23);
             this.label4.TabIndex = 21;
@@ -116,8 +116,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(7, 125);
+            this.label3.Location = new System.Drawing.Point(13, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 23);
             this.label3.TabIndex = 20;
@@ -126,8 +125,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 78);
+            this.label2.Location = new System.Drawing.Point(13, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 23);
             this.label2.TabIndex = 19;
@@ -135,10 +133,9 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(147, 212);
+            this.btnEditar.Location = new System.Drawing.Point(147, 228);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(77, 33);
+            this.btnEditar.Size = new System.Drawing.Size(91, 34);
             this.btnEditar.TabIndex = 18;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -147,9 +144,9 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(607, 50);
+            this.btnBuscar.Location = new System.Drawing.Point(614, 55);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(78, 39);
+            this.btnBuscar.Size = new System.Drawing.Size(81, 29);
             this.btnBuscar.TabIndex = 17;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -157,10 +154,9 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(16, 212);
+            this.btnRegistrar.Location = new System.Drawing.Point(17, 228);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(104, 33);
+            this.btnRegistrar.Size = new System.Drawing.Size(89, 34);
             this.btnRegistrar.TabIndex = 16;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
@@ -169,6 +165,7 @@
             // dgvTipo
             // 
             this.dgvTipo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTipo.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvTipo.Location = new System.Drawing.Point(352, 93);
             this.dgvTipo.Name = "dgvTipo";
             this.dgvTipo.Size = new System.Drawing.Size(391, 241);
@@ -178,7 +175,6 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(92, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 23);
@@ -187,6 +183,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Silver;
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
@@ -196,18 +193,19 @@
             this.groupBox1.Controls.Add(this.txtTipoS);
             this.groupBox1.Controls.Add(this.btnRegistrar);
             this.groupBox1.Controls.Add(this.txtTipoV);
+            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(26, 47);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(283, 268);
+            this.groupBox1.Size = new System.Drawing.Size(306, 268);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(-278, -121);
+            this.pictureBox3.Location = new System.Drawing.Point(-289, -116);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1342, 606);
+            this.pictureBox3.Size = new System.Drawing.Size(1071, 642);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 29;
             this.pictureBox3.TabStop = false;
