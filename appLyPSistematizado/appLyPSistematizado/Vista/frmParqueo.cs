@@ -27,7 +27,7 @@ namespace appLyPSistematizado.Vista
 
         DateTime entradav = DateTime.Now;
         DateTime salidav = DateTime.Now;
-        List<clAutomovil> listadatos = new List<clAutomovil>();
+        List<clAutomovil3> listadatos = new List<clAutomovil3>();
 
 
         private void btnRegistro_Click(object sender, EventArgs e)
