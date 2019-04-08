@@ -75,6 +75,8 @@ namespace appLyPSistematizado
             {
                 MessageBox.Show("Datos Ingresados Incorrectos ");
             }
+
+            
         }
 
         private void txtUsuario_Leave(object sender, EventArgs e)

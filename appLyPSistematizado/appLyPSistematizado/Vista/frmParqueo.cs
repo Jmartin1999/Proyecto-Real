@@ -27,7 +27,7 @@ namespace appLyPSistematizado.Vista
 
         DateTime entradav = DateTime.Now;
         DateTime salidav = DateTime.Now;
-        List<clAutomovil> listadatos = new List<clAutomovil>();
+        List<clAutomovil3> listadatos = new List<clAutomovil3>();
 
 
         private void btnRegistro_Click(object sender, EventArgs e)
@@ -54,11 +54,11 @@ namespace appLyPSistematizado.Vista
                 label2.Enabled = false;
                 objparqueo.Placa = txtPlaca.Text;
                 objparqueo.TipoV = cmbt.Text;
-                //objparqueo.FechaE = txtFecha1.Text;
-                //objparqueo.FechaS = txtTiempo1.Text;
-                //objparqueo.Tipo = label5.Text;
+                objparqueo.FechaE = txtFecha1.Text;
+                
+                objparqueo.Tipo = label5.Text;
 
-               
+
 
                 int cant = objparqueo.mtdlistarregis();
                 if (cant > 0)
@@ -87,8 +87,7 @@ namespace appLyPSistematizado.Vista
 
 
                 txtFecha1.Text = entradav.ToString("dddd dd MMMM yyyy   hh:mm:ss");
-                //txtFecha1.Text = entradav.ToString("dddd dd MMMM yyyy  hh:mm:ss");}
-
+    
 
 
             }
@@ -129,8 +128,11 @@ namespace appLyPSistematizado.Vista
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             clAutomovil3 objparqueo = new clAutomovil3();
+            
+            clServicio objservicio = new clServicio();
             objparqueo.Placa = txtPlaca2.Text;
             dgvAutomovil.DataSource = objparqueo.mtdbuscar();
+            objparqueo.FechaS = txtTiempo1.Text;
 
             gb22.Enabled = true;
             cmbt.Text = null;

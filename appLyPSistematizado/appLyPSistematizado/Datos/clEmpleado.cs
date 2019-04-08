@@ -13,7 +13,7 @@ namespace appLyPSistematizado.Datos
         {
             clConexion conexion = new clConexion();
             DataTable dtempleado = new DataTable();
-            string consulta = "Selet *from Persona";
+            string consulta = "Select *from Persona";
             dtempleado = conexion.mtdDesconectado(consulta);
             return dtempleado;
         }

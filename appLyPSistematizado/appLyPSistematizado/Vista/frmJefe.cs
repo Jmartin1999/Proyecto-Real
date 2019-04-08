@@ -22,11 +22,14 @@ namespace appLyPSistematizado.Vista
         private void pbRegistro_Click(object sender, EventArgs e)
         {
             objRegistroPersonal.Show();
+
         }
 
         private void pbProceso_Click(object sender, EventArgs e)
         {
-            
+            frmParqueo parqueo = new frmParqueo();
+            parqueo.Show();
+            this.Hide();
         }
 
         private void pbTipo_Click(object sender, EventArgs e)
@@ -58,6 +61,11 @@ namespace appLyPSistematizado.Vista
             frmLavado lavado = new frmLavado();
             lavado.Show();
             this.Hide();
+        }
+
+        private void pbMensualidad_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
