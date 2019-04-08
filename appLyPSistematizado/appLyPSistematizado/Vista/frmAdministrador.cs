@@ -20,11 +20,16 @@ namespace appLyPSistematizado.Vista
         private void pbMensualidad_Click(object sender, EventArgs e)
         {
             objMensualidad.Show();
+            frmLavado lavado = new frmLavado();
+            lavado.Show();
+            this.Hide();
         }
 
         private void pbProceso_Click(object sender, EventArgs e)
         {
-
+            frmParqueo parque = new frmParqueo();
+            parque.Show();
+            this.Hide();
         }
 
         private void pbLavado_Click(object sender, EventArgs e)

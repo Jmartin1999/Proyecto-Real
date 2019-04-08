@@ -64,6 +64,7 @@
             // 
             // dgvDatos
             // 
+            this.dgvDatos.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatos.Location = new System.Drawing.Point(614, 59);
             this.dgvDatos.Name = "dgvDatos";
@@ -103,6 +104,7 @@
             this.lblId.Size = new System.Drawing.Size(24, 23);
             this.lblId.TabIndex = 17;
             this.lblId.Text = "id";
+            this.lblId.Visible = false;
             // 
             // cmbEmpleado
             // 

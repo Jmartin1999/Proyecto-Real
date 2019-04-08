@@ -18,20 +18,23 @@ namespace appLyPSistematizado.Vista
             InitializeComponent();
         }
         List<VclLavadero> listadatos = new List<VclLavadero>();
-        private void FrmLavadero_Load(object sender, EventArgs e)
+        private void frmLavado_Load(object sender, EventArgs e)
         {
             VclLavadero lavadero = new VclLavadero();
             listadatos = lavadero.mtdListar();
             dgvDatos.DataSource = lavadero.mtdListar();
-
-
-            //combos
+           // combos
             clEmpleado empleado = new clEmpleado();
             DataTable dtempleado = new DataTable();
             dtempleado = empleado.mtdListar();
             cmbEmpleado.DataSource = dtempleado;
             cmbEmpleado.DisplayMember = "NombreP";
             cmbEmpleado.ValueMember = "IdPersona";
+        }
+
+        private void FrmLavadero_Load(object sender, EventArgs e)
+        {
+
 
         }
         private void btnBuscar22_Click(object sender, EventArgs e)
@@ -75,16 +78,12 @@ namespace appLyPSistematizado.Vista
 
         }
 
-        private void frmLavado_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnautomovil_Click(object sender, EventArgs e)
         {
             string placa = txtPlaca.Text;
             string tipovehiculo = "";
-            string valor = "";
             clAutomovil objAutomovil = new clAutomovil();
             List<clAutomovil> RepetirPlaca = new List<clAutomovil>();
             RepetirPlaca = objAutomovil.mtdAutoCompletarAutomovil();
@@ -96,28 +95,7 @@ namespace appLyPSistematizado.Vista
                 {
                     MessageBox.Show("Este Automovil ya esta resgistrado");
 
-                    for (int y = 0; i < listadatos.Count; i++)
-                    {
-                        if (listadatos[y].PLACA == placa)
-                        {
-                            tipovehiculo = listadatos[y].TIPOVEHICULO;
-                            valor = listadatos[y].VALOR;
-                        }
-                    }
-
-                    if (tipovehiculo == "carro")
-                    {
-                        rbCarro.Checked = true;
-                    }
-                    else if (tipovehiculo == "moto")
-                    {
-                        rbMoto.Checked = true;
-                    }
-                    else if (tipovehiculo == "bicicleta")
-                    {
-                        rbBicicleta.Checked = true;
-                    }
-                    txtServicio.Text = valor;
+                    
                 }
                 else
                 {
@@ -152,8 +130,8 @@ namespace appLyPSistematizado.Vista
                     }
                 }
 
-            }
+                }
 
-        }
+            }
     }
 }

@@ -22,7 +22,7 @@ namespace appLyPSistematizado.Datos
         {
             List<VclLavadero> listalavado = new List<VclLavadero>();
             DataTable dtLavado = new DataTable();
-            string consulta = "select Placa,TipoV,Tipo,Valor from Automovil inner join Servicio on (Servicio.IdAutomovil=Automovil.IdAutomovil) inner join Tarifa on  (Servicio.IdTarifa = Tarifa.IdTipo) where Tipo= 'LAVADO1' or Tipo = 'LAVADO2' or Tipo='LAVADO3'";
+            string consulta = "select Placa,TipoV,Tipo,Valor from Automovil inner join Servicio on (Servicio.IdAutomovil=Automovil.IdAutomovil) inner join Tarifa on  (Servicio.IdTipo = Tarifa.IdTipo) where Tipo= 'LAVADO1' or Tipo = 'LAVADO2' or Tipo='LAVADO3'";
             dtLavado = conexion.mtdDesconectado(consulta);
 
             for (int i = 0; i < dtLavado.Rows.Count; i++)
@@ -40,21 +40,21 @@ namespace appLyPSistematizado.Datos
         public DataTable mtdVehiculo()
         {
             DataTable dtvehiculo = new DataTable();
-            string consulta = "Select *from Automovil where TipoV= 'LAVADO1' or TipoV = 'LAVADO2' or TipoV='LAVADO3' ";
+            string consulta = "Select from Automovil where TipoV= 'LAVADO1' or TipoV = 'LAVADO2' or TipoV='LAVADO3' ";
             dtvehiculo = conexion.mtdDesconectado(consulta);
             return dtvehiculo;
         }
         public int mtdregistrar()
         {
             string consulta = "insert into Servicio (TotalP, IdAutomovil,IdPersona,IdTarifa)"
-                 + "values ('" + VALOR + "', '" + PLACA + "',, '" + EMPLEADO + "''" + SERVICIO + "')";
+                 + "values ('" + VALOR + "', '" + PLACA + "', '" + EMPLEADO + "','" + SERVICIO + "')";
             int cantid = conexion.mtdConectado(consulta);
             return cantid;
         }
         public int mtdAsignarVehiculo()
         {
             DataTable dtCliente = new DataTable();
-            string consulta = "select max (IdAutomovil) from Automovil as Ultimo;";
+            string consulta = "select max (IdAutomovil) from Automovil ";
             dtCliente = conexion.mtdDesconectado(consulta);
             int encontro = int.Parse(dtCliente.Rows[0][0].ToString());
             return encontro;

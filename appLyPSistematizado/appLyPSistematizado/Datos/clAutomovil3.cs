@@ -41,10 +41,10 @@ namespace appLyPSistematizado.Datos
 
                 objAutomovil.Placa = dtparqueo.Rows[i]["Placa"].ToString();
                 objAutomovil.TipoV = dtparqueo.Rows[i]["TipoV"].ToString();
-                //objAutomovil.FechaE = dtparqueo.Rows[i]["FechaHoraE"].ToString();
-                //objAutomovil.FechaS = dtparqueo.Rows[i]["FechaHoraS"].ToString();
-                //objAutomovil.Tipo = dtparqueo.Rows[i]["Tipo"].ToString();
-                //objAutomovil.Valor = dtparqueo.Rows[i]["Valor"].ToString();
+                objAutomovil.FechaE = dtparqueo.Rows[i]["FechaHoraE"].ToString();
+                objAutomovil.FechaS = dtparqueo.Rows[i]["FechaHoraS"].ToString();
+                objAutomovil.Tipo = dtparqueo.Rows[i]["Tipo"].ToString();
+                objAutomovil.Valor = dtparqueo.Rows[i]["Valor"].ToString();
 
                 listaAutomovil.Add(objAutomovil);
 
@@ -57,29 +57,37 @@ namespace appLyPSistematizado.Datos
             String consulta = "insert into Automovil (Placa,TipoV)" +
                               " values('" + Placa + "','" + TipoV + "')";
 
-            //DataTable dtServicio = new DataTable();
-            //String consulta5 = "select max (IdAutomovil) from Automovil AS Ultimo  ";
-            //dtServicio = objconexion.mtdDesconectado(consulta5);
-            //int encontro = int.Parse(dtServicio.Rows[0][0].ToString());
-            //return encontro;
-
-
-            String consulta2 = "insert into Servicio (FechaHoraE)" +
-                              " values('" + FechaE + "')";
-            String consulta3 = "insert into Servicio (FechaHoraS)" +
-                             " values('" + FechaS + "')";
-            string consulta4 = "insert into Servicio (Tipo,Valor)" +
-                              " values('" + Tipo + "','" + Valor + "')";
-
-
-
             int usure = objconexion.mtdConectado(consulta);
             return usure;
         }
+        public int mtdasignarvehi()
+        {
+
+            DataTable dtServicio = new DataTable();
+            String consulta5 = "select max (IdAutomovil) from Automovil AS Ultimo  ";
+            dtServicio = objconexion.mtdDesconectado(consulta5);
+            int encontro = int.Parse(dtServicio.Rows[0][0].ToString());
+            return encontro;
+        }
+
+        public int mtdservicio()
+        { 
+        String consulta2 = "insert into Servicio (FechaHoraE,FechaHoraS,Tipo,Valor)" +
+                          " values('" + FechaE + "','" + FechaS + "','" + Tipo + "','" + Valor + "')";
+
+        int usure2 = objconexion.mtdConectado(consulta2);
+            return usure2;
+        }
+
+
+         
+        
         public DataTable mtdbuscar()
         {
             DataTable dtbuscar = new DataTable();
-            string consulta = "select Placa,TipoV,FechaHoraE,FechaHoraS,Tipo,Valor FROM Automovil inner join Servicio on  (Servicio.IdAutomovil=Automovil.IdAutomovil) inner join Tarifa on (Tarifa.IdTipo=Servicio.IdServicio)where	Tipo='PARQUEO1'  or	Tipo='PARQUEO2' or 	Tipo='PARQUEO3' and Placa ='" + Placa + "'";
+            //string consulta = "select Placa,TipoV,FechaHoraE,FechaHoraS,Tipo,Valor FROM Automovil inner join Servicio on  (Servicio.IdAutomovil=Automovil.IdAutomovil) inner join Tarifa on (Tarifa.IdTipo=Servicio.IdServicio)where	Tipo='PARQUEO1'  or	Tipo='PARQUEO2' ";
+
+            string consulta = "select Placa,TipoV,FechaHoraE,FechaHoraS,Tipo,Valor FROM Automovil inner join Servicio on  (Servicio.IdAutomovil=Automovil.IdAutomovil) inner join Tarifa on (Tarifa.IdTipo=Servicio.IdServicio)where Placa ='" + Placa + "'";
             dtbuscar = objconexion.mtdDesconectado(consulta);
             return dtbuscar;
         }

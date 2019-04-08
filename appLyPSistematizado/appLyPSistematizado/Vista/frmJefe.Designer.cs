@@ -161,6 +161,7 @@
             this.pbMensualidad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMensualidad.TabIndex = 10;
             this.pbMensualidad.TabStop = false;
+            this.pbMensualidad.Click += new System.EventHandler(this.pbMensualidad_Click);
             // 
             // label7
             // 
