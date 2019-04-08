@@ -119,12 +119,13 @@
             // 
             this.cmbRol.FormattingEnabled = true;
             this.cmbRol.Items.AddRange(new object[] {
-            "ADMINISTRADOR",
-            "JEFE"});
+            "Administrador",
+            "Jefe"});
             this.cmbRol.Location = new System.Drawing.Point(381, 289);
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(121, 23);
             this.cmbRol.TabIndex = 9;
+            this.cmbRol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbRol_KeyPress_1);
             // 
             // label6
             // 

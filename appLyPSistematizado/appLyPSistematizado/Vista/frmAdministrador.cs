@@ -16,5 +16,15 @@ namespace appLyPSistematizado.Vista
         {
             InitializeComponent();
         }
+        frmMensualidad objMensualidad = new frmMensualidad();
+        private void pbMensualidad_Click(object sender, EventArgs e)
+        {
+            objMensualidad.Show();
+        }
+
+        private void pbProceso_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

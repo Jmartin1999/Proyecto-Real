@@ -8,9 +8,13 @@ namespace appLyPSistematizado.Datos
 {
     class clPagos
     {
-        public int mtdRegistrarAutomovil(int IdCliente)
+        public int IdAutomovil { get; set; }
+        public DateTime FechaPago { get; set; }
+        public string Valor { get; set; }
+        clConexion objConexion = new clConexion();
+        public int mtdRegistrarAutomovil(int IdAutomovil)
         {
-            string consulta = "insert into Automovil(Placa,TipoV,Observaciones,IdCliente) values ('" + Placa + "','" + TipoV + "','" + Observaciones + "','" + IdCliente + "')";
+            string consulta = "insert into Pago(FechaPago,Valor,IdAutomovil) values ('" + FechaPago + "','" + Valor + "','" + IdAutomovil + "')";
             int cantidad = objConexion.mtdConectado(consulta);
             return cantidad;
         }

@@ -32,9 +32,11 @@
             this.pbMensualidad = new System.Windows.Forms.PictureBox();
             this.pbLavado = new System.Windows.Forms.PictureBox();
             this.pbProceso = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbMensualidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLavado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProceso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pbMensualidad
@@ -46,11 +48,12 @@
             this.pbMensualidad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMensualidad.TabIndex = 13;
             this.pbMensualidad.TabStop = false;
+            this.pbMensualidad.Click += new System.EventHandler(this.pbMensualidad_Click);
             // 
             // pbLavado
             // 
             this.pbLavado.Image = ((System.Drawing.Image)(resources.GetObject("pbLavado.Image")));
-            this.pbLavado.Location = new System.Drawing.Point(316, 150);
+            this.pbLavado.Location = new System.Drawing.Point(308, 150);
             this.pbLavado.Name = "pbLavado";
             this.pbLavado.Size = new System.Drawing.Size(176, 138);
             this.pbLavado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -66,6 +69,17 @@
             this.pbProceso.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbProceso.TabIndex = 11;
             this.pbProceso.TabStop = false;
+            this.pbProceso.Click += new System.EventHandler(this.pbProceso_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(-271, -78);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(1342, 606);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
             // 
             // frmAdministrador
             // 
@@ -75,11 +89,13 @@
             this.Controls.Add(this.pbMensualidad);
             this.Controls.Add(this.pbLavado);
             this.Controls.Add(this.pbProceso);
+            this.Controls.Add(this.pictureBox3);
             this.Name = "frmAdministrador";
             this.Text = "frmAdministrador";
             ((System.ComponentModel.ISupportInitialize)(this.pbMensualidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLavado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProceso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -89,5 +105,6 @@
         private System.Windows.Forms.PictureBox pbMensualidad;
         private System.Windows.Forms.PictureBox pbLavado;
         private System.Windows.Forms.PictureBox pbProceso;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

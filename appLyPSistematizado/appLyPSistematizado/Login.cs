@@ -26,6 +26,8 @@ namespace appLyPSistematizado
         List<clLogin> listaOlvidar = new List<clLogin>();
         frmRegistroPersonal objRegistrar = new frmRegistroPersonal();
         frmAdministrador objAdministrador = new frmAdministrador();
+        frmJefe objJefe = new frmJefe();
+        
         
  
         private void label5_Click(object sender, EventArgs e)
@@ -179,7 +181,10 @@ namespace appLyPSistematizado
             }
         }
 
-        private void cmbRol_KeyPress(object sender, KeyPressEventArgs e)
+      
+ 
+
+        private void cmbRol_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
         }

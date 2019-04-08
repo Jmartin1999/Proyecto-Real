@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroPersonal));
             this.cmbRol = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
@@ -48,7 +49,9 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvPersonal = new System.Windows.Forms.DataGridView();
             this.btnListarPersonal = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbRol
@@ -233,6 +236,16 @@
             this.btnListarPersonal.UseVisualStyleBackColor = true;
             this.btnListarPersonal.Click += new System.EventHandler(this.btnListarPersonal_Click);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(-271, -78);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(1342, 606);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 44;
+            this.pictureBox3.TabStop = false;
+            // 
             // frmRegistroPersonal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,10 +271,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox3);
             this.Name = "frmRegistroPersonal";
             this.Text = "frmRegistroPersonal";
             this.Load += new System.EventHandler(this.frmRegistroPersonal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPersonal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,5 +304,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.DataGridView dgvPersonal;
         private System.Windows.Forms.Button btnListarPersonal;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
