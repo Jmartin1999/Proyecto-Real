@@ -34,6 +34,7 @@
             this.btnEliminar11 = new System.Windows.Forms.Button();
             this.tabCliente = new System.Windows.Forms.TabPage();
             this.gbxcliente = new System.Windows.Forms.GroupBox();
+            this.btnPagar = new System.Windows.Forms.Button();
             this.gpAutomovil = new System.Windows.Forms.GroupBox();
             this.btnVehiculo = new System.Windows.Forms.Button();
             this.txtPlaca = new System.Windows.Forms.TextBox();
@@ -53,10 +54,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.dgvBuscar = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbPagos = new System.Windows.Forms.TabPage();
+            this.lblAutomovil = new System.Windows.Forms.Label();
+            this.lblTiempo = new System.Windows.Forms.Label();
             this.btnPago = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPagos = new System.Windows.Forms.DataGridView();
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.txtPlaca3 = new System.Windows.Forms.TextBox();
@@ -64,22 +68,18 @@
             this.btnBuscarPlaca = new System.Windows.Forms.Button();
             this.txtPlaca2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.lblTiempo = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblAutomovil = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabCliente.SuspendLayout();
             this.gbxcliente.SuspendLayout();
             this.gpAutomovil.SuspendLayout();
             this.gbCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tbPagos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnServicio
@@ -113,7 +113,7 @@
             // 
             // gbxcliente
             // 
-            this.gbxcliente.Controls.Add(this.linkLabel1);
+            this.gbxcliente.Controls.Add(this.btnPagar);
             this.gbxcliente.Controls.Add(this.gpAutomovil);
             this.gbxcliente.Controls.Add(this.gbCliente);
             this.gbxcliente.Controls.Add(this.dgvBuscar);
@@ -123,6 +123,16 @@
             this.gbxcliente.Size = new System.Drawing.Size(840, 484);
             this.gbxcliente.TabIndex = 19;
             this.gbxcliente.TabStop = false;
+            // 
+            // btnPagar
+            // 
+            this.btnPagar.Location = new System.Drawing.Point(666, 359);
+            this.btnPagar.Name = "btnPagar";
+            this.btnPagar.Size = new System.Drawing.Size(114, 59);
+            this.btnPagar.TabIndex = 38;
+            this.btnPagar.Text = "Pago$$$";
+            this.btnPagar.UseVisualStyleBackColor = true;
+            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
             // gpAutomovil
             // 
@@ -308,6 +318,16 @@
             this.dgvBuscar.Size = new System.Drawing.Size(513, 200);
             this.dgvBuscar.TabIndex = 33;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-251, -61);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1342, 606);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabCliente);
@@ -323,7 +343,7 @@
             this.tbPagos.Controls.Add(this.lblAutomovil);
             this.tbPagos.Controls.Add(this.lblTiempo);
             this.tbPagos.Controls.Add(this.btnPago);
-            this.tbPagos.Controls.Add(this.dataGridView1);
+            this.tbPagos.Controls.Add(this.dgvPagos);
             this.tbPagos.Controls.Add(this.txtTipo);
             this.tbPagos.Controls.Add(this.txtObservaciones);
             this.tbPagos.Controls.Add(this.txtPlaca3);
@@ -340,6 +360,24 @@
             this.tbPagos.Text = "Registro Pagos";
             this.tbPagos.UseVisualStyleBackColor = true;
             // 
+            // lblAutomovil
+            // 
+            this.lblAutomovil.AutoSize = true;
+            this.lblAutomovil.Location = new System.Drawing.Point(49, 62);
+            this.lblAutomovil.Name = "lblAutomovil";
+            this.lblAutomovil.Size = new System.Drawing.Size(10, 13);
+            this.lblAutomovil.TabIndex = 14;
+            this.lblAutomovil.Text = ":";
+            // 
+            // lblTiempo
+            // 
+            this.lblTiempo.AutoSize = true;
+            this.lblTiempo.Location = new System.Drawing.Point(683, 25);
+            this.lblTiempo.Name = "lblTiempo";
+            this.lblTiempo.Size = new System.Drawing.Size(10, 13);
+            this.lblTiempo.TabIndex = 13;
+            this.lblTiempo.Text = ":";
+            // 
             // btnPago
             // 
             this.btnPago.Location = new System.Drawing.Point(313, 445);
@@ -350,13 +388,13 @@
             this.btnPago.UseVisualStyleBackColor = true;
             this.btnPago.Click += new System.EventHandler(this.btnPago_Click);
             // 
-            // dataGridView1
+            // dgvPagos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(147, 179);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(458, 204);
-            this.dataGridView1.TabIndex = 11;
+            this.dgvPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPagos.Location = new System.Drawing.Point(147, 179);
+            this.dgvPagos.Name = "dgvPagos";
+            this.dgvPagos.Size = new System.Drawing.Size(458, 204);
+            this.dgvPagos.TabIndex = 11;
             // 
             // txtTipo
             // 
@@ -416,39 +454,6 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Buscar Placa";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(680, 395);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(77, 13);
-            this.linkLabel1.TabIndex = 36;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Registrar Pago";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // lblTiempo
-            // 
-            this.lblTiempo.AutoSize = true;
-            this.lblTiempo.Location = new System.Drawing.Point(683, 25);
-            this.lblTiempo.Name = "lblTiempo";
-            this.lblTiempo.Size = new System.Drawing.Size(10, 13);
-            this.lblTiempo.TabIndex = 13;
-            this.lblTiempo.Text = ":";
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lblAutomovil
-            // 
-            this.lblAutomovil.AutoSize = true;
-            this.lblAutomovil.Location = new System.Drawing.Point(49, 62);
-            this.lblAutomovil.Name = "lblAutomovil";
-            this.lblAutomovil.Size = new System.Drawing.Size(10, 13);
-            this.lblAutomovil.TabIndex = 14;
-            this.lblAutomovil.Text = ":";
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
@@ -459,15 +464,9 @@
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox1
+            // timer1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-251, -61);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1342, 606);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmMensualidad
             // 
@@ -482,18 +481,17 @@
             this.Load += new System.EventHandler(this.frmMensualidad_Load);
             this.tabCliente.ResumeLayout(false);
             this.gbxcliente.ResumeLayout(false);
-            this.gbxcliente.PerformLayout();
             this.gpAutomovil.ResumeLayout(false);
             this.gpAutomovil.PerformLayout();
             this.gbCliente.ResumeLayout(false);
             this.gbCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tbPagos.ResumeLayout(false);
             this.tbPagos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -523,7 +521,7 @@
         private System.Windows.Forms.GroupBox gbCliente;
         private System.Windows.Forms.TextBox txtDocumento;
         private System.Windows.Forms.TextBox txtPlaca;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPagos;
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.TextBox txtObservaciones;
         private System.Windows.Forms.TextBox txtPlaca3;
@@ -534,11 +532,11 @@
         private System.Windows.Forms.Button btnVehiculo;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Button btnPago;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label lblTiempo;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblAutomovil;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btnPagar;
     }
 }
