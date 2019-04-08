@@ -49,17 +49,9 @@ namespace appLyPSistematizado
             for (int i = 0; i < listaUsuario.Count; i++)
 
             {
-                if (listaUsuario[i].Correo == txtUsuario.Text && listaUsuario[i].Contraseña == txtContraseña.Text && listaUsuario[i].Rol == cmbRol.Text)
+                if (listaUsuario[i].Correo == txtUsuario.Text && listaUsuario[i].Contraseña == txtContraseña.Text && listaUsuario[i].Rol =="Administrador" )
                 {
-                    if (cmbRol.Text=="Administrador")
-                    {
-                        objAdministrador.Show();
-                      
-                    }
-                    else if(cmbRol.Text == "Jefe")
-                   {
-                        objJefe.Show();
-                    }
+                    
                 }
                 else
                 {
@@ -67,6 +59,7 @@ namespace appLyPSistematizado
                 }
 
             }
+
             if (incorrecto==true)
             {
                 incorrecto = false;

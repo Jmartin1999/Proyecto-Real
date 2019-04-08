@@ -11,7 +11,7 @@ namespace appLyPSistematizado.Datos
     {
         public string TipoServicio { get; set; }
         public string TipoVehiculo { get; set; }
-        public string Costo { get; set; }
+        public string Valor { get; set; }
 
         clConexion objConexion = new clConexion();
 
@@ -26,8 +26,8 @@ namespace appLyPSistematizado.Datos
             {
                 clTipo objTipo = new clTipo();
                 objTipo.TipoServicio = dtTipo.Rows[i]["TipoServicio"].ToString();
-                objTipo.TipoVehiculo = dtTipo.Rows[i]["TipoVehiculo"].ToString();
-                objTipo.Costo = dtTipo.Rows[i]["ValorTarifa"].ToString();
+                objTipo.TipoVehiculo = dtTipo.Rows[i]["Categoria"].ToString();
+                objTipo.Valor = dtTipo.Rows[i]["Valor"].ToString();
                 ListaTipo.Add(objTipo);
 
             }
@@ -36,7 +36,7 @@ namespace appLyPSistematizado.Datos
         public int mtdRegistro()
 
         {
-            string Consulta = "Insert into Tarifa(TipoServicio,TipoVehiculo,ValorTarifa) values ('" + TipoServicio + "','" + TipoVehiculo + "','" + Costo + "')";
+            string Consulta = "Insert into Tarifa(TipoServicio,TipoVehiculo,ValorTarifa) values ('" + TipoServicio + "','" + TipoVehiculo + "','" + Valor + "')";
             int dtRegistro = objConexion.mtdConectado(Consulta);
             return dtRegistro;
         }
@@ -49,7 +49,7 @@ namespace appLyPSistematizado.Datos
         }
         public int mtdModificar()
         {
-            string Consulta = "update Tarifa set TipoServicio='" + TipoServicio + "' , TipoVehiculo='" + TipoVehiculo + "',ValorTarifa='" + Costo + "'where TipoServicio='" + TipoServicio + "'  ";
+            string Consulta = "update Tarifa set TipoServicio='" + TipoServicio + "' , TipoVehiculo='" + TipoVehiculo + "',ValorTarifa='" + Valor + "'where TipoServicio='" + TipoServicio + "'  ";
             int Cant = objConexion.mtdConectado(Consulta);
             return Cant;
 

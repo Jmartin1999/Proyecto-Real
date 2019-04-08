@@ -44,7 +44,7 @@ namespace appLyPSistematizado.Vista
                 clTipo objTipo = new clTipo();
                 objTipo.TipoServicio = txtTipoS.Text;
                 objTipo.TipoVehiculo = txtTipoV.Text;
-                objTipo.Costo = txtCosto.Text;
+                objTipo.Valor = txtCosto.Text;
                 int Cantidad = objTipo.mtdRegistro();
                 if (Cantidad > 0)
                 {
@@ -74,7 +74,7 @@ namespace appLyPSistematizado.Vista
             clTipo ObjTipo = new clTipo();
             ObjTipo.TipoServicio = txtTipoS.Text;
             ObjTipo.TipoVehiculo = txtTipoV.Text;
-            ObjTipo.Costo = txtCosto.Text;
+            ObjTipo.Valor = txtCosto.Text;
             int Cantidad = ObjTipo.mtdModificar();
             if (Cantidad > 0)
             {
