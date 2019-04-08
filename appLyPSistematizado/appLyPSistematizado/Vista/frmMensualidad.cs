@@ -23,9 +23,10 @@ namespace appLyPSistematizado.Vista
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             clCliente objCliente = new clCliente();
+            
             List<clCliente> Repetir = new List<clCliente>();
-            objCliente.Documento = txtDocumento.Text;
             Repetir = objCliente.mtdAutoCompletar();
+            objCliente.Documento = txtDocumento.Text;
             for (int i = 0; i < Repetir.Count; i++)
             {
                 if (Repetir[i].Documento == txtDocumento.Text)
@@ -42,7 +43,7 @@ namespace appLyPSistematizado.Vista
                     if (can > 0)
                     {
                         MessageBox.Show("Registrado");
-                        gpAutomovil.Visible = true;
+                      
                         frmMensualidad_Load(null, null);
                     }
                     else
@@ -52,10 +53,7 @@ namespace appLyPSistematizado.Vista
                 }
             }
           
-            txtDocumento.Clear();
-            txtNombre.Clear();
-            txtTelefono.Clear();
-            txtPlaca.Focus();
+        
 
         }
 
@@ -145,8 +143,9 @@ namespace appLyPSistematizado.Vista
         private void btnModificar_Click(object sender, EventArgs e)
         {
             clAutomovil objAutomovil = new clAutomovil();
-            List<clAutomovil> RepetirPlaca = new List<clAutomovil>();
             objAutomovil.Placa = txtPlaca.Text;
+            List<clAutomovil> RepetirPlaca = new List<clAutomovil>();
+       
             RepetirPlaca = objAutomovil.mtdAutoCompletarAutomovil();
             for (int i = 0; i < RepetirPlaca.Count; i++)
             {
@@ -184,12 +183,12 @@ namespace appLyPSistematizado.Vista
             clAutomovil objAutomovil = new clAutomovil();
 
             List<clAutomovil> ListaAutomovil = new List<clAutomovil>();
-            objAutomovil.Placa = txtPlaca.Text;
+            objAutomovil.Placa = txtPlaca2.Text;
             dgvBuscar.DataSource = objAutomovil.mtdMostrar();
             ListaAutomovil = objAutomovil.mtdAutoCompletarAutomovil();
             for (int i = 0; i < ListaAutomovil.Count; i++)
             {
-                if (ListaAutomovil[i].Placa == txtPlaca.Text)
+                if (ListaAutomovil[i].Placa == txtPlaca2.Text)
                 {
               
                     int variable = ListaAutomovil[i].IdAutomovil;
@@ -217,11 +216,11 @@ namespace appLyPSistematizado.Vista
         {
             clPagos objPago = new clPagos();
             objPago.FechaPago = Convert.ToDateTime(lblTiempo.Text);
-            if (txtTipo.Text=="Carro")
+            if (txtTipo.Text == "Carro")
             {
                 objPago.Valor = "50000";
             }
-            else if (txtTipo.Text=="Moto")
+            else if (txtTipo.Text == "Moto")
             {
                 objPago.Valor = "30000";
             }
@@ -229,7 +228,9 @@ namespace appLyPSistematizado.Vista
             {
                 objPago.Valor = "10000";
             }
+
             int IdAutomovil = Convert.ToInt32(lblAutomovil.Text);
+            objPago.IdAutomovil = IdAutomovil;
             int can = objPago.mtdRegistrarPago(IdAutomovil);
             if (can > 0)
             {
@@ -240,6 +241,7 @@ namespace appLyPSistematizado.Vista
             {
                 MessageBox.Show("ERORRRRRRRRRR");
             }
+            
 
         }
     }
