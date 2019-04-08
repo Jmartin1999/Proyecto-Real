@@ -26,5 +26,12 @@ namespace appLyPSistematizado.Vista
         {
 
         }
+
+        private void pbLavado_Click(object sender, EventArgs e)
+        {
+            frmLavado lavado = new frmLavado();
+            lavado.Show();
+            this.Hide();
+        }
     }
 }
