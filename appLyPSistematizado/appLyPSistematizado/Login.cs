@@ -25,11 +25,11 @@ namespace appLyPSistematizado
         List<clLogin> listaCorreo = new List<clLogin>();
         List<clLogin> listaOlvidar = new List<clLogin>();
         frmRegistroPersonal objRegistrar = new frmRegistroPersonal();
-        frmMenu objMenu = new frmMenu();
+        frmJefe objMenu = new frmJefe();
        
-        frmMenu objServicios = new frmMenu();
+        frmJefe objServicios = new frmJefe();
 
-        frmMenu objJefe = new frmMenu();
+        frmJefe objJefe = new frmJefe();
         private void label5_Click(object sender, EventArgs e)
         {
             objRegistrar.Show();
@@ -45,35 +45,35 @@ namespace appLyPSistematizado
 
             clLogin objLogin = new clLogin();
             listaUsuario = objLogin.mtdListarSesion();
-            bool incorrecto = false;
+            bool incorrecto = true;
             for (int i = 0; i < listaUsuario.Count; i++)
 
             {
                 if (listaUsuario[i].Correo == txtUsuario.Text && listaUsuario[i].Contraseña == txtContraseña.Text && listaUsuario[i].Rol == cmbRol.Text)
                 {
-                    if (cmbRol.Text=="ADMINISTRADOR")
+                    if (cmbRol.Text=="Administrador")
                     {
                         objMenu.Show();
                       
                     }
-                    else if(cmbRol.Text=="JEFE")
+                    else if(cmbRol.Text == "Jefe")
                    {
                         objMenu.Show();
                     }
                 }
                 else
                 {
-                    incorrecto = true;
+                    incorrecto = false;
                 }
 
             }
-            if (incorrecto==false)
+            if (incorrecto==true)
             {
-                incorrecto = true;
+                incorrecto = false;
             }
             else
             {
-                MessageBox.Show("Revise Correo o Contraseña");
+                MessageBox.Show("Datos Ingresados Incorrectos ");
             }
         }
 
@@ -161,19 +161,33 @@ namespace appLyPSistematizado
         string contraseñarecuperada = "";
         private void lnlContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            clLogin objLogin = new clLogin();
-            string email = txtUsuario.Text;
-            listaOlvidar = objLogin.mtdOlvidar(email);
+            try
+            {
+                clLogin objLogin = new clLogin();
+                string email = txtUsuario.Text;
+                listaOlvidar = objLogin.mtdOlvidar(email);
 
 
-            contraseñarecuperada = listaOlvidar[0].Contraseña.ToString();
+                contraseñarecuperada = listaOlvidar[0].Contraseña.ToString();
 
 
-            mtdEnviar();
-            MessageBox.Show("Se ha enviado un Correo de recuperacion a su cuenta de correo electronico");
+                mtdEnviar();
+                MessageBox.Show("Se ha enviado un Correo de recuperacion a su cuenta de correo electronico " + txtUsuario);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No hay conexion a internet" + ex.ToString());
+
+            }
+        }
+
+        private void cmbRol_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }
+
         
 
 

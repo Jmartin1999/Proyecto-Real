@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,184 +17,200 @@ namespace appLyPSistematizado.Vista
         public frmMensualidad()
         {
             InitializeComponent();
+            timer1.Enabled = true;
         }
-        clValidacion3 objvalidacion = new clValidacion3();
-
-        private void btnguarda11_Click(object sender, EventArgs e)
+        List<clAutomovil> ListaVerAutomovil = new List<clAutomovil>();
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtDoc11.Text) || string.IsNullOrEmpty(txtNom11.Text))
+            clCliente objCliente = new clCliente();
+            List<clCliente> Repetir = new List<clCliente>();
+            objCliente.Documento = txtDocumento.Text;
+            Repetir = objCliente.mtdAutoCompletar();
+            for (int i = 0; i < Repetir.Count; i++)
             {
-                MessageBox.Show("debe ingresar la informacion completa");
-            }
-            else if (string.IsNullOrEmpty(txtTelf11.Text) | string.IsNullOrEmpty(txtDirec11.Text))
-            {
-                MessageBox.Show("debe ingresar la informacion completa");
-            }
-            else if (string.IsNullOrEmpty(txtFecha11.Text))
-            {
-                MessageBox.Show("debe ingresar la informacion completa");
-            }
-            else
-            {
-                clCliente objcliente = new clCliente();
-                
-
-                objcliente.NombresYApellidos = txtNom11.Text;
-                objcliente.Documento = txtDoc11.Text;
-                objcliente.Telefono = txtTelf11.Text;
-                objcliente.Direccion = txtDirec11.Text;
-                objcliente.Fecha = txtFecha11.Text;
-                int numm = objcliente.mtdRegistrar();
-                
-                if (numm > 0)
+                if (Repetir[i].Documento == txtDocumento.Text)
                 {
-                    MessageBox.Show("Datos Registrados");
+                    MessageBox.Show("Este Cliente Ya Esta Registrado");
+                }
+                else
+                {
+                    objCliente.Documento = txtDocumento.Text;
+                    objCliente.Nombres = txtNombre.Text;
+                    objCliente.Telefono = txtTelefono.Text;
+
+                    int can = objCliente.mtdRegistrarCliente();
+                    if (can > 0)
+                    {
+                        MessageBox.Show("Registrado");
+                        gpAutomovil.Visible = true;
+                        frmMensualidad_Load(null, null);
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERORRRRRRRRRR");
+                    }
+                }
+            }
+          
+            txtDocumento.Clear();
+            txtNombre.Clear();
+            txtTelefono.Clear();
+            txtPlaca.Focus();
+
+        }
+
+       
+
+        private void btnVehiculo_Click(object sender, EventArgs e)
+        {
+            clAutomovil objAutomovil = new clAutomovil();
+            objAutomovil.Placa = txtPlaca.Text;
+            dgvBuscar.DataSource = objAutomovil.mtdMostrar();
+    
+
+        }
+
+        private void frmMensualidad_Load(object sender, EventArgs e)
+        {
+            clAutomovil objAutomovil = new clAutomovil();
+            DataTable dtAutomovil = new DataTable();
+            dtAutomovil = objAutomovil.mtdMostrar();
+            dgvBuscar.DataSource = dtAutomovil;
+            
+        }
+
+  
+
+        private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clCliente objCliente = new clCliente();
+            List<clCliente> ListaCliente = new List<clCliente>();
+            objCliente.Documento = txtDocumento.Text;
+            ListaCliente = objCliente.mtdAutoCompletar();
+            for (int i = 0; i < ListaCliente.Count; i++)
+            {
+                if (ListaCliente[i].Documento == txtDocumento.Text)
+                {
+                    txtNombre.Text = ListaCliente[i].Nombres;
+                    txtTelefono.Text = ListaCliente[i].Telefono;
+                }
+
+            }
+        }
+
+        private void txtPlaca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clAutomovil objAutomovil = new clAutomovil();
+
+            List<clAutomovil> ListaAutomovil = new List<clAutomovil>();
+            objAutomovil.Placa = txtPlaca.Text;
+            dgvBuscar.DataSource = objAutomovil.mtdMostrar();
+            ListaAutomovil = objAutomovil.mtdAutoCompletarAutomovil();
+            for (int i = 0; i < ListaAutomovil.Count; i++)
+            {
+                if (ListaAutomovil[i].Placa == txtPlaca.Text)
+                {
+                   
+                    cmbTipo.Text = ListaAutomovil[i].TipoV;
+                    txtObservacion.Text = ListaAutomovil[i].Observaciones;
+                }
+
+            }
+        }
+
+        private void txtPlaca2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            clAutomovil objAutomovil = new clAutomovil();
+
+            List<clAutomovil> lista = new List<clAutomovil>();
+            objAutomovil.Placa = txtPlaca2.Text;
+   
+            lista = objAutomovil.mtdAutoCompletarAutomovil();
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (lista[i].Placa == txtPlaca2.Text)
+                {
+                    txtPlaca3.Text = lista[i].Placa;
+                    txtTipo.Text = lista[i].TipoV;
+                    txtObservaciones.Text = lista[i].Observaciones;
+                }
+
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            clAutomovil objAutomovil = new clAutomovil();
+            List<clAutomovil> RepetirPlaca = new List<clAutomovil>();
+            objAutomovil.Placa = txtPlaca.Text;
+            RepetirPlaca = objAutomovil.mtdAutoCompletarAutomovil();
+            for (int i = 0; i < RepetirPlaca.Count; i++)
+            {
+                if (RepetirPlaca[i].Placa==txtPlaca.Text)
+                {
+                    MessageBox.Show("Este Automovil ya esta resgistrado");
+                }
+                else
+                {
+                    objAutomovil.Placa = txtPlaca.Text;
+                    objAutomovil.TipoV = cmbTipo.Text;
+                    objAutomovil.Observaciones = txtObservacion.Text;
                     clCliente objCliente = new clCliente();
-                    dgvCliente.DataSource = objCliente.mtdListar();
+                    int variable = objCliente.mtdAsignarVehiculo();
+                    lblId.Text = variable.ToString();
 
-                    
+
+                    int can = objAutomovil.mtdRegistrarAutomovil(variable);
+                    if (can > 0)
+                    {
+                        MessageBox.Show("Registrado");
+                        frmMensualidad_Load(null, null);
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERORRRRRRRRRR");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Datos no Registrados");
-                }
-                frmParqueadero objAutomovil = new frmParqueadero("");
-                objAutomovil.Show();
-
-                txtNom11.Clear();
-                txtDoc11.Clear();
-                txtTelf11.Clear();
-                txtDirec11.Clear();
-                txtFecha11.Clear();
-               
             }
-        }
-
-        private void frmCliente_Load(object sender, EventArgs e)
-        {
-            clCliente objCliente = new clCliente();
-            List<clCliente> listaDatos = new List<clCliente>();
-
-            listaDatos = objCliente.mtdListar();
-            dgvCliente.DataSource = objCliente.mtdListar();
-            for (int i = 0; i < listaDatos.Count; i++)
-            {
-
-            }
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            clCliente objCliente = new clCliente();
-            objCliente.Documento = txtDocumento11.Text;
-            dgvCliente.DataSource = objCliente.mtdBuscar();
-        }
-
-        private void btnModificar11_Click(object sender, EventArgs e)
-        {
-            clCliente objcliente = new clCliente();
-            
-            objcliente.NombresYApellidos = txtNom11.Text;
-            objcliente.Documento = txtDoc11.Text;
-            objcliente.Telefono = txtTelf11.Text;
-            objcliente.Direccion = txtDirec11.Text;
-            objcliente.Fecha = txtFecha11.Text;
-
-            int cant = objcliente.mtdModificar();
-            if (cant > 0)
-            {
-                MessageBox.Show("Datos Modificados" + cant);
-
-            }
-            else
-            {
-                MessageBox.Show("Error");
-            }
-            dgvCliente.DataSource = objcliente.mtdListar();
            
-            txtNom11.Clear();
-            txtDoc11.Clear();
-            txtTelf11.Clear();
-            txtDirec11.Clear();
-            txtFecha11.Clear();
         }
 
-        private void txtDoc11_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnBuscarPlaca_Click(object sender, EventArgs e)
         {
-            if (char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                if (char.IsControl(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-                else
-                {
-                    e.Handled = true;
-                    MessageBox.Show("digitar solo numeros");
-                }
-            }
-        }
+            clAutomovil objAutomovil = new clAutomovil();
 
-        private void dgvCliente_DoubleClick(object sender, EventArgs e)
-        {
-            
-            txtNom11.Text = Convert.ToString(dgvCliente.CurrentRow.Cells[0].Value);
-            txtDoc11.Text = Convert.ToString(dgvCliente.CurrentRow.Cells[1].Value);
-            txtTelf11.Text = Convert.ToString(dgvCliente.CurrentRow.Cells[2].Value);
-            txtDirec11.Text = Convert.ToString(dgvCliente.CurrentRow.Cells[3].Value);
-            txtFecha11.Text = Convert.ToString(dgvCliente.CurrentRow.Cells[4].Value);
-
-        }
-
-        private void txtTelf11_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            objvalidacion.mtdSolNumeros(e);
-        }
-
-        private void btnEliminar11_Click(object sender, EventArgs e)
-        {
-            clCliente objCliente = new clCliente();
-            objCliente.Documento = txtDocumento11.Text;
-            objCliente.mtdEliminar();
-            MessageBox.Show("Datos Eliminados");
-            dgvCliente.DataSource = objCliente.mtdListar();
+            List<clAutomovil> ListaAutomovil = new List<clAutomovil>();
+            objAutomovil.Placa = txtPlaca.Text;
            
-            txtNom11.Clear();
-            txtDoc11.Clear();
-            txtTelf11.Clear();
-            txtDirec11.Clear();
-            txtFecha11.Clear();
+            dgvBuscar.DataSource = objAutomovil.mtdMostrar();
+            ListaAutomovil = objAutomovil.mtdAutoCompletarAutomovil();
+            for (int i = 0; i < ListaAutomovil.Count; i++)
+            {
+                if (ListaAutomovil[i].Placa == txtPlaca.Text)
+                {
+              
+                    int variable = ListaAutomovil[i].IdAutomovil;
+                    lblAutomovil.Text = variable.ToString();
+                    cmbTipo.Text = ListaAutomovil[i].TipoV;
+                    txtObservacion.Text = ListaAutomovil[i].Observaciones;
+                }
+
+            }
         }
 
-        private void txtNom11_KeyPress(object sender, KeyPressEventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
-            objvalidacion.mtdSololetras(e);
-            objvalidacion.mtdSoloMayusculas(e);
+            tbPagos.Show();
         }
 
-        private void txtDirec11_KeyPress(object sender, KeyPressEventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            objvalidacion.mtdSoloMayusculas(e);
+            lblTiempo.Text = DateTime.Now.ToString();
         }
 
-        private void txtDoc11_KeyPress_1(object sender, KeyPressEventArgs e)
+        private void btnPago_Click(object sender, EventArgs e)
         {
-            objvalidacion.mtdSolNumeros(e);
-        }
 
-        private void txtFecha11_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            objvalidacion.mtdSolNumeros(e);
-        }
-
-        private void txtDocumento11_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            objvalidacion.mtdSolNumeros(e);
         }
     }
 }

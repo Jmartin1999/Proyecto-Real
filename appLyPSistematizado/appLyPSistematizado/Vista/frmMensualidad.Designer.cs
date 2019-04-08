@@ -28,32 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnServicio = new System.Windows.Forms.Button();
             this.btnEliminar11 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtDocumento11 = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.tabCliente = new System.Windows.Forms.TabPage();
             this.gbxcliente = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtDoc11 = new System.Windows.Forms.TextBox();
-            this.btnModificar11 = new System.Windows.Forms.Button();
-            this.btnguarda11 = new System.Windows.Forms.Button();
-            this.txtFecha11 = new System.Windows.Forms.TextBox();
+            this.gpAutomovil = new System.Windows.Forms.GroupBox();
+            this.btnVehiculo = new System.Windows.Forms.Button();
+            this.txtPlaca = new System.Windows.Forms.TextBox();
+            this.cmbTipo = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtDirec11 = new System.Windows.Forms.TextBox();
-            this.txtNom11 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.txtObservacion = new System.Windows.Forms.TextBox();
+            this.gbCliente = new System.Windows.Forms.GroupBox();
+            this.lblId = new System.Windows.Forms.Label();
+            this.txtDocumento = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtTelf11 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.dgvBuscar = new System.Windows.Forms.DataGridView();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tbPagos = new System.Windows.Forms.TabPage();
+            this.btnPago = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtTipo = new System.Windows.Forms.TextBox();
+            this.txtObservaciones = new System.Windows.Forms.TextBox();
+            this.txtPlaca3 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnBuscarPlaca = new System.Windows.Forms.Button();
+            this.txtPlaca2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lblTiempo = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblAutomovil = new System.Windows.Forms.Label();
+            this.tabCliente.SuspendLayout();
             this.gbxcliente.SuspendLayout();
+            this.gpAutomovil.SuspendLayout();
+            this.gbCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tbPagos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnServicio
             // 
-            this.btnServicio.Location = new System.Drawing.Point(777, 406);
+            this.btnServicio.Location = new System.Drawing.Point(737, 422);
             this.btnServicio.Name = "btnServicio";
             this.btnServicio.Size = new System.Drawing.Size(75, 23);
             this.btnServicio.TabIndex = 24;
@@ -68,190 +94,378 @@
             this.btnEliminar11.TabIndex = 23;
             this.btnEliminar11.Text = "Eliminar";
             this.btnEliminar11.UseVisualStyleBackColor = true;
-            this.btnEliminar11.Click += new System.EventHandler(this.btnEliminar11_Click);
             // 
-            // label6
+            // tabCliente
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(464, 44);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Documento";
-            // 
-            // txtDocumento11
-            // 
-            this.txtDocumento11.Location = new System.Drawing.Point(583, 44);
-            this.txtDocumento11.Name = "txtDocumento11";
-            this.txtDocumento11.Size = new System.Drawing.Size(204, 20);
-            this.txtDocumento11.TabIndex = 22;
-            this.txtDocumento11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocumento11_KeyPress);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(834, 44);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 18;
-            this.btnBuscar.Text = "buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // dgvCliente
-            // 
-            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Location = new System.Drawing.Point(427, 86);
-            this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.Size = new System.Drawing.Size(631, 300);
-            this.dgvCliente.TabIndex = 20;
-            this.dgvCliente.DoubleClick += new System.EventHandler(this.dgvCliente_DoubleClick);
+            this.tabCliente.Controls.Add(this.gbxcliente);
+            this.tabCliente.Location = new System.Drawing.Point(4, 22);
+            this.tabCliente.Name = "tabCliente";
+            this.tabCliente.Padding = new System.Windows.Forms.Padding(3);
+            this.tabCliente.Size = new System.Drawing.Size(846, 496);
+            this.tabCliente.TabIndex = 0;
+            this.tabCliente.Text = "Registro Cliente";
+            this.tabCliente.UseVisualStyleBackColor = true;
             // 
             // gbxcliente
             // 
-            this.gbxcliente.Controls.Add(this.label1);
-            this.gbxcliente.Controls.Add(this.txtDoc11);
-            this.gbxcliente.Controls.Add(this.btnModificar11);
-            this.gbxcliente.Controls.Add(this.btnguarda11);
-            this.gbxcliente.Controls.Add(this.txtFecha11);
-            this.gbxcliente.Controls.Add(this.label5);
-            this.gbxcliente.Controls.Add(this.label2);
-            this.gbxcliente.Controls.Add(this.txtDirec11);
-            this.gbxcliente.Controls.Add(this.txtNom11);
-            this.gbxcliente.Controls.Add(this.label4);
-            this.gbxcliente.Controls.Add(this.label3);
-            this.gbxcliente.Controls.Add(this.txtTelf11);
-            this.gbxcliente.Location = new System.Drawing.Point(34, 31);
+            this.gbxcliente.Controls.Add(this.linkLabel1);
+            this.gbxcliente.Controls.Add(this.gpAutomovil);
+            this.gbxcliente.Controls.Add(this.gbCliente);
+            this.gbxcliente.Controls.Add(this.dgvBuscar);
+            this.gbxcliente.Location = new System.Drawing.Point(3, 6);
             this.gbxcliente.Name = "gbxcliente";
-            this.gbxcliente.Size = new System.Drawing.Size(358, 398);
+            this.gbxcliente.Size = new System.Drawing.Size(840, 484);
             this.gbxcliente.TabIndex = 19;
             this.gbxcliente.TabStop = false;
-            this.gbxcliente.Text = "Registro de Cliente";
             // 
-            // label1
+            // gpAutomovil
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 111);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Documento";
+            this.gpAutomovil.Controls.Add(this.btnVehiculo);
+            this.gpAutomovil.Controls.Add(this.txtPlaca);
+            this.gpAutomovil.Controls.Add(this.cmbTipo);
+            this.gpAutomovil.Controls.Add(this.label15);
+            this.gpAutomovil.Controls.Add(this.label8);
+            this.gpAutomovil.Controls.Add(this.label5);
+            this.gpAutomovil.Controls.Add(this.btnModificar);
+            this.gpAutomovil.Controls.Add(this.txtObservacion);
+            this.gpAutomovil.Location = new System.Drawing.Point(397, 28);
+            this.gpAutomovil.Name = "gpAutomovil";
+            this.gpAutomovil.Size = new System.Drawing.Size(417, 211);
+            this.gpAutomovil.TabIndex = 35;
+            this.gpAutomovil.TabStop = false;
+            this.gpAutomovil.Text = "Vehiculo";
             // 
-            // txtDoc11
+            // btnVehiculo
             // 
-            this.txtDoc11.Location = new System.Drawing.Point(148, 111);
-            this.txtDoc11.Name = "txtDoc11";
-            this.txtDoc11.Size = new System.Drawing.Size(204, 20);
-            this.txtDoc11.TabIndex = 13;
-            this.txtDoc11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDoc11_KeyPress_1);
+            this.btnVehiculo.Location = new System.Drawing.Point(31, 159);
+            this.btnVehiculo.Name = "btnVehiculo";
+            this.btnVehiculo.Size = new System.Drawing.Size(99, 38);
+            this.btnVehiculo.TabIndex = 24;
+            this.btnVehiculo.Text = "Buscar Vehiculo";
+            this.btnVehiculo.UseVisualStyleBackColor = true;
+            this.btnVehiculo.Click += new System.EventHandler(this.btnVehiculo_Click);
             // 
-            // btnModificar11
+            // txtPlaca
             // 
-            this.btnModificar11.Location = new System.Drawing.Point(171, 297);
-            this.btnModificar11.Name = "btnModificar11";
-            this.btnModificar11.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar11.TabIndex = 11;
-            this.btnModificar11.Text = "Modificar";
-            this.btnModificar11.UseVisualStyleBackColor = true;
-            this.btnModificar11.Click += new System.EventHandler(this.btnModificar11_Click);
+            this.txtPlaca.Location = new System.Drawing.Point(116, 42);
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.Size = new System.Drawing.Size(100, 20);
+            this.txtPlaca.TabIndex = 23;
+            this.txtPlaca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPlaca_KeyPress);
             // 
-            // btnguarda11
+            // cmbTipo
             // 
-            this.btnguarda11.Location = new System.Drawing.Point(65, 297);
-            this.btnguarda11.Name = "btnguarda11";
-            this.btnguarda11.Size = new System.Drawing.Size(75, 23);
-            this.btnguarda11.TabIndex = 0;
-            this.btnguarda11.Text = "Registrar";
-            this.btnguarda11.UseVisualStyleBackColor = true;
-            this.btnguarda11.Click += new System.EventHandler(this.btnguarda11_Click);
+            this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Items.AddRange(new object[] {
+            "Carro",
+            "Moto",
+            "Bicicleta"});
+            this.cmbTipo.Location = new System.Drawing.Point(116, 69);
+            this.cmbTipo.Name = "cmbTipo";
+            this.cmbTipo.Size = new System.Drawing.Size(100, 21);
+            this.cmbTipo.TabIndex = 22;
             // 
-            // txtFecha11
+            // label15
             // 
-            this.txtFecha11.Location = new System.Drawing.Point(148, 223);
-            this.txtFecha11.Name = "txtFecha11";
-            this.txtFecha11.Size = new System.Drawing.Size(204, 20);
-            this.txtFecha11.TabIndex = 10;
-            this.txtFecha11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFecha11_KeyPress);
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(9, 69);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(72, 13);
+            this.label15.TabIndex = 18;
+            this.label15.Text = "Tipo Vehiculo";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(12, 42);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(34, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Placa";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 223);
+            this.label5.Location = new System.Drawing.Point(9, 105);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Fecha";
+            this.label5.Size = new System.Drawing.Size(78, 13);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Observaciones";
             // 
-            // label2
+            // btnModificar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Nombre y Apellidos";
+            this.btnModificar.Location = new System.Drawing.Point(224, 154);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(120, 43);
+            this.btnModificar.TabIndex = 15;
+            this.btnModificar.Text = "Registrar Vehiculo";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // txtDirec11
+            // txtObservacion
             // 
-            this.txtDirec11.Location = new System.Drawing.Point(148, 186);
-            this.txtDirec11.Name = "txtDirec11";
-            this.txtDirec11.Size = new System.Drawing.Size(204, 20);
-            this.txtDirec11.TabIndex = 8;
-            this.txtDirec11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDirec11_KeyPress);
+            this.txtObservacion.Location = new System.Drawing.Point(116, 96);
+            this.txtObservacion.Name = "txtObservacion";
+            this.txtObservacion.Size = new System.Drawing.Size(100, 20);
+            this.txtObservacion.TabIndex = 21;
             // 
-            // txtNom11
+            // gbCliente
             // 
-            this.txtNom11.Location = new System.Drawing.Point(148, 73);
-            this.txtNom11.Name = "txtNom11";
-            this.txtNom11.Size = new System.Drawing.Size(204, 20);
-            this.txtNom11.TabIndex = 4;
-            this.txtNom11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNom11_KeyPress);
+            this.gbCliente.Controls.Add(this.lblId);
+            this.gbCliente.Controls.Add(this.txtDocumento);
+            this.gbCliente.Controls.Add(this.txtTelefono);
+            this.gbCliente.Controls.Add(this.label3);
+            this.gbCliente.Controls.Add(this.label2);
+            this.gbCliente.Controls.Add(this.txtNombre);
+            this.gbCliente.Controls.Add(this.label1);
+            this.gbCliente.Controls.Add(this.btnRegistrar);
+            this.gbCliente.Location = new System.Drawing.Point(6, 28);
+            this.gbCliente.Name = "gbCliente";
+            this.gbCliente.Size = new System.Drawing.Size(385, 211);
+            this.gbCliente.TabIndex = 34;
+            this.gbCliente.TabStop = false;
+            this.gbCliente.Text = "Cliente";
             // 
-            // label4
+            // lblId
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 186);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Direccion";
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(290, 68);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(10, 13);
+            this.lblId.TabIndex = 17;
+            this.lblId.Text = ":";
+            // 
+            // txtDocumento
+            // 
+            this.txtDocumento.Location = new System.Drawing.Point(147, 47);
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.Size = new System.Drawing.Size(100, 20);
+            this.txtDocumento.TabIndex = 15;
+            this.txtDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDocumento_KeyPress);
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Location = new System.Drawing.Point(147, 108);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefono.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 147);
+            this.label3.Location = new System.Drawing.Point(28, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Telefono";
             // 
-            // txtTelf11
+            // label2
             // 
-            this.txtTelf11.Location = new System.Drawing.Point(148, 147);
-            this.txtTelf11.Name = "txtTelf11";
-            this.txtTelf11.Size = new System.Drawing.Size(204, 20);
-            this.txtTelf11.TabIndex = 6;
-            this.txtTelf11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelf11_KeyPress);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(28, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Nombre y Apellidos";
             // 
-            // frmCliente
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(147, 78);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Documento";
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Location = new System.Drawing.Point(241, 154);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(123, 43);
+            this.btnRegistrar.TabIndex = 14;
+            this.btnRegistrar.Text = "Registrar Cliente";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // dgvBuscar
+            // 
+            this.dgvBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBuscar.Location = new System.Drawing.Point(128, 259);
+            this.dgvBuscar.Name = "dgvBuscar";
+            this.dgvBuscar.Size = new System.Drawing.Size(513, 200);
+            this.dgvBuscar.TabIndex = 33;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabCliente);
+            this.tabControl1.Controls.Add(this.tbPagos);
+            this.tabControl1.Location = new System.Drawing.Point(1, -1);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(854, 522);
+            this.tabControl1.TabIndex = 30;
+            // 
+            // tbPagos
+            // 
+            this.tbPagos.Controls.Add(this.lblAutomovil);
+            this.tbPagos.Controls.Add(this.lblTiempo);
+            this.tbPagos.Controls.Add(this.btnPago);
+            this.tbPagos.Controls.Add(this.dataGridView1);
+            this.tbPagos.Controls.Add(this.txtTipo);
+            this.tbPagos.Controls.Add(this.txtObservaciones);
+            this.tbPagos.Controls.Add(this.txtPlaca3);
+            this.tbPagos.Controls.Add(this.label6);
+            this.tbPagos.Controls.Add(this.btnBuscarPlaca);
+            this.tbPagos.Controls.Add(this.txtPlaca2);
+            this.tbPagos.Controls.Add(this.label4);
+            this.tbPagos.Location = new System.Drawing.Point(4, 22);
+            this.tbPagos.Name = "tbPagos";
+            this.tbPagos.Padding = new System.Windows.Forms.Padding(3);
+            this.tbPagos.Size = new System.Drawing.Size(846, 496);
+            this.tbPagos.TabIndex = 1;
+            this.tbPagos.Text = "Registro Pagos";
+            this.tbPagos.UseVisualStyleBackColor = true;
+            // 
+            // btnPago
+            // 
+            this.btnPago.Location = new System.Drawing.Point(313, 445);
+            this.btnPago.Name = "btnPago";
+            this.btnPago.Size = new System.Drawing.Size(130, 41);
+            this.btnPago.TabIndex = 12;
+            this.btnPago.Text = "Registrar Pago ";
+            this.btnPago.UseVisualStyleBackColor = true;
+            this.btnPago.Click += new System.EventHandler(this.btnPago_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(147, 179);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(458, 204);
+            this.dataGridView1.TabIndex = 11;
+            // 
+            // txtTipo
+            // 
+            this.txtTipo.Location = new System.Drawing.Point(332, 131);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(100, 20);
+            this.txtTipo.TabIndex = 9;
+            // 
+            // txtObservaciones
+            // 
+            this.txtObservaciones.Location = new System.Drawing.Point(441, 128);
+            this.txtObservaciones.Multiline = true;
+            this.txtObservaciones.Name = "txtObservaciones";
+            this.txtObservaciones.Size = new System.Drawing.Size(113, 36);
+            this.txtObservaciones.TabIndex = 7;
+            // 
+            // txtPlaca3
+            // 
+            this.txtPlaca3.Location = new System.Drawing.Point(207, 131);
+            this.txtPlaca3.Name = "txtPlaca3";
+            this.txtPlaca3.Size = new System.Drawing.Size(100, 20);
+            this.txtPlaca3.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(109, 131);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Automovil";
+            // 
+            // btnBuscarPlaca
+            // 
+            this.btnBuscarPlaca.Location = new System.Drawing.Point(398, 51);
+            this.btnBuscarPlaca.Name = "btnBuscarPlaca";
+            this.btnBuscarPlaca.Size = new System.Drawing.Size(100, 34);
+            this.btnBuscarPlaca.TabIndex = 2;
+            this.btnBuscarPlaca.Text = "Buscar";
+            this.btnBuscarPlaca.UseVisualStyleBackColor = true;
+            this.btnBuscarPlaca.Click += new System.EventHandler(this.btnBuscarPlaca_Click);
+            // 
+            // txtPlaca2
+            // 
+            this.txtPlaca2.Location = new System.Drawing.Point(265, 59);
+            this.txtPlaca2.Name = "txtPlaca2";
+            this.txtPlaca2.Size = new System.Drawing.Size(100, 20);
+            this.txtPlaca2.TabIndex = 1;
+            this.txtPlaca2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPlaca2_KeyPress);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(177, 59);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Buscar Placa";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(686, 446);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(77, 13);
+            this.linkLabel1.TabIndex = 36;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Registrar Pago";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // lblTiempo
+            // 
+            this.lblTiempo.AutoSize = true;
+            this.lblTiempo.Location = new System.Drawing.Point(683, 25);
+            this.lblTiempo.Name = "lblTiempo";
+            this.lblTiempo.Size = new System.Drawing.Size(10, 13);
+            this.lblTiempo.TabIndex = 13;
+            this.lblTiempo.Text = ":";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblAutomovil
+            // 
+            this.lblAutomovil.AutoSize = true;
+            this.lblAutomovil.Location = new System.Drawing.Point(49, 62);
+            this.lblAutomovil.Name = "lblAutomovil";
+            this.lblAutomovil.Size = new System.Drawing.Size(10, 13);
+            this.lblAutomovil.TabIndex = 14;
+            this.lblAutomovil.Text = ":";
+            // 
+            // frmMensualidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1098, 450);
+            this.ClientSize = new System.Drawing.Size(853, 519);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnServicio);
             this.Controls.Add(this.btnEliminar11);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtDocumento11);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.dgvCliente);
-            this.Controls.Add(this.gbxcliente);
-            this.Name = "frmCliente";
-            this.Text = "frmCliente";
-            this.Load += new System.EventHandler(this.frmCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
+            this.Name = "frmMensualidad";
+            this.Text = "Mensualidad";
+            this.Load += new System.EventHandler(this.frmMensualidad_Load);
+            this.tabCliente.ResumeLayout(false);
             this.gbxcliente.ResumeLayout(false);
             this.gbxcliente.PerformLayout();
+            this.gpAutomovil.ResumeLayout(false);
+            this.gpAutomovil.PerformLayout();
+            this.gbCliente.ResumeLayout(false);
+            this.gbCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBuscar)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tbPagos.ResumeLayout(false);
+            this.tbPagos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -259,22 +473,41 @@
 
         private System.Windows.Forms.Button btnServicio;
         private System.Windows.Forms.Button btnEliminar11;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtDocumento11;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dgvCliente;
+        private System.Windows.Forms.TabPage tabCliente;
         private System.Windows.Forms.GroupBox gbxcliente;
-        private System.Windows.Forms.Button btnModificar11;
-        private System.Windows.Forms.Button btnguarda11;
-        private System.Windows.Forms.TextBox txtFecha11;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtDirec11;
-        private System.Windows.Forms.TextBox txtNom11;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtTelf11;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtDoc11;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.ComboBox cmbTipo;
+        private System.Windows.Forms.TextBox txtObservacion;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DataGridView dgvBuscar;
+        private System.Windows.Forms.TabPage tbPagos;
+        private System.Windows.Forms.GroupBox gpAutomovil;
+        private System.Windows.Forms.GroupBox gbCliente;
+        private System.Windows.Forms.TextBox txtDocumento;
+        private System.Windows.Forms.TextBox txtPlaca;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtTipo;
+        private System.Windows.Forms.TextBox txtObservaciones;
+        private System.Windows.Forms.TextBox txtPlaca3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnBuscarPlaca;
+        private System.Windows.Forms.TextBox txtPlaca2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnVehiculo;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Button btnPago;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label lblTiempo;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblAutomovil;
     }
 }

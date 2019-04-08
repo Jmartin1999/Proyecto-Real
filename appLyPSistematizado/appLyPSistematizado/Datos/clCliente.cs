@@ -4,67 +4,58 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Windows.Controls;
+using System.Data.SqlClient;
+
 
 namespace appLyPSistematizado.Datos
 {
     class clCliente
     {
-        
-        public string NombresYApellidos { get; set; }
         public string Documento { get; set; }
+        public string Nombres { get; set; }
         public string Telefono { get; set; }
-        public string Direccion { get; set; }
-        public string Fecha { get; set; }
-        clConexion objConeexion = new clConexion();
-
-
-        public List<clCliente> mtdListar()
+        clConexion objConexion = new clConexion();
+        List<clCliente> ListaCliente = new List<clCliente>();
+        public List<clCliente> mtdAutoCompletar()
         {
-            List<clCliente> listaclientes = new List<clCliente>();
             DataTable dtCliente = new DataTable();
-            string consulta = "Select *From Cliente";
-            dtCliente = objConeexion.mtdDesconectado(consulta);
-
+            string consulta = "select * from Cliente where Documento='"+Documento+"'";
+            dtCliente = objConexion.mtdDesconectado(consulta);
             for (int i = 0; i < dtCliente.Rows.Count; i++)
             {
-                clCliente objcliente = new clCliente();
-                objcliente.NombresYApellidos = dtCliente.Rows[i]["NombresYApellidos"].ToString();
-                objcliente.Documento = dtCliente.Rows[i]["Documento"].ToString();
-                objcliente.Telefono = dtCliente.Rows[i]["Telefono"].ToString();
-                objcliente.Direccion = dtCliente.Rows[i]["Direccion"].ToString();
-                objcliente.Fecha = dtCliente.Rows[i]["Fecha"].ToString();
-                listaclientes.Add(objcliente);
+                clCliente objCliente = new clCliente();
+                objCliente.Documento = dtCliente.Rows[i]["Documento"].ToString();
+                objCliente.Nombres= dtCliente.Rows[i]["Nombres"].ToString();
+                objCliente.Telefono = dtCliente.Rows[i]["Telefono"].ToString();
+                ListaCliente.Add(objCliente);
 
             }
-            return listaclientes;
+            return ListaCliente;
 
         }
-        public int mtdRegistrar()
+        public int mtdRegistrarCliente()
         {
-            string consulta = "insert into Cliente (NombresYApellidos,Documento,Telefono,Direccion,Fecha)"
-                + "values ('" + NombresYApellidos + "','" + Documento + "','" + Telefono + "','" + Direccion + "','" + Fecha + "')";
-            int cint = objConeexion.mtdConectado(consulta);
-            return cint;
+            string consulta = "insert into Cliente(Documento,Nombres,Telefono) values ('" + Documento + "','" + Nombres+ "','" + Telefono + "')";
+            int cantidad = objConexion.mtdConectado(consulta);
+            return cantidad;
         }
+        public int mtdAsignarVehiculo()
+        {
+            DataTable dtCliente = new DataTable();
+            string consulta = "select max (IdCliente) from Cliente as Ultimo;";
+            dtCliente = objConexion.mtdDesconectado(consulta);
+            int encontro= int.Parse(dtCliente.Rows[0][0].ToString());
+            return encontro;
+        }
+     
 
-        public DataTable mtdBuscar()
-        {
-            DataTable dtbuscar = new DataTable();
-            string consulta = "Select  NombresYApellidos, Documento,Telefono,Direccion,Fecha from Cliente where Documento =  '" + Documento + "'";
-            dtbuscar = objConeexion.mtdDesconectado(consulta);
-            return dtbuscar;
-        }
-        public int mtdModificar()
-        {
-            string consulta = "update Cliente set NombresYApellidos='" + NombresYApellidos + "',Documento='" + Documento + "',Telefono='" + Telefono + "',Direccion='" + Direccion + "' ,Fecha='" + Fecha + "' where Documento = '" + Documento + "' ";
-            int cannnn = objConeexion.mtdConectado(consulta);
-            return cannnn;
-        }
-        public int mtdEliminar()
-        {
-            string consulta = " delete  Cliente where Documento = '" + Documento + "' ";
-            int cnnt = objConeexion.mtdConectado(consulta);
-            return cnnt;
-        }
     }
 }
+
+
+
+  
+
+
+

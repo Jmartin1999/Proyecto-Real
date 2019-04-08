@@ -1,6 +1,6 @@
 ﻿namespace appLyPSistematizado.Vista
 {
-    partial class frmMenu
+    partial class frmJefe
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJefe));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pbProceso = new System.Windows.Forms.PictureBox();
@@ -38,15 +38,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pbLavado = new System.Windows.Forms.PictureBox();
+            this.pbMensualidad = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbProceso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegistro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTipo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLavado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMensualidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,25 +137,26 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "LAVADO";
             // 
-            // pictureBox1
+            // pbLavado
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(338, 39);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(176, 138);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.pbLavado.Image = ((System.Drawing.Image)(resources.GetObject("pbLavado.Image")));
+            this.pbLavado.Location = new System.Drawing.Point(338, 39);
+            this.pbLavado.Name = "pbLavado";
+            this.pbLavado.Size = new System.Drawing.Size(176, 138);
+            this.pbLavado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLavado.TabIndex = 9;
+            this.pbLavado.TabStop = false;
             // 
-            // pictureBox2
+            // pbMensualidad
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(618, 39);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(176, 138);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
+            this.pbMensualidad.Image = ((System.Drawing.Image)(resources.GetObject("pbMensualidad.Image")));
+            this.pbMensualidad.Location = new System.Drawing.Point(618, 39);
+            this.pbMensualidad.Name = "pbMensualidad";
+            this.pbMensualidad.Size = new System.Drawing.Size(176, 138);
+            this.pbMensualidad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMensualidad.TabIndex = 10;
+            this.pbMensualidad.TabStop = false;
+            this.pbMensualidad.Click += new System.EventHandler(this.pbMensualidad_Click);
             // 
             // label7
             // 
@@ -182,8 +183,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 641);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbMensualidad);
+            this.Controls.Add(this.pbLavado);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -200,8 +201,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbProceso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegistro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTipo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLavado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMensualidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -219,8 +220,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pbLavado;
+        private System.Windows.Forms.PictureBox pbMensualidad;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox3;
     }

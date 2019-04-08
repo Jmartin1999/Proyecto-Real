@@ -1,6 +1,7 @@
 ﻿using appLyPSistematizado.Datos;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Net;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
@@ -15,30 +16,54 @@ namespace appLyPSistematizado.Vista
             InitializeComponent();
         }
 
-        List<clLogin> listaPersonal = new List<clLogin>();
+        List<clRegistroPersonal> listaPersonal = new List<clRegistroPersonal>();
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            clLogin objLogin = new clLogin();
-            objLogin.Documento = txtDocumento.Text;
-            objLogin.NombreP = txtNombres.Text;
-            objLogin.Direccion = txtDireccion.Text;
-            objLogin.Telefono = txtTelefono.Text;
-            objLogin.Correo = txtCorreo.Text;
-            objLogin.Contraseña = txtContraseña.Text;
-            objLogin.Rol = cmbRol.Text;
-            objLogin.SueldoBasico = txtSueldo.Text;
-            int can = objLogin.mtdRegistrar();
-            if (can > 0)
+            bool incorrecto = true;
+            clRegistroPersonal objRegistro = new clRegistroPersonal();
+            objRegistro.Documento = txtDocumento.Text;
+            objRegistro.NombreP = txtNombres.Text;
+            objRegistro.Direccion = txtDireccion.Text;
+            objRegistro.Telefono = txtTelefono.Text;
+            objRegistro.Correo = txtCorreo.Text;
+            objRegistro.Contraseña = txtContraseña.Text;
+            objRegistro.Rol = cmbRol.Text;
+            List<clRegistroPersonal> Repetido = new List<clRegistroPersonal>();
+            Repetido = objRegistro.mtdListarPersona();
+            for (int i = 0; i < Repetido.Count; i++)
             {
-                MessageBox.Show("Registrado" + can);
+                if(Repetido[i].Correo ==txtCorreo.Text)
+                {
+                    MessageBox.Show("Este Empleado Ya esta registrado");
+                }
+                else
+                {
 
+                    incorrecto = false;
+                }
+                
+            }
+            if (incorrecto==true)
+            {
+                incorrecto = false;
             }
             else
             {
-                MessageBox.Show("ERORRRRRRRRRR");
+
+                int can = objRegistro.mtdRegistrar();
+                if (can > 0)
+                {
+                    MessageBox.Show("Registrado" + can);
+
+                }
+                else
+                {
+                    MessageBox.Show("ERORRRRRRRRRR");
+
+                }
             }
-    
+
 
         }
         public static bool validaremail(string email)
@@ -84,7 +109,7 @@ namespace appLyPSistematizado.Vista
             objMensaje.From = new MailAddress("jonathan200045@gmail.com", "", System.Text.Encoding.UTF8);
             objMensaje.Subject = "Bienvenido Registro Exitoso";
             objMensaje.SubjectEncoding = System.Text.Encoding.UTF8;
-            objMensaje.Body = "Documento" + "=" + txtDocumento.Text + "Nombres" + "=" + txtNombres.Text + "Direccion" + "=" + txtDireccion.Text + "Telefono" + "=" + txtTelefono.Text + "Correo" + "=" + txtCorreo.Text + "Contraseña" + "=" + txtContraseña.Text + "Rol" + "=" + cmbRol.Text + "Sueldo" + "=" + txtSueldo.Text;
+            objMensaje.Body = "Documento" + "=" + txtDocumento.Text + "Nombres" + "=" + txtNombres.Text + "Direccion" + "=" + txtDireccion.Text + "Telefono" + "=" + txtTelefono.Text + "Correo" + "=" + txtCorreo.Text + "Contraseña" + "=" + txtContraseña.Text + "Rol" + "=" + cmbRol.Text;
             objMensaje.BodyEncoding = System.Text.Encoding.UTF8;
             objMensaje.IsBodyHtml = false;
 
@@ -98,20 +123,20 @@ namespace appLyPSistematizado.Vista
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            clLogin objLogin = new clLogin();
-            objLogin.Documento = txtDocumento.Text;
-            objLogin.NombreP = txtNombres.Text;
-            objLogin.Direccion = txtDireccion.Text;
-            objLogin.Telefono = txtTelefono.Text;
-            objLogin.Correo = txtCorreo.Text;
-            objLogin.Contraseña = txtContraseña.Text;
-            objLogin.Rol = cmbRol.Text;
-            objLogin.SueldoBasico = txtSueldo.Text;
-            int can = objLogin.mtdModificarPersona();
+            clRegistroPersonal objRegistro = new clRegistroPersonal();
+            objRegistro.Documento = txtDocumento.Text;
+            objRegistro.NombreP = txtNombres.Text;
+            objRegistro.Direccion = txtDireccion.Text;
+            objRegistro.Telefono = txtTelefono.Text;
+            objRegistro.Correo = txtCorreo.Text;
+            objRegistro.Contraseña = txtContraseña.Text;
+            objRegistro.Rol = cmbRol.Text;
+         
+            int can = objRegistro.mtdModificarPersona();
             if (can > 0)
             {
                 MessageBox.Show("Filas Afectadas" + can);
-               frmRegistroPersonal_Load(null, null);
+               
             }
             else
             {
@@ -121,33 +146,27 @@ namespace appLyPSistematizado.Vista
 
         private void frmRegistroPersonal_Load(object sender, EventArgs e)
         {
-            clLogin objLogin = new clLogin();
-            List<clLogin> listapersonal = new List<clLogin>();
-            listapersonal = objLogin.mtdListarPersona();
+            clRegistroPersonal objRegistro = new clRegistroPersonal();
+            List<clRegistroPersonal> listapersonal = new List<clRegistroPersonal>();
+            listapersonal = objRegistro.mtdListarPersona();
             dgvPersonal.DataSource = listapersonal;
 
-            for (int i = 0; i < listapersonal.Count; i++)
-            {
-                if (listapersonal[i].Documento == "1055315950")
-                {
-                    MessageBox.Show(listapersonal[i].Rol);
-                }
-            }
+  
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
 
-            clLogin objLogin = new clLogin();
-            objLogin.Documento = txtDocumento.Text;
-            objLogin.NombreP = txtNombres.Text;
-            objLogin.Direccion = txtDireccion.Text;
-            objLogin.Telefono = txtTelefono.Text;
-            objLogin.Correo = txtCorreo.Text;
-            objLogin.Contraseña = txtContraseña.Text;
-            objLogin.Rol = cmbRol.Text;
-            objLogin.SueldoBasico = txtSueldo.Text;
-            int can = objLogin.EliminarPersona();
+            clRegistroPersonal objRegistro = new clRegistroPersonal();
+            objRegistro.Documento = txtDocumento.Text;
+            objRegistro.NombreP = txtNombres.Text;
+            objRegistro.Direccion = txtDireccion.Text;
+            objRegistro.Telefono = txtTelefono.Text;
+            objRegistro.Correo = txtCorreo.Text;
+            objRegistro.Contraseña = txtContraseña.Text;
+            objRegistro.Rol = cmbRol.Text;
+       
+            int can = objRegistro.EliminarPersona();
             if (can > 0)
             {
                 MessageBox.Show("Filas Afectadas" + can);
@@ -159,24 +178,36 @@ namespace appLyPSistematizado.Vista
             }
         }
 
-        private void dgvPersonal_DoubleClick(object sender, EventArgs e)
-        {
-            txtDocumento.Text = Convert.ToString(dgvPersonal.CurrentRow.Cells[0].Value);
-            txtNombres.Text = Convert.ToString(dgvPersonal.CurrentRow.Cells[1].Value);
-            txtDireccion.Text = Convert.ToString(dgvPersonal.CurrentRow.Cells[2].Value);
-           txtTelefono.Text = Convert.ToString(dgvPersonal.CurrentRow.Cells[3].Value);
-            txtCorreo.Text = Convert.ToString(dgvPersonal.CurrentRow.Cells[4].Value);
-            txtContraseña.Text = Convert.ToString(dgvPersonal.CurrentRow.Cells[5].Value);
-            cmbRol.Text = Convert.ToString(dgvPersonal.CurrentRow.Cells[6].Value);
-           txtSueldo.Text = Convert.ToString(dgvPersonal.CurrentRow.Cells[7].Value);
-
-        }
+  
         clValidacion3 objvalidacion = new clValidacion3();
 
         private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
+            txtContraseña.Visible = false;
             objvalidacion.mtdSolNumeros(e);
+            clRegistroPersonal objRegistro = new clRegistroPersonal();
+            objRegistro.Documento = txtDocumento.Text;
+            List<clRegistroPersonal> MostrarDatos = new List<clRegistroPersonal>();
+            MostrarDatos = objRegistro.mtdListarPersona();
+            for (int i = 0; i < MostrarDatos.Count; i++)
+            {
+                if (MostrarDatos[i].Documento== txtDocumento.Text)
+                {
+
+                    txtNombres.Text = MostrarDatos[i].NombreP;
+                    txtDireccion.Text = MostrarDatos[i].Direccion;
+                    txtTelefono.Text = MostrarDatos[i].Telefono;
+                    txtCorreo.Text = MostrarDatos[i].Correo;
+                    txtContraseña.Text = MostrarDatos[i].Contraseña;
+                    cmbRol.Text = MostrarDatos[i].Rol;
+                }
+                
+            }
         }
+           
+            
+        
+    
 
         private void txtNombres_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -196,8 +227,16 @@ namespace appLyPSistematizado.Vista
 
         private void btnListarPersonal_Click(object sender, EventArgs e)
         {
-         
+            clRegistroPersonal objRegistro = new clRegistroPersonal();
+            List<clRegistroPersonal> listapersonal = new List<clRegistroPersonal>();
+            listapersonal = objRegistro.mtdListarPersona();
+            dgvPersonal.DataSource = listapersonal;
 
+        }
+
+        private void cmbRol_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

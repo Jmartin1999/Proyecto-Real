@@ -52,15 +52,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Datos\clautomovil2.cs" />
-    <Compile Include="Datos\clAutomovil3.cs" />
+    <Compile Include="Datos\clAutomovil.cs" />
     <Compile Include="Datos\clCliente.cs" />
-    <Compile Include="Datos\clCliente3.cs" />
     <Compile Include="Datos\clConexion.cs" />
     <Compile Include="Datos\clLogin.cs" />
-    <Compile Include="Datos\clpersona2.cs" />
-    <Compile Include="Datos\clServicio.cs" />
-    <Compile Include="Datos\cltarifa2.cs" />
+    <Compile Include="Datos\clPagos.cs" />
+    <Compile Include="Datos\clRegistroPersonal.cs" />
     <Compile Include="Datos\clTipo.cs" />
     <Compile Include="Datos\clValidacion3.cs" />
     <Compile Include="Login.cs">
@@ -69,13 +66,14 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="objConexion\mtdDesconectado.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Vista\frmParqueadero.cs">
+    <Compile Include="Vista\frmAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\frmParqueadero.Designer.cs">
-      <DependentUpon>frmParqueadero.cs</DependentUpon>
+    <Compile Include="Vista\frmAdministrador.Designer.cs">
+      <DependentUpon>frmAdministrador.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmMensualidad.cs">
       <SubType>Form</SubType>
@@ -83,29 +81,17 @@
     <Compile Include="Vista\frmMensualidad.Designer.cs">
       <DependentUpon>frmMensualidad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\frmCupos.cs">
+    <Compile Include="Vista\frmJefe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\frmCupos.Designer.cs">
-      <DependentUpon>frmCupos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\frmMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\frmMenu.Designer.cs">
-      <DependentUpon>frmMenu.cs</DependentUpon>
+    <Compile Include="Vista\frmJefe.Designer.cs">
+      <DependentUpon>frmJefe.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmRegistroPersonal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\frmRegistroPersonal.Designer.cs">
       <DependentUpon>frmRegistroPersonal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\frmLavado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\frmLavado.Designer.cs">
-      <DependentUpon>frmLavado.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmTarifa.cs">
       <SubType>Form</SubType>
@@ -125,23 +111,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Vista\frmParqueadero.resx">
-      <DependentUpon>frmParqueadero.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\frmAdministrador.resx">
+      <DependentUpon>frmAdministrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmMensualidad.resx">
       <DependentUpon>frmMensualidad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmCupos.resx">
-      <DependentUpon>frmCupos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmMenu.resx">
-      <DependentUpon>frmMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Vista\frmJefe.resx">
+      <DependentUpon>frmJefe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmRegistroPersonal.resx">
       <DependentUpon>frmRegistroPersonal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmLavado.resx">
-      <DependentUpon>frmLavado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmTarifa.resx">
       <DependentUpon>frmTarifa.cs</DependentUpon>

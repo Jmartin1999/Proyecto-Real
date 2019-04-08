@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.cmbRol = new System.Windows.Forms.ComboBox();
-            this.txtSueldo = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -63,22 +61,7 @@
             this.cmbRol.Name = "cmbRol";
             this.cmbRol.Size = new System.Drawing.Size(121, 21);
             this.cmbRol.TabIndex = 39;
-            // 
-            // txtSueldo
-            // 
-            this.txtSueldo.Location = new System.Drawing.Point(140, 318);
-            this.txtSueldo.Name = "txtSueldo";
-            this.txtSueldo.Size = new System.Drawing.Size(100, 20);
-            this.txtSueldo.TabIndex = 38;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(57, 318);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 13);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "Sueldo Basico";
+            this.cmbRol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbRol_KeyPress);
             // 
             // label8
             // 
@@ -92,6 +75,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(140, 168);
+            this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
             this.txtTelefono.TabIndex = 35;
@@ -109,6 +93,7 @@
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(140, 128);
+            this.txtDireccion.MaxLength = 20;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(100, 20);
             this.txtDireccion.TabIndex = 33;
@@ -143,6 +128,7 @@
             // txtDocumento
             // 
             this.txtDocumento.Location = new System.Drawing.Point(140, 48);
+            this.txtDocumento.MaxLength = 15;
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(100, 20);
             this.txtDocumento.TabIndex = 29;
@@ -211,7 +197,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(328, 386);
+            this.btnModificar.Location = new System.Drawing.Point(308, 386);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(156, 52);
             this.btnModificar.TabIndex = 40;
@@ -236,7 +222,6 @@
             this.dgvPersonal.Name = "dgvPersonal";
             this.dgvPersonal.Size = new System.Drawing.Size(413, 265);
             this.dgvPersonal.TabIndex = 42;
-            this.dgvPersonal.DoubleClick += new System.EventHandler(this.dgvPersonal_DoubleClick);
             // 
             // btnListarPersonal
             // 
@@ -258,8 +243,6 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.cmbRol);
-            this.Controls.Add(this.txtSueldo);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.label7);
@@ -287,8 +270,6 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cmbRol;
-        private System.Windows.Forms.TextBox txtSueldo;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label7;

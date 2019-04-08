@@ -11,14 +11,14 @@ namespace appLyPSistematizado.Datos
 {
     class clConexion
     {
-        SqlConnection conexion;
+       public SqlConnection conexion;
         SqlDataAdapter adaptador;
 
         public clConexion()
         {
             try
             {
-                conexion = new SqlConnection("Data Source=CLIENTTE;Initial Catalog=ProyectoCompartido;Integrated Security=True");
+                conexion = new SqlConnection("Data Source=.;Initial Catalog=proyecto;Integrated Security=True");
 
             }
             catch (Exception)

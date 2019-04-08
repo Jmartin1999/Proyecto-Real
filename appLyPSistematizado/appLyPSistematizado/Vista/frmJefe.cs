@@ -10,13 +10,14 @@ using System.Windows.Forms;
 
 namespace appLyPSistematizado.Vista
 {
-    public partial class frmMenu : Form
+    public partial class frmJefe : Form
     {
-        public frmMenu()
+        public frmJefe()
         {
             InitializeComponent();
         }
         frmRegistroPersonal objRegistroPersonal = new frmRegistroPersonal();
+        frmMensualidad objMensualidad = new frmMensualidad();
      
 
         private void pbRegistro_Click(object sender, EventArgs e)
@@ -39,6 +40,11 @@ namespace appLyPSistematizado.Vista
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pbMensualidad_Click(object sender, EventArgs e)
+        {
+              objMensualidad.Show();
         }
     }
 }
