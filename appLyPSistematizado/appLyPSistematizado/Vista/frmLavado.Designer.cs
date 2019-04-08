@@ -32,6 +32,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblId = new System.Windows.Forms.Label();
+            this.cmbEmpleado = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnautomovil = new System.Windows.Forms.Button();
             this.btnBuscar22 = new System.Windows.Forms.Button();
@@ -43,8 +46,6 @@
             this.txtServicio = new System.Windows.Forms.TextBox();
             this.rbMoto = new System.Windows.Forms.RadioButton();
             this.rbBicicleta = new System.Windows.Forms.RadioButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbEmpleado = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -72,6 +73,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Silver;
+            this.groupBox1.Controls.Add(this.lblId);
             this.groupBox1.Controls.Add(this.cmbEmpleado);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
@@ -93,6 +95,32 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "REGISTRO";
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(48, 363);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(24, 23);
+            this.lblId.TabIndex = 17;
+            this.lblId.Text = "id";
+            // 
+            // cmbEmpleado
+            // 
+            this.cmbEmpleado.FormattingEnabled = true;
+            this.cmbEmpleado.Location = new System.Drawing.Point(181, 303);
+            this.cmbEmpleado.Name = "cmbEmpleado";
+            this.cmbEmpleado.Size = new System.Drawing.Size(221, 31);
+            this.cmbEmpleado.TabIndex = 16;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(32, 303);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 23);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "EMPLEADO";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -110,6 +138,7 @@
             this.btnautomovil.TabIndex = 8;
             this.btnautomovil.Text = "INGRESAR";
             this.btnautomovil.UseVisualStyleBackColor = true;
+            this.btnautomovil.Click += new System.EventHandler(this.btnautomovil_Click);
             // 
             // btnBuscar22
             // 
@@ -137,7 +166,7 @@
             this.txtPlaca.Multiline = true;
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(272, 88);
-            this.txtPlaca.TabIndex = 1;
+            this.txtPlaca.TabIndex = 6;
             // 
             // button1
             // 
@@ -198,23 +227,6 @@
             this.rbBicicleta.Text = "BICICLETA";
             this.rbBicicleta.UseVisualStyleBackColor = true;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 303);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 23);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "EMPLEADO";
-            // 
-            // cmbEmpleado
-            // 
-            this.cmbEmpleado.FormattingEnabled = true;
-            this.cmbEmpleado.Location = new System.Drawing.Point(181, 303);
-            this.cmbEmpleado.Name = "cmbEmpleado";
-            this.cmbEmpleado.Size = new System.Drawing.Size(221, 31);
-            this.cmbEmpleado.TabIndex = 16;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -225,6 +237,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmLavado
             // 
@@ -237,6 +250,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmLavado";
             this.Text = "frmLavado";
+            this.Load += new System.EventHandler(this.frmLavado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -264,5 +278,6 @@
         private System.Windows.Forms.ComboBox cmbEmpleado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblId;
     }
 }

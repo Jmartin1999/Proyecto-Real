@@ -150,6 +150,7 @@
             this.pbLavado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLavado.TabIndex = 9;
             this.pbLavado.TabStop = false;
+            this.pbLavado.Click += new System.EventHandler(this.pbLavado_Click);
             // 
             // pbMensualidad
             // 
@@ -185,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 641);
+            this.ClientSize = new System.Drawing.Size(1354, 641);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pbMensualidad);
             this.Controls.Add(this.pbLavado);

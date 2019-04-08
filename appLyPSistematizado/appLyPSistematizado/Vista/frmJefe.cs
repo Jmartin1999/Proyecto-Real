@@ -52,5 +52,12 @@ namespace appLyPSistematizado.Vista
             frmMensualidad mensualidad = new frmMensualidad();
             mensualidad.Show();
         }
+
+        private void pbLavado_Click(object sender, EventArgs e)
+        {
+            frmLavado lavado = new frmLavado();
+            lavado.Show();
+            this.Hide();
+        }
     }
 }
