@@ -46,6 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cmbEmpleado = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,6 +73,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Silver;
+            this.groupBox1.Controls.Add(this.lblId);
             this.groupBox1.Controls.Add(this.cmbEmpleado);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
@@ -110,6 +112,7 @@
             this.btnautomovil.TabIndex = 8;
             this.btnautomovil.Text = "INGRESAR";
             this.btnautomovil.UseVisualStyleBackColor = true;
+            this.btnautomovil.Click += new System.EventHandler(this.btnautomovil_Click);
             // 
             // btnBuscar22
             // 
@@ -225,6 +228,16 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(48, 363);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(24, 23);
+            this.lblId.TabIndex = 17;
+            this.lblId.Text = "id";
             // 
             // frmLavado
             // 
@@ -237,6 +250,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmLavado";
             this.Text = "frmLavado";
+            this.Load += new System.EventHandler(this.frmLavado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -264,5 +278,6 @@
         private System.Windows.Forms.ComboBox cmbEmpleado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblId;
     }
 }
