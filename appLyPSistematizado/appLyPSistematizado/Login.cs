@@ -25,11 +25,9 @@ namespace appLyPSistematizado
         List<clLogin> listaCorreo = new List<clLogin>();
         List<clLogin> listaOlvidar = new List<clLogin>();
         frmRegistroPersonal objRegistrar = new frmRegistroPersonal();
-        frmJefe objMenu = new frmJefe();
-       
-        frmJefe objServicios = new frmJefe();
-
-        frmJefe objJefe = new frmJefe();
+        frmAdministrador objAdministrador = new frmAdministrador();
+        
+ 
         private void label5_Click(object sender, EventArgs e)
         {
             objRegistrar.Show();
@@ -53,12 +51,12 @@ namespace appLyPSistematizado
                 {
                     if (cmbRol.Text=="Administrador")
                     {
-                        objMenu.Show();
+                        objAdministrador.Show();
                       
                     }
                     else if(cmbRol.Text == "Jefe")
                    {
-                        objMenu.Show();
+                        objJefe.Show();
                     }
                 }
                 else

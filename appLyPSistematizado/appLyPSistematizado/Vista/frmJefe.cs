@@ -43,8 +43,8 @@ namespace appLyPSistematizado.Vista
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            frmLavado lavado = new frmLavado();
-            lavado.Show();
+
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

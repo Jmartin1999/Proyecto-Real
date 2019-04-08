@@ -107,7 +107,7 @@
             // 
             this.chkContraseña.AutoSize = true;
             this.chkContraseña.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkContraseña.Location = new System.Drawing.Point(526, 230);
+            this.chkContraseña.Location = new System.Drawing.Point(515, 233);
             this.chkContraseña.Name = "chkContraseña";
             this.chkContraseña.Size = new System.Drawing.Size(166, 31);
             this.chkContraseña.TabIndex = 8;
