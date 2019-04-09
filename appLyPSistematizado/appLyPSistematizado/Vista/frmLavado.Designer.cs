@@ -55,7 +55,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(679, 409);
+            this.button4.Location = new System.Drawing.Point(723, 435);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(131, 36);
             this.button4.TabIndex = 17;
@@ -66,9 +66,9 @@
             // 
             this.dgvDatos.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(614, 59);
+            this.dgvDatos.Location = new System.Drawing.Point(591, 61);
             this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.Size = new System.Drawing.Size(417, 272);
+            this.dgvDatos.Size = new System.Drawing.Size(459, 342);
             this.dgvDatos.TabIndex = 16;
             // 
             // groupBox1
@@ -99,7 +99,7 @@
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(48, 363);
+            this.lblId.Location = new System.Drawing.Point(19, 36);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(24, 23);
             this.lblId.TabIndex = 17;
@@ -109,7 +109,7 @@
             // cmbEmpleado
             // 
             this.cmbEmpleado.FormattingEnabled = true;
-            this.cmbEmpleado.Location = new System.Drawing.Point(181, 303);
+            this.cmbEmpleado.Location = new System.Drawing.Point(185, 323);
             this.cmbEmpleado.Name = "cmbEmpleado";
             this.cmbEmpleado.Size = new System.Drawing.Size(221, 31);
             this.cmbEmpleado.TabIndex = 16;
@@ -117,7 +117,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 303);
+            this.label3.Location = new System.Drawing.Point(36, 323);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 23);
             this.label3.TabIndex = 15;
@@ -126,7 +126,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 48);
+            this.label1.Location = new System.Drawing.Point(19, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 23);
             this.label1.TabIndex = 0;
@@ -134,7 +134,7 @@
             // 
             // btnautomovil
             // 
-            this.btnautomovil.Location = new System.Drawing.Point(311, 74);
+            this.btnautomovil.Location = new System.Drawing.Point(315, 94);
             this.btnautomovil.Name = "btnautomovil";
             this.btnautomovil.Size = new System.Drawing.Size(127, 33);
             this.btnautomovil.TabIndex = 8;
@@ -144,7 +144,7 @@
             // 
             // btnBuscar22
             // 
-            this.btnBuscar22.Location = new System.Drawing.Point(310, 113);
+            this.btnBuscar22.Location = new System.Drawing.Point(314, 133);
             this.btnBuscar22.Name = "btnBuscar22";
             this.btnBuscar22.Size = new System.Drawing.Size(128, 33);
             this.btnBuscar22.TabIndex = 12;
@@ -164,7 +164,7 @@
             // txtPlaca
             // 
             this.txtPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 47F);
-            this.txtPlaca.Location = new System.Drawing.Point(19, 74);
+            this.txtPlaca.Location = new System.Drawing.Point(23, 94);
             this.txtPlaca.Multiline = true;
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(272, 88);
@@ -183,7 +183,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 250);
+            this.label2.Location = new System.Drawing.Point(36, 270);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(175, 23);
             this.label2.TabIndex = 7;
@@ -192,7 +192,7 @@
             // rbCarro
             // 
             this.rbCarro.AutoSize = true;
-            this.rbCarro.Location = new System.Drawing.Point(19, 197);
+            this.rbCarro.Location = new System.Drawing.Point(23, 217);
             this.rbCarro.Name = "rbCarro";
             this.rbCarro.Size = new System.Drawing.Size(85, 27);
             this.rbCarro.TabIndex = 2;
@@ -202,7 +202,7 @@
             // 
             // txtServicio
             // 
-            this.txtServicio.Location = new System.Drawing.Point(252, 250);
+            this.txtServicio.Location = new System.Drawing.Point(256, 270);
             this.txtServicio.Name = "txtServicio";
             this.txtServicio.Size = new System.Drawing.Size(150, 30);
             this.txtServicio.TabIndex = 6;
@@ -210,7 +210,7 @@
             // rbMoto
             // 
             this.rbMoto.AutoSize = true;
-            this.rbMoto.Location = new System.Drawing.Point(127, 197);
+            this.rbMoto.Location = new System.Drawing.Point(131, 217);
             this.rbMoto.Name = "rbMoto";
             this.rbMoto.Size = new System.Drawing.Size(80, 27);
             this.rbMoto.TabIndex = 3;
@@ -221,7 +221,7 @@
             // rbBicicleta
             // 
             this.rbBicicleta.AutoSize = true;
-            this.rbBicicleta.Location = new System.Drawing.Point(238, 197);
+            this.rbBicicleta.Location = new System.Drawing.Point(242, 217);
             this.rbBicicleta.Name = "rbBicicleta";
             this.rbBicicleta.Size = new System.Drawing.Size(118, 27);
             this.rbBicicleta.TabIndex = 4;
@@ -239,7 +239,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmLavado
             // 

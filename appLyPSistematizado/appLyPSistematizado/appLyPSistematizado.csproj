@@ -65,6 +65,7 @@
     <Compile Include="Datos\clTarifa.cs" />
     <Compile Include="Datos\clTipo.cs" />
     <Compile Include="Datos\clValidacion3.cs" />
+    <Compile Include="Datos\VclAutomovil.cs" />
     <Compile Include="Datos\VclLavadero.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
